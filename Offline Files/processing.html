@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<!-- start of the document -->
+<html> 
+
+ <!-- The header. Information here doesn't make up elements of the webpage. We'll define all the javascript stuff at the end, so we just put the title here. -->
+ <head>
+    <title>My Processing Program</title> <!-- Title to be displayed in browser -->
+ </head>
+ 
+ <!-- The body of the webpage, where all visible stuff lies. -->
+ <body>
+    <canvas id="mycanvas"></canvas>
+ </body>
+
+
+ <!-- run all the javascript stuff -->
+ <script src="processing-1.3.6.min.js"></script> <!-- Include the processing.js commands -->
+ <script src="myCode.js"></script> <!-- The actual source code for your program -->
+ <script type="application/javascript">
+  var canvas = document.getElementById("mycanvas"); //get the canvas that processingjs will use
+  var processingInstance = new Processing(canvas, sketchProc); //pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+ </script>
+
+</html>
