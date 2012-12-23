@@ -14,20 +14,20 @@ var rectPositionY = 320;
 /* Begin Game Loop. Everything in here will be drawn over and over at 30 Frames Per Second. */
 draw = function(){
 // Erase everything and repaint the screen Black
-background(0, 0, 0); 
+background(0, 0, 0);
 
 // Update the Position each time through the Loop
 rectPositionY = rectPositionY + -1.5;
 
 // Set Drawing color
-fill(127, 0, 255); 
+fill(127, 0, 255);
 
 // Draw Rectangle using Variables for X and Y Position
-rect(RECT_POSITION_X, rectPositionY, 100, 100); 
+rect(RECT_POSITION_X, rectPositionY, 100, 100);
 
 // If it tries to go offscreen...
 if (rectPositionY < -100){
-    rectPositionY = 400; // set it back to the beginning ;)
+rectPositionY = 400; // set it back to the beginning ;)
 }
 
 }; // End Game Loop

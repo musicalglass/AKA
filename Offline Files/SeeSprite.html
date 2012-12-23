@@ -5,7 +5,7 @@
 
  <!-- The header. Information here doesn't make up elements of the webpage. We'll define all the javascript stuff at the end, so we just put the title here. -->
  <head>
-    <title>See Sprite </title> <!-- Title to be displayed in browser -->
+    <title>See Sprite</title> <!-- Title to be displayed in browser -->
     <style type="text/css">
 <!--
 .style1 {font-family: Arial, Helvetica, sans-serif}
@@ -25,7 +25,9 @@
 	  <table border="4" cellpadding="8">
 	    
     <tr>
-      <td><p>//&lt;Description&gt; Apply Matrix Transformations on a group of primitive graphics objects. &lt;/Description&gt;</p>
+      <td> 
+        <p>//&lt;Description&gt; Apply Matrix Transformations on a group of primitive 
+          graphics objects. &lt;/Description&gt;</p>
         <p>// This Variable changes 0,0 to the Game Window's Center<br>
           // Change this to 0 to see the Window's normal settings<br>
           var OFFSET = 200;<br>
@@ -36,8 +38,8 @@
           var scaleX = 2.0; <br>
           var scaleY = 2.0; <br>
           var rotateDegrees = 0; </p>
-        <p>// Move 0, 0 from top left corner to Center of screen to make it easier for you to create Sprites<br>
-          translate(OFFSET, OFFSET); </p>
+        <p>// Update X &amp; Y based on new World Center<br>
+          translateX += OFFSET; translateY += OFFSET;</p>
         <p>// Set Transformation effects using Variables<br>
           translate(translateX,translateY); <br>
           scale(scaleX, scaleY); <br>
@@ -83,7 +85,13 @@
           line(-4, -37, -11, -47); // Antenae Left<br>
           line(9, -59, 11, -47); // Antenae Right b<br>
           line(-9, -59, -11, -47); // Antenae Left b<br>
-        </p></td>
+        </p>
+        <p>/* Tutorials in plain English by Dillinger &copy; 2012. <br>
+          All code is owned by its respective author and made available under 
+          an MIT license:<br>
+          http://opensource.org/licenses/mit-license.php */<br>
+        </p>
+        </td>
     </tr>
       </table>
  </div>
