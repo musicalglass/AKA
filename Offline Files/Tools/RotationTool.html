@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<!-- start of the document -->
+<html> 
+
+ <!-- The header. Information here doesn't make up elements of the webpage. 
+ We'll define all the JavaScript stuff at the end, so we just put the title here. -->
+ <head>
+ <!-- Title to be displayed in browser -->
+    <title>RotationTool</title> 
+</head>
+ 
+ <!-- The body of the webpage, where all visible stuff lies. -->
+ <body>
+    <p align="center"> 
+    <!--This draws the canvas on the webpage -->
+      <canvas id="mycanvas"></canvas> 
+    </p>
+	<hr>
+	<div align="center">
+	
+	<!-- Name of Program -->
+  <h2>RotationTool</h2>
+
+	  <table border="4" cellpadding="8">
+	    
+    <tr>
+      <td>
+        <p>&nbsp;</p>
+        <p>/* Tutorials in plain English by Dillinger &copy; 2012. <br>
+          All code is owned by its respective author and made available under 
+          an MIT license:<br>
+          http://opensource.org/licenses/mit-license.php */<br>
+        </p>
+      </td>
+    </tr>
+      </table>
+ </div>
+
+ </body>
+
+
+ <!-- run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <script src="../processing-1.3.6.min.js"></script> 
+ 
+ <!-- The the name the program source code goes here-->
+ 
+<script src="RotationTool.js"></script> 
+ 
+ <script type="application/javascript">
+//get the canvas that processingjs will use
+  var canvas = document.getElementById("mycanvas"); 
+//pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+  var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>

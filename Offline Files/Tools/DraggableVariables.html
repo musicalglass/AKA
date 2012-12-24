@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<!-- start of the document -->
+<html> 
+
+ <!-- The header. Information here doesn't make up elements of the webpage. We'll define all the javascript stuff at the end, so we just put the title here. -->
+ <head>
+    <title>Drag Window to Change Variables</title> <!-- Title to be displayed in browser -->
+    <style type="text/css">
+<!--
+.style1 {font-family: Arial, Helvetica, sans-serif}
+-->
+    </style>
+</head>
+ 
+ <!-- The body of the webpage, where all visible stuff lies. -->
+ <body>
+    <p align="center">
+      <canvas id="mycanvas"></canvas> <!--This draws the canvas on the webpage -->
+    </p>
+	<hr>
+	<div align="center">
+	<!-- Name of Program -->
+	
+  <h2>Drag Window to Change Variables</h2>
+	  <table border="4" cellpadding="8">
+	    
+    <tr>
+      <td>
+        <p>&nbsp;</p>
+        <p>/* Tutorials in plain English by Dillinger &copy; 2012. <br>
+          All code is owned by its respective author and made available under 
+          an MIT license:<br>
+          http://opensource.org/licenses/mit-license.php */<br>
+        </p>
+      </td>
+    </tr>
+      </table>
+ </div>
+
+ </body>
+
+
+ <!-- run all the javascript stuff -->
+ <!-- Include the processing.js commands -->
+ <script src="../processing-1.3.6.min.js"></script> 
+ <!-- The actual source code for the program goes here-->
+ 
+<script src="DraggableVariables.js"></script> 
+ <script type="application/javascript">
+  var canvas = document.getElementById("mycanvas"); //get the canvas that processingjs will use
+  var processingInstance = new Processing(canvas, sketchProc); //pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+ </script>
+
+</html>

@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<!-- start of the document -->
+<html> 
+
+ <!-- The header. Information here doesn't make up elements of the webpage. 
+ We'll define all the JavaScript stuff at the end, so we just put the title here. -->
+ <head>
+ <!-- Title to be displayed in browser -->
+    <title>Hitting Things with Projectiles (Shooter)</title> 
+</head>
+ 
+ <!-- The body of the webpage, where all visible stuff lies. -->
+ <body>
+    <p align="center"> 
+    <!--This draws the canvas on the webpage -->
+      <canvas id="mycanvas"></canvas> 
+    </p>
+	<hr>
+	<div align="center">
+	
+	<!-- Name of Program -->
+  <h2>Hitting Things with Projectiles (Shooter)</h2>
+
+	  <table border="4" cellpadding="8">
+	    
+    <tr>
+      <td> 
+        <p>var BULLET_SPEED = 12.0;<br>
+          var bullets=[]; // Create an Array to store Projectiles<br>
+          var skeets=[]; // Stuff to shoot at<br>
+          var SKEETS_NUM = 4; <br>
+          var maxNumSkeets = 2; // How many onscreen at one time<br>
+          var paddlePos;<br>
+          var myFont1 = createFont(&quot;fantasy&quot;, 18);<br>
+          var score = 0;</p>
+        <p>// Each time mouse is clicked...<br>
+          mouseClicked = function(){ <br>
+          bullets.push({ // ...create new Array entry<br>
+          x:mouseX,<br>
+          y:356<br>
+          });<br>
+          };</p>
+        <p>var updateBullets = function(b){<br>
+          for (var i = 0; i &lt; b.length; i += 1){<br>
+          // When the bullet reaches set distance..<br>
+          if(b[i].y &lt; 40){ <br>
+          b.splice(i, 1); // ...remove it from Array<br>
+          }<br>
+          else{<br>
+          b[i].y -= BULLET_SPEED; // Update Bullet Position<br>
+          }<br>
+          }<br>
+          };</p>
+        <p>// Declare a couple Variables<br>
+          var randomX; var randomY;<br>
+          var createSkeet = function(){<br>
+          // Assign random Number from 20 - 380 to Variables<br>
+          randomX = random(20, 380); <br>
+          randomY = random(20, 200);<br>
+          // Create a new Array entry<br>
+          skeets.push({<br>
+          x:randomX,<br>
+          y:randomY,<br>
+          width: 20,<br>
+          height: 20<br>
+          });<br>
+          };</p>
+        <p>// Check for Collision and Delete Skeet<br>
+          var updateSkeets = function(b){<br>
+          if (bullets.length){<br>
+          // Cycle through each Skeet in Array<br>
+          for (var i = 0; i &lt; b.length; i++){<br>
+          // Compare it with each Bullet<br>
+          for (var j = 0; j &lt; bullets.length; j++){<br>
+          if (bullets[j].x &gt; (b[i].x - (b[i].width / 2)) &amp;&amp; <br>
+          bullets[j].x &lt; (b[i].x + b[i].width ) &amp;&amp; <br>
+          bullets[j].y &gt; b[i].y - (b[i].height / 2) &amp;&amp; <br>
+          bullets[j].y &lt; (b[i].y + b[i].height) ){<br>
+          score++;<br>
+          SKEETS_NUM--;<br>
+          if (b[i]){ // Still there?<br>
+          b.splice(i, 1);<br>
+          }<br>
+          }<br>
+          }<br>
+          }<br>
+          }<br>
+          };</p>
+        <p>var drawSkeets = function(b){<br>
+          // Cycle through Array and draw each skeet<br>
+          for (var i = 0; i &lt; b.length; i++){ <br>
+          strokeWeight (3);<br>
+          stroke (153, 0, 255);<br>
+          fill (255, 166, 0); <br>
+          rect(b[i].x, b[i].y, b[i].width, b[i].height);<br>
+          }<br>
+          };</p>
+        <p>var drawBullets = function(b){<br>
+          strokeWeight (1);<br>
+          stroke (255, 0, 0);<br>
+          fill (255, 255, 0); </p>
+        <p>// Cycle through Array and draw each bullet at x, y<br>
+          for (var i = 0; i &lt; b.length; i += 1){ <br>
+          ellipse(b[i].x, b[i].y, 7, 7);<br>
+          }<br>
+          <br>
+          };</p>
+        <p>// Begin Game Loop<br>
+          draw = function(){<br>
+          noStroke (); // Prevent player from suffering a coronary<br>
+          // Draw Background at 85% Opacity for a bit of motion blur<br>
+          fill (8, 36, 5, 85);<br>
+          rect (0, 0, 400, 400); </p>
+        <p>if (SKEETS_NUM &gt; 0){<br>
+          updateBullets(bullets);<br>
+          updateSkeets(skeets);<br>
+          }</p>
+        <p>drawBullets(bullets);</p>
+        <p>if (SKEETS_NUM &gt; 0){<br>
+          paddlePos = mouseX - 40; // Center Paddle to Mouse<br>
+          if (SKEETS_NUM &gt; 1){ <br>
+          if (skeets.length &lt; maxNumSkeets){<br>
+          createSkeet();<br>
+          }<br>
+          }<br>
+          }<br>
+          else{<br>
+          fill (255, 0, 0); <br>
+          textFont(myFont1, 52);<br>
+          text(&quot;Game Over&quot;, 96, 200);<br>
+          }</p>
+        <p>drawSkeets(skeets); // Happy little targets :)</p>
+        <p>// Draw Paddle<br>
+          noStroke (); <br>
+          fill(124, 0, 255);<br>
+          rect(paddlePos, 356, 80, 16);</p>
+        <p>fill(255, 255, 255);<br>
+          textFont(myFont1, 20);<br>
+          text(&quot;Score:&quot;, 18, 40);text(score, 81, 40); </p>
+        <p>};// End Game Loop</p>
+        <p>/* Tutorials in plain English by Dillinger &copy; 2012. <br>
+          All code is owned by its respective author and made available under 
+          an MIT license:<br>
+          http://opensource.org/licenses/mit-license.php */<br>
+        </p>
+        <p><br>
+        </p>
+        </td>
+    </tr>
+      </table>
+ </div>
+
+ </body>
+
+
+ <!-- run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <script src="processing-1.3.6.min.js"></script> 
+ 
+ <!-- The the name the program source code goes here-->
+ <script src="Shooter.js"></script> 
+ 
+ <script type="application/javascript">
+//get the canvas that processingjs will use
+  var canvas = document.getElementById("mycanvas"); 
+//pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+  var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>

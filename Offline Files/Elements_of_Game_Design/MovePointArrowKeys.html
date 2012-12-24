@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<!-- start of the document -->
+<html> 
+
+ <!-- The header. Information here doesn't make up elements of the webpage. We'll define all the javascript stuff at the end, so we just put the title here. -->
+ <head>
+    <title>Move Point Arrow with Keys</title> <!-- Title to be displayed in browser -->
+    <style type="text/css">
+<!--
+.style1 {font-family: Arial, Helvetica, sans-serif}
+-->
+    </style>
+</head>
+ 
+ <!-- The body of the webpage, where all visible stuff lies. -->
+ <body>
+    <p align="center">
+      <canvas id="mycanvas"></canvas> <!--This draws the canvas on the webpage -->
+    </p>
+	<hr>
+	<div align="center">
+	<!-- Name of Program -->
+	<h2>Move Point Arrow with Keys</h2>
+	  <table border="4" cellpadding="8">
+	    
+    <tr>
+      <td><p>/*&lt;Description&gt; Use the built in Keyboard Functions to update Variables. &lt;/Description&gt;*/</p>
+        <p>// Declare a CONSTANT_VARIABLE. This never changes.<br>
+          var DOT_SPEED = 4.2;<br>
+          // Declare an operatorVariable. This will be updated.<br>
+          var dotPositionX = 200;<br>
+          var dotPositionY = 200;</p>
+        <p>// Begin Game Loop. Everything in here will loop at 30 FPS<br>
+          draw = function(){<br>
+          // Erase everything and paint the background black<br>
+          background(0); </p>
+        <p>if(keyIsPressed){ // If any key is pressed...<br>
+          // Check for specific keys<br>
+          if(keyCode === DOWN){ <br>
+          // Add DOT_SPEED to Y Position Variable<br>
+          dotPositionY = dotPositionY + DOT_SPEED; <br>
+          }<br>
+          if(keyCode === UP){<br>
+          // Subtract DOT_SPEED from Y Position Variable<br>
+          dotPositionY = dotPositionY - DOT_SPEED;<br>
+          }<br>
+          if(keyCode === RIGHT){<br>
+          // Another way to add 2 numbers<br>
+          dotPositionX += DOT_SPEED; <br>
+          }<br>
+          if(keyCode === LEFT){<br>
+          // Another way to increment by 1<br>
+          dotPositionX -= DOT_SPEED; <br>
+          } <br>
+          }</p>
+        <p>// Draw Point<br>
+          stroke(255, 0, 0);  // Set Color<br>
+          strokeWeight(12); // Set Point Radius <br>
+          // Draw point using updated Variables<br>
+          point(dotPositionX, dotPositionY); </p>
+        <p>}; // end Game Loop</p>
+        <p>/* Tutorials in plain English by Dillinger &copy; 2012. <br>
+          All code is owned by its respective author and made available under 
+          an MIT license:<br>
+          http://opensource.org/licenses/mit-license.php */<br>
+        </p>
+        <p><br>
+        </p></td>
+    </tr>
+      </table>
+ </div>
+
+ </body>
+
+
+ <!-- run all the javascript stuff -->
+ <!-- Include the processing.js commands -->
+ <script src="../processing-1.3.6.min.js"></script> 
+ <!-- The actual source code for the program goes here-->
+ 
+<script src="MovePointArrowKeys.js"></script> 
+ <script type="application/javascript">
+  var canvas = document.getElementById("mycanvas"); //get the canvas that processingjs will use
+  var processingInstance = new Processing(canvas, sketchProc); //pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+ </script>
+
+</html>

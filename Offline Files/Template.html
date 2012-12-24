@@ -1,0 +1,40 @@
+<!-- Open template.js, paste your Program into the commented part and 
+Save As NameOfProgram.js
+then at the bottom of this page, change  
+<script src="template.js"></script>  to 
+<script src="NameOfProgram.js"></script> 
+and Save as NameOfProgram.html -->
+
+<!DOCTYPE html>
+<!-- start of the document -->
+<html> 
+ <!-- The header. Information here doesn't make up elements of the webpage. We'll define all the javascript stuff at the end, so we just put the title here. -->
+ <head>
+ <!-- Title to be displayed in browser -->
+    <title>Template</title> 
+</head>
+ 
+ <!-- The body of the webpage, where all visible stuff lies. -->
+ <body>
+    <p align="center"> 
+	<!--This draws the Canvas on the webpage -->
+      <canvas id="mycanvas"></canvas> 
+    </p>
+ </body>
+
+
+ <!-- run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <script src="processing-1.3.6.min.js"></script> 
+ 
+ <!-- The name of the Program Source Code goes here -->
+ <script src="template.js"></script> 
+ 
+ <script type="application/javascript">
+  //get the canvas that Processing-js will use
+  var canvas = document.getElementById("mycanvas"); 
+  //pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+  var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>

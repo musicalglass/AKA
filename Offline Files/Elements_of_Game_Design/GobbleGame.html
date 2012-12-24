@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<!-- start of the document -->
+<html> 
+
+ <!-- The header. Information here doesn't make up elements of the webpage. We'll define all the javascript stuff at the end, so we just put the title here. -->
+ <head>
+    <title>Collide with Things (Gobble Game)</title> <!-- Title to be displayed in browser -->
+    <style type="text/css">
+<!--
+.style1 {font-family: Arial, Helvetica, sans-serif}
+-->
+    </style>
+</head>
+ 
+ <!-- The body of the webpage, where all visible stuff lies. -->
+ <body>
+    <p align="center">
+    <!--This draws the canvas on the webpage -->
+      <canvas id="mycanvas"></canvas> 
+    </p>
+	<hr>
+	<div align="center">
+	
+	<!-- Name of Program -->
+  <h2>Collide with Things (Gobble Game)</h2>
+	  <table border="4" cellpadding="8">
+	    
+    <tr>
+      <td> 
+        <p>var mySpeed = 4;<br>
+          var score = 0;<br>
+          var munchies = [];<br>
+          var munchNum = 6;<br>
+          var randomX;<br>
+          var randomY;<br>
+          var myDudeX = 200;<br>
+          var myDudeY = 200;<br>
+          var startGame = &quot;false&quot;;</p>
+        <p>var createMunchies = function(){<br>
+          randomX = round( random(20, 380) );<br>
+          randomY = round( random(20, 380) );<br>
+          munchies.push({<br>
+          x:randomX,<br>
+          y:randomY<br>
+          });<br>
+          };</p>
+        <p>var updateMunchies = function(b){<br>
+          for (var i = b.length - 1; i &gt;= 0; i = i - 1){<br>
+          if(myDudeX &gt; b[i].x - 8 &amp;&amp; <br>
+          myDudeX &lt; b[i].x + 8 &amp;&amp; <br>
+          myDudeY &gt; b[i].y - 8 &amp;&amp; <br>
+          myDudeY &lt; b[i].y + 8){<br>
+          score++;<br>
+          munchNum--;<br>
+          b.splice(i, 1);<br>
+          }<br>
+          }<br>
+          };</p>
+        <p>var drawMunchies = function(b){<br>
+          strokeWeight (2);<br>
+          stroke (255, 255, 0);<br>
+          fill (255, 0, 0); <br>
+          for (var i = b.length - 1; i &gt;= 0; i = i - 1){<br>
+          ellipse(b[i].x, b[i].y, 12, 12);<br>
+          }<br>
+          };</p>
+        <p>mousePressed = function(){<br>
+          for (var i = 1; i &lt;= munchNum; i++) {<br>
+          createMunchies();<br>
+          startGame = &quot;true&quot;;<br>
+          }<br>
+          };</p>
+        <p>keyPressed = function(){<br>
+          if(keyCode === LEFT) {<br>
+          myDudeX = myDudeX - mySpeed;}<br>
+          if (keyCode === RIGHT) {<br>
+          myDudeX = myDudeX + mySpeed;} <br>
+          if(keyCode === UP) {<br>
+          myDudeY = myDudeY - mySpeed;}<br>
+          if (keyCode === DOWN) {<br>
+          myDudeY = myDudeY + mySpeed;} <br>
+          };</p>
+        <p>var drawDude = function(){<br>
+          strokeWeight (3);<br>
+          stroke (0, 0, 0);<br>
+          fill (0, 255, 0); <br>
+          ellipse(myDudeX, myDudeY, 16, 17);<br>
+          };</p>
+        <p>// Begin Game Loop<br>
+          draw = function(){<br>
+          background(0); // Clear the Screen Black</p>
+        <p>// Draw Player<br>
+          if(munchNum !== 0) {<br>
+          drawDude();<br>
+          }<br>
+          updateMunchies(munchies);<br>
+          drawMunchies(munchies);</p>
+        <p>// Use Fantasy Font<br>
+          var f = createFont(&quot;fantasy&quot;, 18);<br>
+          // Set Font Size<br>
+          textFont(f, 28);</p>
+        <p>fill (0, 47, 255); // Blue<br>
+          if (startGame === &quot;false&quot;){<br>
+          text(&quot;Use Arrow keys to Gobble Dots&quot;, 30, 107);<br>
+          text(&quot;Click Screen to Begin&quot;, 80, 172);<br>
+          }<br>
+          else{<br>
+          fill(255, 0, 0);<br>
+          text(&quot;Score:&quot;, 18, 40); text(score, 100, 40); <br>
+          }</p>
+        <p>textFont(f, 52);<br>
+          if(munchNum === 0) {<br>
+          text(&quot;Game Over&quot;, 96, 200);<br>
+          }<br>
+          }; // End Game Loop</p>
+        <p>/* Tutorials in plain English by Dillinger &copy; 2012. <br>
+          All code is owned by its respective author and made available under 
+          an MIT license:<br>
+          http://opensource.org/licenses/mit-license.php */<br>
+        </p>
+        <p><br>
+        </p>
+        </td>
+    </tr>
+      </table>
+ </div>
+
+ </body>
+
+
+ <!-- run all the javascript stuff -->
+ <!-- Include the processing.js commands -->
+ <script src="../processing-1.3.6.min.js"></script> 
+ <!-- The actual source code for the program goes here-->
+ 
+<script src="GobbleGame.js"></script> 
+ <script type="application/javascript">
+  var canvas = document.getElementById("mycanvas"); //get the canvas that processingjs will use
+  var processingInstance = new Processing(canvas, sketchProc); //pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+ </script>
+
+</html>

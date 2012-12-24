@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<!-- start of the document -->
+<html> 
+
+ <!-- The header. Information here doesn't make up elements of the webpage. 
+ We'll define all the JavaScript stuff at the end, so we just put the title here. -->
+ <head>
+ <!-- Title to be displayed in browser -->
+    <title>6 Frame Walk Cycle</title> 
+</head>
+ 
+ <!-- The body of the webpage, where all visible stuff lies. -->
+ <body>
+    <p align="center"> 
+    <!--This draws the canvas on the webpage -->
+      <canvas id="mycanvas"></canvas> 
+    </p>
+	<hr>
+	
+<div align="center"> 
+  <!-- Name of Program -->
+  <h2>6 Frame Walk Cycle</h2>
+
+	  <table border="4" cellpadding="8">
+	    
+    <tr>
+      <td> 
+        <p>/*&lt;Description&gt; A Heirarchy of Dependencies using Matrix Transformations. 
+          &lt;/Description&gt;*/</p>
+        <p>frameRate(6);<br>
+          var frameNum = 3;<br>
+          var Action = 1;</p>
+        <p>// Declare operatorVariables<br>
+          var pelvisTranslateX = 200; <br>
+          var pelvisTranslateY = 200; </p>
+        <p>var leftLegTranslateX = 0; <br>
+          var leftLegTranslateY = 0; <br>
+          var leftLegRotate = 0; <br>
+          var leftShinRotate = 0; <br>
+          var leftFootRotate = 0; </p>
+        <p>var rightLegTranslateX = 0; <br>
+          var rightLegTranslateY = 0; <br>
+          var rightLegRotate = 0; <br>
+          var rightShinRotate = 0; <br>
+          var rightFootRotate = 0; </p>
+        <p>// Begin Game Loop<br>
+          draw = function (){<br>
+          background(255); // Set color(greyscale)</p>
+        <p>if(Action){<br>
+          frameNum++; // Animate<br>
+          }</p>
+        <p>if(frameNum === 7){<br>
+          frameNum = 1;<br>
+          }</p>
+        <p></p>
+        <p>/* The Pelvis is the Character's Center in this Heirarchy. Translating 
+          it moves the entire &quot;Rig&quot;. */<br>
+          translate(pelvisTranslateX, pelvisTranslateY); <br>
+          //scale(1.0, 1.0);<br>
+          //rotate(0);<br>
+          strokeWeight(20); </p>
+        <p>// Leg Right<br>
+          pushMatrix(); // Begin Right Leg Transformations<br>
+          translate(rightLegTranslateX,rightLegTranslateY);<br>
+          rotate(rightLegRotate);<br>
+          line(0, 0, 0, 60); // draw Leg Right</p>
+        <p>// Shin Right<br>
+          translate(0,60);<br>
+          rotate(rightShinRotate);<br>
+          line(0, 0, 0, 54); // draw Shin Right</p>
+        <p>// Foot Right<br>
+          strokeWeight(12); // Right Foot Thickness<br>
+          translate(0,60);<br>
+          rotate(rightFootRotate);<br>
+          triangle(-58, 20, 0, -6, 14, 20); // Draw foot right</p>
+        <p>popMatrix(); // End Right Leg Transformations</p>
+        <p>// Pelvis<br>
+          strokeWeight(4); // Pelvis line thickness<br>
+          ellipse(0, 0, 60, 52); //Draw Pelvis</p>
+        <p>// Leg Left<br>
+          pushMatrix(); <br>
+          strokeWeight(20); // Leg Thickness<br>
+          translate(leftLegTranslateX,leftLegTranslateY);<br>
+          rotate(leftLegRotate);<br>
+          line(0, 0, 0, 60); // Draw Leg Left</p>
+        <p>// Shin Left<br>
+          translate(0,60);<br>
+          rotate(leftShinRotate);<br>
+          line(0, 0, 0, 54); // draw Shin Left</p>
+        <p>// Foot Left<br>
+          strokeWeight(12); // Foot line Thickness<br>
+          translate(0,60);<br>
+          rotate(leftFootRotate);<br>
+          triangle(-58, 20, 0, -6, 14, 20); // Draw Foot Left<br>
+          popMatrix(); // End Left Leg</p>
+        <p>resetMatrix();</p>
+        <p>fill(0, 0, 0);<br>
+          textSize(32); // Change Text Size<br>
+          text(&quot;frame:&quot;,24,45); text(frameNum,122,45); <br>
+          fill(255);</p>
+        <p>// Contact<br>
+          // Frame 1 Transformation Settings<br>
+          if(frameNum === 1){ <br>
+          pelvisTranslateX = 200; <br>
+          pelvisTranslateY = 209; </p>
+        <p>leftLegTranslateX = 4; <br>
+          leftLegTranslateY = 12; <br>
+          leftLegRotate = -26; <br>
+          leftShinRotate = -17; <br>
+          leftFootRotate = 37; </p>
+        <p>rightLegTranslateX = -4; <br>
+          rightLegTranslateY = 12; <br>
+          rightLegRotate = 38; <br>
+          rightShinRotate = -1; <br>
+          rightFootRotate = 6; <br>
+          } // End Frame 1</p>
+        <p>//Propel<br>
+          // Frame 2 Transformation Settings<br>
+          if(frameNum === 2){ <br>
+          pelvisTranslateX = 200; <br>
+          pelvisTranslateY = 200; </p>
+        <p>leftLegTranslateX = 6; <br>
+          leftLegTranslateY = 12; <br>
+          leftLegRotate = -25; <br>
+          leftShinRotate = -49; <br>
+          leftFootRotate = -26; </p>
+        <p>rightLegTranslateX = -4; <br>
+          rightLegTranslateY = 12; <br>
+          rightLegRotate = 17; <br>
+          rightShinRotate = -17; <br>
+          rightFootRotate = 0; <br>
+          } // End Frame 2</p>
+        <p>// Passing<br>
+          // Frame 3 Transformation Settings<br>
+          if(frameNum === 3){ <br>
+          pelvisTranslateX = 200; <br>
+          pelvisTranslateY = 189; </p>
+        <p>leftLegTranslateX = 0; <br>
+          leftLegTranslateY = 14; <br>
+          leftLegRotate = 32; <br>
+          leftShinRotate = -103; <br>
+          leftFootRotate = 19; </p>
+        <p>rightLegTranslateX = 0; <br>
+          rightLegTranslateY = 12; <br>
+          rightLegRotate = 0; <br>
+          rightShinRotate = 0; <br>
+          rightFootRotate = 0; <br>
+          } // End Frame 3</p>
+        <p>// Contact<br>
+          // Frame 4 Transformation Settings<br>
+          if(frameNum === 4){ <br>
+          pelvisTranslateX = 200; <br>
+          pelvisTranslateY = 209; </p>
+        <p>leftLegTranslateX = -4; <br>
+          leftLegTranslateY = 12; <br>
+          leftLegRotate = 38; <br>
+          leftShinRotate = -1; <br>
+          leftFootRotate = 6; </p>
+        <p>rightLegTranslateX = 4; <br>
+          rightLegTranslateY = 12; <br>
+          rightLegRotate = -26; <br>
+          rightShinRotate = -17; <br>
+          rightFootRotate = 37; <br>
+          } // End Frame 4</p>
+        <p>//Propel<br>
+          // Frame 5 Transformation Settings<br>
+          if(frameNum === 5){ <br>
+          pelvisTranslateX = 200; <br>
+          pelvisTranslateY = 200; </p>
+        <p>leftLegTranslateX = -6; <br>
+          leftLegTranslateY = 12; <br>
+          leftLegRotate = 17; <br>
+          leftShinRotate = -17; <br>
+          leftFootRotate = 0; </p>
+        <p>rightLegTranslateX = 4; <br>
+          rightLegTranslateY = 12; <br>
+          rightLegRotate = -25; <br>
+          rightShinRotate = -49; <br>
+          rightFootRotate = -26; <br>
+          } // End Frame 4</p>
+        <p>// Passing<br>
+          // Frame 6 Transformation Settings<br>
+          if(frameNum === 6){ <br>
+          pelvisTranslateX = 200; <br>
+          pelvisTranslateY = 189; </p>
+        <p>rightLegTranslateX = 0; <br>
+          rightLegTranslateY = 14; <br>
+          rightLegRotate = 32; <br>
+          rightShinRotate = -103; <br>
+          rightFootRotate = 19; </p>
+        <p>leftLegTranslateX = 0; <br>
+          leftLegTranslateY = 12; <br>
+          leftLegRotate = 0; <br>
+          leftShinRotate = 0; <br>
+          leftFootRotate = 0; <br>
+          } // End Frame 6</p>
+        <p>// Background<br>
+          stroke(0); <br>
+          strokeWeight(6); <br>
+          line(0, 350, 400, 350);</p>
+        <p>}; // End Game Loop</p>
+        <p><br>
+          /* Tutorials in plain English by Dillinger &copy; 2012. <br>
+          All code is owned by its respective author and made available under 
+          an MIT license:<br>
+          http://opensource.org/licenses/mit-license.php */<br>
+        </p>
+      </td>
+    </tr>
+      </table>
+ </div>
+
+ </body>
+
+
+ <!-- run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <script src="../processing-1.3.6.min.js"></script> 
+ 
+ <!-- The the name the program source code goes here-->
+ 
+<script src="6FrameWalkCycle.js"></script> 
+ 
+ <script type="application/javascript">
+//get the canvas that processingjs will use
+  var canvas = document.getElementById("mycanvas"); 
+//pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+  var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>
