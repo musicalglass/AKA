@@ -1,0 +1,185 @@
+<html>
+<head>
+<title>Accelerated</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p><font size="+1">Open Notepad and type the following:</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1">int main( ){return 0;}</font>
+       </pre>
+    </td>
+  </tr>
+</table>
+<p><font size="+1">This is the construct. This is where we will build our first 
+  program. Save it as <font color="#0000FF">MyFile.cs</font><br>
+  Every C++ program consists of one or more functions. At least one of these functions 
+  <u>must</u> be named main. In this case we only have one function: to return 
+  an integer value to the computer. In this case a value of 0, which will terminate 
+  the program. If you run this program you won't see anything happen, it will 
+  just run and quit. It is like a blank page</font></p>
+<h3>Comments</h3>
+<pre><font color="#0000FF" size="+1">/* This is a comment. */</font></pre>
+<pre><font color="#0000FF" size="+1">/*
+   This is also a comment.
+   Anything between the asterisk and forward slashes
+   will be ignored by the computer.
+   You can use this space to write notes and document your code.
+*/ </font></pre>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1">/* Empty Template for C++ code<br>File Name: Template.cpp<br>Written by: YourName<br>Date: 
+*/
+<br>int main ( )
+{
+/* Code goes here */
+return 0 ;
+} /* end function main */
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font size="+1">Right, so for a first project we want to do something simple 
+  like print the word &quot;Hello&quot; to the screen.<br>
+  If this were BASIC you would simply write:</font></p>
+<p><font size="+1">print &quot;Hello&quot;</font></p>
+<p><font size="+1">Pretty straightforward. Of course in their efforts to make 
+  everything as mind numbingly complicated as possible, we don't just go print 
+  hello in C++. Nooooooooo. We have to send a whole bunch of complicated-ass instructions 
+  to the computer every time we want to do a simple thing like say &quot;Hi&quot;.</font></p>
+<p><font size="+1">To get an idea what I'm talking about, open another Notepad, 
+  go to the Includes folder of your compiler, and open the file called stdio.h<br>
+  ( Borland/BCC55/Includes/stdio.h )<br>
+  this is the Standard Input Output header file that handles a whole bunch of 
+  the commands associated with inputting and outputting text on the computer. 
+  Imagine having to type up something like this every time you wanted to do a 
+  simple thing like print &quot;Yo&quot; to the screen.</font></p>
+<p><font size="+1">OK now picture this: you're a programmer writing these endlessly 
+  long-ass code commands over and over and over. Eventually you get fed up with 
+  typing the SAME THING all the time and instead make a file which contains all 
+  of these &quot;frequent phrases&quot;. Now whenever you want to make a new program, 
+  you just copy the long, tedious part out of one document and paste it into your 
+  code.<br>
+  After time, you end up with maybe 100 different applications on your hard drive, 
+  each containing the exact same page long bit of code.<br>
+  One day you say to yourself &quot;This is stupid. Instead of having the exact 
+  same chunk of code residing in 100 different places on my hard drive. What if 
+  instead I stored the reusable part of code in it's own separate file? Then when 
+  I want to include that bit in my code, I could just make a pointer to it.&quot; 
+  Like this:</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1">#include &lt;stdio.h&gt;</font></pre>
+      <pre><font color="#0000FF" size="+1">int main ( void ) 
+{ 
+printf ( &quot;Hello&quot; ) ; 
+return 0 ; 
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font size="+1">Now what we have effectively done, is include the entire contents 
+  of the file stdio.h. When the compiler turns our code into an application, it 
+  will include everything it needs from stdio.h as if it were part of our code.<br>
+  This is called a <i>header</i> file, signified by the . h extension and goes 
+  at the head of our code.<br>
+  Inside the Standard Input Output header file are a number of different <i>functions</i> 
+  you can call upon. In this case, we are calling the function <i>printf</i>. 
+  Whatever is inside the ( ) is the <i>parameter</i> that is passed to the function. 
+  In this case the parameter we are passing is a string of text, signified by 
+  the quotation marks. Whatever is inside the &quot; &quot; will be printed to 
+  the screen .</font></p>
+<p><font size="+1">Right, let's try to print some thing on two lines:</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1">/* HelloHello.cpp
+This will print 
+HelloHello 
+*/ 
+
+#include &lt;stdio.h&gt;</font></pre>
+      <pre><font color="#0000FF" size="+1">int main ( void ) 
+{ 
+printf ( &quot;Hello&quot; ) ; 
+printf ( &quot;Hello&quot; ) ; 
+return 0 ; 
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h3>Print on new line</h3>
+<p><font size="+1">To print on a new line, use the command: <font color="#0000FF"><br>
+  \n</font></font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1">/* New Line
+This will print 
+Hello
+Hello 
+*/ 
+
+#include &lt;stdio.h&gt;</font></pre>
+      <pre><font color="#0000FF" size="+1">int main ( void ) 
+{ 
+printf ( &quot;Hello\n&quot; ) ; 
+printf ( &quot;Hello&quot; ) ; 
+return 0 ; 
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<font size="+1"><br>
+Note that is a backward slash ( above the Enter key ).<br>
+<br>
+</font>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1">/* Add spaces<br>This will print 
+Hello Hello 
+*/ 
+
+#include &lt;stdio.h&gt;</font></pre>
+      <pre><font color="#0000FF" size="+1">int main ( void ) 
+{ 
+printf ( &quot;Hello &quot; ) ; 
+printf ( &quot;Hello&quot; ) ; 
+return 0 ; 
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h3>Tabs</h3>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1">/* Add Tab<br>This will print 
+Hello
+        Hello 
+*/ 
+
+#include &lt;stdio.h&gt;</font></pre>
+      <pre><font color="#0000FF" size="+1">int main ( void ) 
+{ 
+printf ( &quot;Hello\n&quot; ) ; 
+printf ( &quot;\tHello&quot; ) ; 
+return 0 ; 
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p align="center"><font size="+1"><a href="../index.htm">Index</a></font></p>
+</body>
+</html>

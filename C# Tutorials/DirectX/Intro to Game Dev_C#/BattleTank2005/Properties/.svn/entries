@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="17"
+   name=""
+   committed-date="2005-03-28T17:09:00.581425Z"
+   url="http://ares3.sytes.net/svn/Hobbyist/Games/1.%20Introduction%20to%20Game%20Development/C%23/BattleTank2005/Properties"
+   last-author="dpierson"
+   kind="dir"
+   uuid="126e713f-9840-b846-a618-1597db717849"
+   revision="30"/>
+<entry
+   committed-rev="17"
+   name="AssemblyInfo.cs"
+   text-time="2005-04-13T18:29:10.268718Z"
+   committed-date="2005-03-28T17:09:00.581425Z"
+   checksum="e90ac2dffcc02ccdcc9d950cb0eef002"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:10.143718Z"/>
+<entry
+   committed-rev="17"
+   name="Settings.settings"
+   text-time="2005-04-13T18:29:10.284343Z"
+   committed-date="2005-03-28T17:09:00.581425Z"
+   checksum="4b3534a698be9dd5fa7e813e1ea8b03f"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:10.159343Z"/>
+<entry
+   committed-rev="17"
+   name="Settings.cs"
+   text-time="2005-04-13T18:29:10.315593Z"
+   committed-date="2005-03-28T17:09:00.581425Z"
+   checksum="b2cd8c52fc15373f1322dcc5ea9f1de2"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:10.190593Z"/>
+<entry
+   committed-rev="17"
+   name="Resources.resx"
+   text-time="2005-04-13T18:29:10.331218Z"
+   committed-date="2005-03-28T17:09:00.581425Z"
+   checksum="6d7e851c79e155afaa710433d82f34f2"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:10.206218Z"/>
+<entry
+   committed-rev="17"
+   name="Resources.cs"
+   text-time="2005-04-13T18:29:10.362468Z"
+   committed-date="2005-03-28T17:09:00.581425Z"
+   checksum="5e43c52b8439c06182c471608c3f2a92"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:10.237468Z"/>
+</wc-entries>

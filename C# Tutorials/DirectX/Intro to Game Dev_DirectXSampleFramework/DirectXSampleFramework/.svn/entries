@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="28"
+   name=""
+   committed-date="2005-03-28T21:40:50.443856Z"
+   url="http://ares3.sytes.net/svn/Hobbyist/Games/1.%20Introduction%20to%20Game%20Development/DirectXSampleFramework/DirectXSampleFramework"
+   last-author="dpierson"
+   kind="dir"
+   uuid="126e713f-9840-b846-a618-1597db717849"
+   prop-time="2005-04-13T18:29:08.971843Z"
+   revision="30"/>
+<entry
+   committed-rev="27"
+   name="dxmutdata.cs"
+   text-time="2005-04-13T18:29:08.987468Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="b709f82fa7cab67a1ccbce1f50ea8edb"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:04.643718Z"/>
+<entry
+   committed-rev="27"
+   name="DirectXSampleFramework.csproj"
+   text-time="2005-04-13T18:29:09.018718Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="c459e4281b4a18fbcd8ad345767899a9"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:04.674968Z"/>
+<entry
+   committed-rev="27"
+   name="dxmutmisc.cs"
+   text-time="2005-04-13T18:29:09.034343Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="8c7ac1490c8b1a75f5bbac7eeb5014dd"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:04.956218Z"/>
+<entry
+   committed-rev="27"
+   name="dxmutmesh.cs"
+   text-time="2005-04-13T18:29:09.065593Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="58bc65c4e4a1b6ce13cb5378132cf314"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:04.987468Z"/>
+<entry
+   committed-rev="27"
+   name="dxmutexception.cs"
+   text-time="2005-04-13T18:29:09.081218Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="246b670d76e8c086a162f92396de6bfd"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:05.518718Z"/>
+<entry
+   committed-rev="27"
+   name="dxmut.cs"
+   text-time="2005-04-13T18:29:09.112468Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="835cfef2614ea8cd821500a499fbe33d"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:06.721843Z"/>
+<entry
+   committed-rev="27"
+   name="dxmutgui.cs"
+   text-time="2005-04-13T18:29:09.174968Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="b602dd525300808dfb983fcf067ea7d9"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:07.487468Z"/>
+<entry
+   committed-rev="27"
+   name="dxmutenum.cs"
+   text-time="2005-04-13T18:29:09.190593Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="414319009814f1a8781cba2f4187d781"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:07.878093Z"/>
+<entry
+   name="Properties"
+   kind="dir"/>
+<entry
+   committed-rev="27"
+   name="dxmutSettingsDlg.cs"
+   text-time="2005-04-13T18:29:09.221843Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="faf771fec7ab62d8bff148d749a940ad"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:08.956218Z"/>
+</wc-entries>

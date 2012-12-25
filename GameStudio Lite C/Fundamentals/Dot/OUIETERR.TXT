@@ -1,0 +1,3 @@
+
+< bmap = ^dot_panel.pcx" ;>
+DEBUG_DOT.C 2:2  (): Can't open dot_panel.pcx   

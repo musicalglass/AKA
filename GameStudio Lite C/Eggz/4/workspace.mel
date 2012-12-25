@@ -1,0 +1,3 @@
+//Maya 7.0.1 Project Definition
+
+workspace -fr "particles" "particles";

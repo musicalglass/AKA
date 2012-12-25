@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="27"
+   name=""
+   committed-date="2005-03-28T21:39:58.839652Z"
+   url="http://ares3.sytes.net/svn/Hobbyist/Games/1.%20Introduction%20to%20Game%20Development/DirectXSampleFramework/DirectXSampleFramework/Properties"
+   last-author="dpierson"
+   kind="dir"
+   uuid="126e713f-9840-b846-a618-1597db717849"
+   revision="30"/>
+<entry
+   committed-rev="27"
+   name="AssemblyInfo.cs"
+   text-time="2005-04-13T18:29:08.221843Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="ba0e155c4f1668e2dbb4b5df2f86c7dc"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:07.987468Z"/>
+<entry
+   committed-rev="27"
+   name="Settings.settings"
+   text-time="2005-04-13T18:29:08.284343Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="4b3534a698be9dd5fa7e813e1ea8b03f"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:08.018718Z"/>
+<entry
+   committed-rev="27"
+   name="Settings.cs"
+   text-time="2005-04-13T18:29:08.299968Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="efa72138fe9edc47f0db9ba51548b9a4"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:08.034343Z"/>
+<entry
+   committed-rev="27"
+   name="Resources.resx"
+   text-time="2005-04-13T18:29:08.331218Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="6d7e851c79e155afaa710433d82f34f2"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:08.159343Z"/>
+<entry
+   committed-rev="27"
+   name="Resources.cs"
+   text-time="2005-04-13T18:29:08.346843Z"
+   committed-date="2005-03-28T21:39:58.839652Z"
+   checksum="875c3b87697d5c176e8fc6635006e45b"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:08.190593Z"/>
+</wc-entries>

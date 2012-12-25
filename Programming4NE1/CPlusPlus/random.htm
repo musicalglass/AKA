@@ -1,0 +1,349 @@
+<title>C++ Tutorial / Random Variables</title>
+<BODY COLOR=black BGPROPERTIES=FIXED bgcolor="#000000" text="#CC66FF">
+<p><font face="Arial, Helvetica, sans-serif" size="+1"><i><font color="#00CC00">&quot;I've 
+  seen an Agent punch through a concrete wall. Men have emptied entire clips at 
+  them and hit nothing but air. Yet their strength and their speed are still based 
+  in a world that is built on rules, because of that, they will never be as strong, 
+  or as fast as you can be.&quot;</font></i></font></p>
+<p><font color="#00CC00" face="Arial, Helvetica, sans-serif" size="+1">Neo:<i> 
+  &quot;What are you trying to tell me? That I can dodge bullets?&quot;</i></font></p>
+<h1 align="center"><font face="Arial, Helvetica, sans-serif" color="#FF9900">Random 
+  Variables</font></h1>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Consider the following:</font><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"><br>
+  <br>
+  </font><font face="Arial, Helvetica, sans-serif" size="+1">IF My_Coin = Flipped 
+  cout &lt;&lt; &quot;Heads&quot; OR cout &lt;&lt; &quot;Tails&quot;</font><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"><br>
+  </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Of course it would be nice 
+  if there were a virtual coin inside our computer that we could flip and then 
+  see the results, or a set of virtual dice, or a Roulette Wheel. Unfortunately 
+  all we have is numbers. Also, we can't just tell the computer to print one thing 
+  OR the other and leave it up to the computer to arbitrarily make a decision 
+  for us. If only life were so easy: that we had computers to make all of our 
+  decisions for us, but for some strange reason, people are paranoid about that. 
+  Go figure.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Nope, a computer can only 
+  think in terms of numbers.</font></p>
+<font face="Arial, Helvetica, sans-serif" size="+1">So first lets assign a numerical 
+value to our &quot;coin&quot;:</font><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> 
+</font> 
+<pre><font face="Arial, Helvetica, sans-serif" size="+1" color="BLUE">   int My_Coin = 0 ; 
+
+   if ( My_Coin == 0 ) 
+   cout &lt;&lt; &quot;Heads&quot; ; <br>
+   if ( My_Coin = 1 ) 
+   cout &lt;&lt; &quot;Tails&quot; ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Of course this will only 
+  print one or the other depending on how you set the variable My_Coin. Notice 
+  this time that we didn't start at 1 and assign 1 to Heads and 2 for Tails. There 
+  is a reason we chose to do that at this time:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">In the glorious tradition 
+  of writing programming documentation, we will now launch into a two page lecture 
+  on how computers think...... </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1"><i>Yeah, right.</i></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">It's quite simple. When 
+  we went to school we were taught to count like this:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">1 2 3 4 5 6 7, etc. etc.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">A computer however, recognizes 
+  zero as a valid number, so if I told a computer to count 7 digits, it would 
+  say:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">0 1 2 3 4 5 6</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">You're about to see why 
+  it's important to remember this:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">O.K. here's our coin</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> int My_Coin = 0 ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">We can access a random 
+  number generator using the Variable: rand ()</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> My_Coin = rand () % 2 ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">The number in the brackets 
+  determines between what numbers to choose from, in this case, it will generate 
+  a random number between 0 and 2 - 1. ( 0, 1 )</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Here's a few examples:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> My_Coin = 
+  rand () % 2 ; </font><font face="Arial, Helvetica, sans-serif" size="+1"> Generate 
+  one of 2 numbers between 0 and 1<br>
+  </font><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1">My_Dice 
+  = rand () % 6 ; </font><font face="Arial, Helvetica, sans-serif" size="+1">Generate 
+  one of 6 numbers between 0 and 5<br>
+  </font><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1">My_Cards 
+  = rand () % 52 ; </font><font face="Arial, Helvetica, sans-serif" size="+1"> 
+  Generate one of 52 numbers between 0 and 51</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Now that you've grasped 
+  this mind bogglingly complex concept, there is a way to not have to deal with 
+  having to subtract 1 from everything involving a random number, and that is 
+  quite simply to add 1 to the number returned.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Consider this:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> int Random_Number = rand () % 2 ; </font><font face="Arial, Helvetica, sans-serif" size="+1"> 
+<font color="BLUE"> </font></font><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1">int My_Coin = Random_Number + 1</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Pretty neat trick, huh? 
+  We've generated a Variable called Random_Number. Then we added 1 to it and stored 
+  it in a new Variable: My_Coin, resulting in a number between 1 and 2.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Here's an even neater trick. 
+  Check this out:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> My_Coin = My_Coin + 1</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">That's right, you can take 
+  the value of one Variable, do something with it and store it right back in itself. 
+  After all, it's a number, and it's stored as rewriteable data. </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">So we could just put it 
+  all on one line:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> int My_Coin = ( rand () % 2 ) + 1 ; </font><font face="Arial, Helvetica, sans-serif" size="+1"> </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Now you can use the numbers 
+  1 and 2:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="BLUE">#include &lt;iostream&gt;
+using namespace std ; 
+int main ( void ) 
+{ 
+int My_Coin = ( rand () % 2 ) + 1 ; </font><font face="Arial, Helvetica, sans-serif" size="+1">
+</font><font face="Arial, Helvetica, sans-serif" size="+1" color="BLUE">if ( My_Coin == 1 ) 
+cout &lt;&lt; &quot;Heads&quot; ; 
+if ( My_Coin == 2 ) 
+cout &lt;&lt; &quot;Tails&quot; ; 
+return 0 ; 
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<pre>&nbsp;</pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">A few more example:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1">My_Number 
+  = rand() % 11 </font><font face="Arial, Helvetica, sans-serif" size="+1"> Return 
+  a random number from 0 to 10</font><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"><br>
+  My_Number = ( rand() % 10 ) + 1</font><font face="Arial, Helvetica, sans-serif" size="+1"> 
+  Return a random number from 1 to 10<br>
+  </font><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1">My_Number 
+  = ( rand() % 50 ) + 1</font><font face="Arial, Helvetica, sans-serif" size="+1"> 
+  Return a random number from 1 to 50 <br>
+  </font><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1">My_Number 
+  = ( rand() % 50 ) + 50 </font><font face="Arial, Helvetica, sans-serif" size="+1">Return 
+  a random number from 50 to 100<br>
+  </font><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1">My_Number 
+  = ( ( rand() % 10 ) + 1 ) * 10</font><font face="Arial, Helvetica, sans-serif" size="+1"> 
+  Return from 10 to 100 in increments of 10</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Note: If you want to use 
+  the random number variable more than once, you will have to call on the rand() 
+  command again, otherwise you will be printing the same number over and over</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">/* Random.cpp
+   Generate a non repeating sequence of numbers
+   Written by: Your_Name
+   Date: 11/24/05
+*/
+#include &lt;iostream&gt;
+using namespace std ;       </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">int main ( void )
+{</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">/* Local Declarations */
+         int a; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">/* Statements */</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         a = ( rand () % 10 ) + 1 ; // assign random number 1 - 10
+         cout &lt;&lt; a &lt;&lt; endl ; // print it</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         a = ( rand () % 10 ) + 1 ; // re-assign new random number, etc.
+         cout &lt;&lt; a &lt;&lt; endl ;  // print it again</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         a = ( rand () % 10 ) + 1 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         a = ( rand () % 10 ) + 1 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">} /* main */
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Even though we refer to 
+  the rand() command as random, it is not a truly random number, but rather a 
+  <i>non repeating sequence</i> of numbers. I suppose one way to get a truly random 
+  sequence of numbers would be to somehow hook your computer up to a cage full 
+  of numbered ping pong balls being blown around by a fan and everytime a number 
+  passed by a sensor, it would pass that to your computer as a variable. Trying 
+  to come up with a true random number generator algorithm is a complex mathematical 
+  challenge. Not to give you any ideas, but if you happen to be the genius who 
+  can come up with an algorithm which can generate a 100% unpredictable number, 
+  it could potentially make you a multi billionaire.</font> </p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Anyways, the way the rand() 
+  or Non Repeating Sequence feature works is, it starts with a Seed Number, and 
+  it does a bunch of math to it and can continuously output new numbers without 
+  repeating the same patterns twice.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">So if you make a roulette 
+  game using rand() you can play it once and it will never repeat. However, if 
+  you play it again, it will be the exact same sequence. Not real random then, 
+  is it? Part of the definition of random is that it must be unpredictable.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">What we need to do is give 
+  it a different <i>Seed Number</i> to start with, and it will output a different 
+  sequence:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1">/* This will 
+  set the RND() Seed Number to 436 */<br>
+  srand ( 436 )</font> </p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">The srand() command will 
+  change the number which rand() uses to generate a non repeating sequence. Whatever 
+  number specified will be the new Seed Number.</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">/* RandomSeed.cpp
+   Generate a non repeating sequence of numbers
+   based on Seed number
+   Written by: Your_Name
+   Date: 11/24/05
+*/
+#include &lt;iostream&gt;
+using namespace std ;       </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">int main ( void )
+{</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">/* Local Declarations */
+         int a; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">/* Statements */
+
+         srand ( 997 ) ; // set random Seed number</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         a = ( rand () % 10 ) + 1 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         a = ( rand () % 10 ) + 1 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         a = ( rand () % 10 ) + 1 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         a = ( rand () % 10 ) + 1 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">} /* main */
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1"> You could also use a Variable 
+  for the seed number:</font></p>
+<font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> /* This will 
+set the RND() Seed Number to the value of a Variable */ <br>
+srand ( Seed_Variable ) </font> 
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Now you can change the 
+  seed number based on different criteria within the game.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">What you need is a number 
+  that is always different. One trick is to use your CPU's timer to access a number 
+  which is always changing:</font></p>
+<font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> time ( NULL 
+)</font> 
+<p><font face="Arial, Helvetica, sans-serif" size="+1">This is a constantly rising 
+  number inside your computer. You can print it to the screen if you like:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">/* TimePrint.cpp
+   Print the computer's internal clock to the screen
+   Written by: Your_Name
+   Date: 12/09/05
+*/
+#include &lt;iostream&gt;
+using namespace std ;        </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">int main ( void )
+{</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1"> cout &lt;&lt; ( time ( NULL ) ) ;</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">}</font>
+
+</pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Run the program a second 
+  time and note that the number has indeed changed. <br>
+  So we can use the value of time() to seed the rand() command</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">/* RandomTime.cpp
+   Generate a non repeating sequence of numbers
+   using computer's internal clock as a seed number
+   Written by: Your_Name
+   Date: 11/24/05
+*/
+#include &lt;iostream&gt;
+using namespace std ;       </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">int main ( void )
+{</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">/* Local Declarations */
+         int a; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">/* Statements */
+
+         srand ( time ( NULL ) ) ; // set random Seed number using time</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         a = ( rand () % 10 ) + 1 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         a = ( rand () % 10 ) + 1 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         a = ( rand () % 10 ) + 1 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         a = ( rand () % 10 ) + 1 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">} /* main */
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">If we use <font color="#0000FF">rand 
+  () % My_Number</font> we generate a number from 0 to My_Number - 1</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">This would generate a random 
+  number from 0 - 9:</font></p>
+<p><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1"> a = rand 
+  () % 10 ; </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">So to generate a number 
+  from 1 - 10, we would add 1 to the output.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" color="#0000FF" size="+1">random_integer 
+  = ( rand () % 10 ) + 1 ;</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Here's a few examples: 
+  </font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">/* RandomTypes.cpp<br>   Generate various random number ranges<br>   Written by: Your_Name<br>   Date: 11/24/05<br>*/<br>#include &lt;iostream&gt;<br>using namespace std ;       </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">int main ( void )
+{</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">/* Local Declarations */
+         int a; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">/* Statements */</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         srand ( time ( NULL ) ); // set random Seed number using time</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         cout &lt;&lt; &quot;Random number from 0 to 10: &quot; ; 
+         a = rand () % 11 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         cout &lt;&lt; &quot;Random number from 1 to 10: &quot; ; 
+         a = ( rand () % 10 ) + 1 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         cout &lt;&lt; &quot;Random number from 1 to 100: &quot; ; 
+         a = ( rand () % 100 ) + 1 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         cout &lt;&lt; &quot;Random number from 10 to 40: &quot; ; 
+         a = ( rand () % 30 ) + 10 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         cout &lt;&lt; &quot;Random number from -10 to 10: &quot; ; 
+         a = rand () % 20 - 10 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         cout &lt;&lt; &quot;Random number from 2 to 20 in increments of 2: &quot; ; 
+         a = ( ( rand () % 10 ) + 1 ) * 2 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">         cout &lt;&lt; &quot;Random number from 10 to 100 in increments of 10: &quot; ; 
+         a = ( ( rand () % 10 ) + 1 ) * 10 ; 
+         cout &lt;&lt; a &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">return 0 ;<br>} /* main */
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Since the value returned 
+  by the time() is an 10 digit number, the odds of any two games being identical 
+  is now 9999999999 to 1. Whilst this certainly makes it more difficult for an 
+  average user to guess what the next sequence might be, this would still not 
+  work if you wanted to program a Blackjack machine for a casino. All someone 
+  would need to know is the clock speed of your Blackjack machine, then they could 
+  run an identical number generator 9999999999 times adding 1 to the Seed Number 
+  each time until they hit the matching sequence. They could now guess the next 
+  number with 100% accuracy.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">This is why today most 
+  lotteries still depend on the good old ping pong ball.<br>
+  During World War II, since random numbers can be vital to cryptography, the 
+  British military had a room full of housewives doing nothing but picking ping 
+  pong balls from a batch all day and writing down the results.<br>
+  <br>
+  <br>
+  On to the Next Lesson: <a href="shuffle.htm">Shuffle the Deck</a></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1"><a href="../index.htm">Index</a><br>
+  </font></p>
+</BODY>

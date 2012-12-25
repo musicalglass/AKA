@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>C# Tutorial / Arrays</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#CC66FF">
+<h1 align="center"><font face="Arial, Helvetica, sans-serif" color="#FF9900">Arrays</font></h1>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Arrays are like a deck 
+  of blank cards you can write values on. Let's say we want to create a deck of 
+  52 cards. It would be a pain to have to write 52 separate variables. Say we 
+  want to take each card's value and add 1 to it. Instead of writing 52 lines 
+  of code to handle each card, we can create an Array called Deck. Now we can 
+  make changes to the entire Deck, or to individual cards by referring to them 
+  by their corresponding number.</font></p>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">Declare an Array 
+  of Integers</font></h3>
+<p><font color="#0000FF" face="Arial, Helvetica, sans-serif"> <font size="+1">int 
+  Deck[ 52 ] ;</font></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">In this case we have actually 
+  declared 53 separate variables numbered 0 - 52. We will ignore the variable 
+  which exists at position 0 and only use positions 1 - 52. Let's say we want 
+  to store a value of 14 in position number 1.</font></p>
+<p><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">Deck[ 1 
+  ] = 14 ;</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">or pass the value stored 
+  in position 1 to a variable:</font></p>
+<p><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">MyVariable 
+  = Deck[ 1 ] ;</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">or move a value from one 
+  position in the array to another:</font></p>
+<p><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">Deck[ 0 
+  ] = Deck[ 14 ] ;</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">We can assign the values 
+  to each field when we declare the array and the size is automatically set depending 
+  on the number of variables.<br>
+  </font></p>
+<p></p>
+<p><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">int Deck 
+  [ ] = { 14, 2, 3, 4, 5 } ;</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">This would automatically 
+  generate an array of 5 variables containing the values specified. The variables 
+  are automatically numbered 0 - 4:</font></p>
+<p><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">Deck[ 0 
+  ]</font><font face="Arial, Helvetica, sans-serif" size="+1"><br>
+  <font color="#0000FF">Deck[ 1 ]</font><br>
+  <font color="#0000FF">Deck[ 2 ]</font><br>
+  <font color="#0000FF">Deck[ 3 ]</font><br>
+  <font color="#0000FF">Deck[ 4 ]</font></font> </p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Note that for an Array, 
+  you cannot have a space between the Array name and the opening brace [</font></p>
+<p><font color="#FF0000" face="Arial, Helvetica, sans-serif" size="+1">// Wrong!</font><font face="Arial, Helvetica, sans-serif" size="+1"><br>
+  <font color="#0000FF">int MyArray [ 10 ] ; </font></font></p>
+<p><font color="#00FF00" face="Arial, Helvetica, sans-serif" size="+1">// Correct</font><font face="Arial, Helvetica, sans-serif" size="+1"><br>
+  <font color="#0000FF">int MyArray[ 10 ] ; </font></font></p>
+<p></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1"><font color="#00FF00">// HelloArray.cs<br>//  This is the classic &quot;Hello World&quot;<br>//  using an Array of Char Variables</font>
+<font color="#00FF00" size="+1" face="Arial, Helvetica, sans-serif">
+<font color="#0000FF">using System ;</font></font></font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">class HelloArray
+{
+      static void Main ()
+      {
+         <font color="#00FF00">// Local Declarations          </font>
+         char[] vowels = new char[] { 'h', 'e', 'l', 'l', 'o' } ; </font></pre>
+      <pre><font color="#00FF00" face="Arial, Helvetica, sans-serif" size="+1">         // Statements </font><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">
+         Console.WriteLine ( vowels ) ; 
+      }<font color="#00FF00">// end Main  </font>
+} <font color="#00FF00">// end HelloArray </font>
+</font><font color="#0000FF" size="+1">         </font> </pre>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#00FF00" face="Arial, Helvetica, sans-serif" size="+1">// ArrayCards.cs<br>// Create an Array of 53 Cards ( 0 - 52 )<br>// Store Value from 1 to 52 in corresponding Array location using a For Loop<br>// Then print the values to the screen ( ignoring location 0 )</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">using System ;
+public class ArrayCards
+       {
+         static void Main ( )
+         {
+         <font color="#00FF00">// Local Declarations</font>
+         const int Cards = 53 ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">          <font color="#00FF00">// Create an Array of 53 Cards </font>
+         int[ ] Deck = new int[ Cards ]  ;  </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">          <font color="#00FF00">// Starting at 1, cycle through each and insert the appropriate number 
+         // by assigning the current value of iCounter to the corresponding
+         // array location each time the For Loop cycles through </font></font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">          for ( int iCounter = 1 ; iCounter &lt; Cards ; iCounter++ ) 
+         Deck[ iCounter ] = iCounter ; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">          <font color="#00FF00">// Use another For Loop to print them out sequencially          </font>
+         for (int iCounter = 1; iCounter &lt; Cards ; iCounter++ ) 
+         Console.WriteLine( Deck[ iCounter ] ) ;  
+ 
+         } <font color="#00FF00">// </font><font color="#00FF00">end Main </font>
+} <font color="#00FF00">// </font></font> <font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1"><font color="#00FF00">end ArrayCards</font></font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Note here that rather than 
+  declaring our array with a number:</font></p>
+<p><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1"> Deck = 
+  new int [ 52 ] ; </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">We instead declared the 
+  value as a variable</font></p>
+<p><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1"> const 
+  int Cards = 52 ; <br>
+  int Deck[ Cards ] ; </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">In this case, we have declared 
+  the integer variable as being Constant. Notice that the variable: Cards, is 
+  used in more than one place in the program. Let's say that later we want to 
+  make another program which uses a deck of 24 cards. Now all we have to do is 
+  change the value one time at the top of our code, and every instance is automatically 
+  updated. This illustrates the advantage of using structured programming and 
+  declaring your variables at the top of your program. </font></p>
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="+1">On to the 
+  Next Lesson <a href="random.htm">Random Numbers</a><br>
+  Back to the Previous Lesson: <a href="loops.htm">Loops</a><br>
+  <a href="../index.htm">Index </a> <br>
+  </font><font face="Arial, Helvetica, sans-serif"> </font></p>
+</body>
+</html>

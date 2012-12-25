@@ -1,0 +1,285 @@
+<html>
+<head>
+<title>Programming with C++ Tutorial</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#CC66FF">
+<h1 align="center"><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Programming 
+  with C++</font></h1>
+<table width="75%" border="0" bgcolor="#FFFF99" cellspacing="6" align="center">
+  <tr> 
+    <td> 
+      <p><font face="Geneva, Arial, Helvetica, san-serif" color="#000000">Nerd_Note: 
+        Every C or C++ program has:<br>
+        a <b>Global Declaration</b> section at the beginning<br>
+        and one or more <b>Functions</b>. </font> </p>
+      <p><font face="Geneva, Arial, Helvetica, san-serif" color="#000000">Global 
+        declarations are available to the entire program.</font></p>
+      <p><font face="Geneva, Arial, Helvetica, san-serif" color="#000000">One 
+        function must be named <i><b>main</b></i>.</font></p>
+      <p><font face="Geneva, Arial, Helvetica, san-serif" color="#000000">Functions 
+        consist of two parts:<br>
+        the <b>Declarations</b> section <br>
+        and the <b>Statements</b> section.</font></p>
+      <p><font face="Geneva, Arial, Helvetica, san-serif" color="#000000">Declarations 
+        within a function are called <b>Local Declarations</b>.<br>
+        Local declarations are only available to the functions that contain them.</font></p>
+</td>
+  </tr>
+</table>
+<h3><font face="Geneva, Arial, Helvetica, san-serif"><br>
+  <font color="#FF9900">Reinventing the wheel</font></font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">When you write programs, 
+  there are a lot of parts that you will use over and over.<br>
+  To avoid having to type the same things all the time, one idea might be to have 
+  a file containing all those &quot;frequent phrases&quot; or things that you 
+  find yourself typing a lot. Then whenever you need to reuse a bit of code, you 
+  could open the file, copy that bit, then paste it into your existing code.<br>
+  Over time, let's say now you have 100 different programs which all have the 
+  same identical section of code in them. If you think about it, instead of having 
+  the exact same code residing in 100 different places on your hard drive, wouldn't 
+  it be more efficient to have that one frequently used bit of code stored in 
+  it's own, separate file? Then when you want to include that bit of code in your 
+  program, you could just make a little pointer to that file. That's what C++ 
+  does by allowing us to include lots of bits of code which have already been 
+  written for us. Now instead of typing or even copying and pasting bits of code, 
+  we can include prewritten bits of code in our file with a single line of code:</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt;Name_Of_File&gt;</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Tis the fundamental 
+  concept of <b>Object Oriented Programming</b>, which writers spend waaaayy too 
+  much time praising it's virtues and not enough time explaining how to do it, 
+  so let's get on with it, shall we? In our first program, we want to do something 
+  fairly simple: print something to the screen, so we can verify that everything 
+  is working properly. Something short, like &quot;hello&quot;.<br>
+  Even to do such a simple task requires just a whole bunch of things you need 
+  to tell the computer. Every time you want the computer to output something to 
+  the screen, you need a bunch of code. Every time you want to make it so you 
+  can type input into the program, you need a bunch of code. Since the need to 
+  input something and have the computer print something out is common to so many 
+  programs, your compiler more than likely has a file known as the Input / Output 
+  Stream header file:<br>
+  iostream.h<br>
+  Your compiler probably comes with lots and lots of these ready made <i>header</i> 
+  files. Signified by the .h extension. Other compilers may have different sets 
+  of header files, but pretty much all of them have the same standard libraries. 
+  Your compiler should automatically link to these files. You just give it the 
+  name of the file and it will include it in your code.<br>
+  If you look in the main folder of your compiler, somewhere you should find a 
+  folder called <i>Include</i>. Mine is located at:<br>
+  C:\Borland\BCC55\Include<br>
+  In there you should find lots of different kinds of header files. If you open 
+  iostream.h with Notepad or your favorite text editor, you will see all the code 
+  associated with various input and output commands to the computer. Imagine having 
+  to write all this every time you wanted to do something as simple as printing 
+  &quot;Hello&quot; to the screen.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Notepad Note: If 
+  you don't see any files in the Includes directory using Notepad, it is because 
+  Notepad is looking for files with the .txt extension. To view files with the 
+  .h or .cpp extension: from Notepad go to File / Open, navigate to the Includes 
+  folder, hit the Tab key, then the A key. (Quick way to View All Files)</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Here is another 
+  way to do the Hello World example:</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt;iostream&gt;
+using namespace std ; </font>        </pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void ) 
+{
+        cout &lt;&lt; &quot;Hello&quot; ;<br>return 0 ;
+}
+ </font><font color="#0000FF" size="+1">        </font> </pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Several things to 
+  note here:<br>
+  In this example we have eliminated the .h extension for the include file: iostream.h. 
+  This is a more modern C++. To do so we also add <font color="#0000FF">using 
+  namespace std ;</font> . This allows us to access the standard symbols in C++. 
+  The ( ) has been eliminated and instead the output is pumped into cout using 
+  the &lt;&lt; command.<br>
+  As you can see there is more than one header which can be used for input and 
+  output. Since you will find examples around the web which use either one, you 
+  should be familiar with both methods. The earlier version is C the latter is 
+  C++. However you will still see C++ tutorials which use the old method. C++ 
+  is based on C. Most C++ compilers support it.</font></p>
+<table width="75%" border="0" bgcolor="#FFFF99" cellspacing="6" align="center">
+  <tr> 
+    <td><font face="Geneva, Arial, Helvetica, san-serif" color="#000000" size="+1">Note: 
+      Computer nerds also refer to #include commands as <i>Preprocessor Directives</i> 
+      to make themselves sound more educated and further disorient you by arbitrarily 
+      using different, complicated words to describe fairly simple concepts. <br>
+      What's ironic is that in order to save having to type the .h extension, 
+      you have to type this long-ass command: using namespace std; . Unless you're 
+      using a whole pile of headers, this doesn't seem a whole lot simpler does 
+      it? That's C++ for you. <br>
+      And now that everybody's just starting to grasp C++, Microsoft wants everybody 
+      to switch to C#. It never ends. </font></td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">As I said at the 
+  beginning, every C++ program has Global Declarations at the beginning, but for 
+  our first program, we won't have to write any. They've all been written for 
+  us:</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt;iostream&gt;<br>using namespace std ; </font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">O.K. now that our 
+  global definitions are out of the way, we will create our first Function starting 
+  with a Declaration:</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">main ( )</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">One function in 
+  every C++ program must be named main. In this case, it is our only function.<br>
+  The function can have various parameters. In this case, there aren't any. To 
+  be sure, we can specify that the parameter list is void:</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">main ( <b>void</b> )</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Your function will 
+  return a value to your operating system. In our case, at the end of the function, 
+  we will return a value of 0, which will terminate the program and return control 
+  to the operating system. We should also specify the type of value which main 
+  will return. In this case an <i>Integer</i> value:</font></p>
+<pre><font size="+1"><b><font color="#0000FF" face="Arial, Helvetica, sans-serif"> int</font></b><font color="#0000FF" face="Arial, Helvetica, sans-serif"> main ( void ) <b>return 0</b> ; </font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">You now have a complete 
+  program which does nothing, like a blank sheet of paper.<br>
+  Our first function is very simple. All it does is call on another function which 
+  has already been written for us. The cout function is part of the iostream. 
+  h header file. It tells the computer to print something to the screen. To do 
+  so, we must pass a parameter to the function, cout. In this case, that parameter 
+  is the word &quot;Hello&quot;.</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> cout &lt;&lt; &quot;Hello&quot; ; </font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">The semicolon tells 
+  the computer that it has come to the end of a line. <br>
+  You could have more that one line of code on the same line:</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> cout &lt;&lt; &quot;Hello&quot; ; return 0 ;</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">O.K., we have our 
+  Declaration: </font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> int main (void), </font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">and two Statements:</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> cout &lt;&lt; &quot;Hello&quot; ; 
+ return 0 ; </font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">The computer will 
+  execute the first Statement and consider it's job done. To tell the computer 
+  to execute more than one statement as a group, you put the body of your program 
+  between curly brackets.</font> <font size="+1">{ }</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> { cout &lt;&lt; &quot;Hello&quot; ; return 0 ; } </font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">So here is our finished 
+  program:</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt;iostream&gt; using namespace std ; int main ( void ) { cout &lt;&lt; &quot;Hello&quot; ; return 0 ; }</font>
+       </pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">That's it. When 
+  you compile and run the program, it should print whatever you put between the 
+  quotation marks to the screen.<br>
+  While it's still quite small, you can see that it can be hard to tell where 
+  one command ends and another begins. To keep things organized and a little more 
+  readable, it's generally considered good grammar to break the commands up, each 
+  on their own line:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt;iostream&gt;
+using namespace std ; 
+       
+int main ( void ) 
+{ 
+       cout &lt;&lt; &quot;Hello&quot; ; 
+return 0 ; 
+}
+</font><font color="#0000FF" size="+1">       </font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Now you can see 
+  how it's much easier to tell where the body of the function main is: between 
+  the opening and closing brackets, and it's easier to distinguish each of the 
+  Statements.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">You can spread things 
+  out a good bit and the computer ignores the whitespace. With a few exceptions: 
+  for instance, you can't have a space between the # and the word include. You 
+  also can't have space inside the include arrows:</font></p>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">#include &lt; &nbsp;iostream &nbsp;&gt;    <font color="#FF0000">// Wrong!</font>  At least it won't work on my compiler. Try it</font></pre>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Comments</font></h3>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* this is a comment */</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Comments allow you 
+  to leave notes to yourself all over your work. Everything between the opening 
+  /* and the closing */ will be ignored by the compiler.</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/*
+   This is also a comment
+   This part is invisible to the compiler
+*/</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">you can put a comment 
+  after a command to remind you what it does:</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">cout &lt;&lt; &quot;Hello&quot; ; /* This line prints hello to the screen */</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">If you're putting 
+  a short comment at the end of the line, C++ allows you to also use // at the 
+  beginning of a comment .</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">cout &lt;&lt; &quot;Hello&quot; ; // Overkill, since it's blatantly obvious what this line does!</font></pre>
+<p> <font face="Geneva, Arial, Helvetica, san-serif" size="+1">Note: no end command 
+  is required using // as long as it's on the same line.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1"> You can use comments 
+  to help you hash out a program before you begin coding:</font></p>
+<table width="75%" border="0" cellpadding="6" align="center">
+  <tr>
+    <td>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* 01 layout for standard output program */</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Global Declarations */</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void )
+{
+   /* Local Declarations */</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">   /* Statements */
+   /* Print something to the screen */</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0 ;
+} /* end main */<br></font></pre>
+    </td>
+  </tr>
+</table>
+<pre>&nbsp;</pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Right, let's print 
+  something on two lines. Try running this:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt; iostream &gt;
+using namespace std ; 
+       
+int main ( void ) 
+{ 
+       cout &lt;&lt; &quot;Hello&quot; ; <br>       cout &lt;&lt; &quot;Hello&quot; ; 
+return 0 ; 
+}
+   </font><font color="#0000FF" size="+1">    </font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">If we do this, it 
+  will print HelloHello. If we want to print on a new line using the iostream 
+  header, we can specify that by adding <font color="#0000FF">endl</font></font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt; iostream &gt;
+using namespace std ; 
+       
+int main ( void ) 
+{ 
+       cout &lt;&lt; &quot;Hello&quot; &lt;&lt; endl ; <br>       cout &lt;&lt; &quot;Hello&quot; ; 
+return 0 ; 
+}
+    </font><font color="#0000FF" size="+1">   </font></pre>
+    </td>
+  </tr>
+</table>
+<h3><font color="#0000FF" size="+1"><br>
+  </font><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Next page 
+  <a href="identifiers.htm">Identifiers</a></font></h3>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" size="+1">or, here is another 
+  tutorial very similar to this one which I did when I was in a different frame 
+  of mind: <a href="source.htm#%20Tutorial/accelerated.htm">C++ Accelerated</a></font></h3>
+<h3 align="center"><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><a href="../index.htm">Index</a></font></h3>
+</body>
+</html>

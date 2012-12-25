@@ -1,0 +1,21 @@
+
+< button(240,250,quitButtonOn,quitButtonOff,quitButtonOver^exitGame,NULL,NULL);>
+DEFINITIONS.C 3:12  (): Not found -  exitGame   
+
+< button(40,250,restartButtonOn,restartButtonOff,restartButtonOver^restartGame,N>
+DEFINITIONS.C 3:12  (): Not found -  restartGame   
+
+< >
+DEFINITIONS.C 0:-1  (): Syntax error -    
+
+< button(520,535,startButtonOn,startButtonOff,startButtonOver^restartGame,NULL,N>
+DEFINITIONS.C 3:12  (): Not found -  restartGame   
+
+< >
+DEFINITIONS.C 0:-1  (): Syntax error -    
+
+< button(520,470,rulesButtonOn,rulesButtonOff,rulesButtonOver^displayRules,NULL,>
+DEFINITIONS.C 3:12  (): Not found -  displayRules   
+
+< button(520,535,startButtonOn,startButtonOff,startButtonOver^restartGame,NULL,N>
+DEFINITIONS.C 4:12  (): Not found -  restartGame   

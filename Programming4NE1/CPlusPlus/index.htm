@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>Borland Command Line Compiler Tutorial</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p><font face="Geneva, Arial, Helvetica, san-serif">I tried the free Visual C++ 
+  download from Microsoft and found that none of the tutorials I could find on 
+  the web for Visual C++ were compatible, mostly because of changes to the interface. 
+  This is Visual C++ <i>Express</i> and not only were there no tutorials yet on 
+  the web, but a lot of the built in help feature had broken links, all the help 
+  seemed to assume you are an experienced programmer and was extremely technical 
+  and there was no &quot;help for beginner's&quot; feature, so although you can 
+  still compile your programs with Visual C++ O.K. from the command line, I ended 
+  up using Borland's free command line compiler, so I recommend you download that 
+  one as well to follow along.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif"><a href="http://www.borland.com/products/downloads/download_cbuilder.html">http://www.borland.com/products/downloads/download_cbuilder.html</a></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Once you have installed your 
+  free Borland compiler we will go straight into the forbidden zone known as DOS. 
+  First you want to open your Command Prompt.<br>
+  Assuming you are on a PC and have no idea what a Command Prompt or DOS is:<br>
+  On Windows, go to Start / All Programs / Accesories / Command Prompt. Remember 
+  to click on the Compilers button in your menu bar to return to this tutorial. 
+  </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">If you blow the window up 
+  to full screen size you'll get an idea of what computers looked like before 
+  there was Windows, everything was done at the text level, and that's where we're 
+  going to be spending a lot of time from now on.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Depending on your computer 
+  you may see something a little different, mine looks like this:</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif"><img src="../Borland/images/command_prompt.jpg" width="705" height="486"></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">We want to start at the root 
+  directory like this:</font></p>
+<p><img src="../Borland/images/command_prompt_C.jpg" width="833" height="544"></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">C: represents your main hard 
+  drive. Yours may be a different letter, D: perhaps.<br>
+  If yours already looks like this, that's fine. If yours looks more like mine 
+  with a couple of folder names after it<br>
+  Type the following:<br>
+  <font size="+2" color="#0000FF">cd..</font></font><font size="+2" face="Geneva, Arial, Helvetica, san-serif"> 
+  </font><font face="Geneva, Arial, Helvetica, san-serif"><br>
+  and hit Enter. (That's CD period period)<br>
+  This should move you up one Directory:</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif"><img src="../Borland/images/command_prompt2.jpg" width="833" height="544"></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Type <font color="#0000FF">CD..</font> 
+  again and hit Enter. This should move you up another level.<br>
+  Continue entering CD.. until you can go no higher. You have reached the top 
+  level of your Hard Drive.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif"><img src="../Borland/images/command_prompt3.jpg" width="833" height="544"></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Type<br>
+  <font size="+1" color="#0000FF">dir</font><br>
+  and hit Enter.<br>
+  This should display the contents of your hard drive:</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif"><img src="../Borland/images/command_prompt4.jpg" width="833" height="544"></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">You can see there may be one 
+  or two files and a number of folders, or Directories. <br>
+  If you have installed the Borland command line compiler, you should see a Directory 
+  named &quot;Borland&quot;.<br>
+  Type<br>
+  <font size="+1" color="#0000FF">cd borland</font><br>
+  This will take you to the Borland directory, or folder.<br>
+  Enter <font size="+1" color="#0000FF">dir</font> to display the contents of 
+  that directory. There is only one directory contained therein: BCC55.<br>
+  Enter <font size="+1" color="#0000FF">cd bcc55</font>, then <font size="+1" color="#0000FF">dir</font> 
+  to show the contents of the BCC55 directory.</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif">Create a new Directory from 
+  the Command Prompt</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Make a directory to store 
+  your code in:<br>
+  Type<br>
+  <font size="+1" color="#0000FF">mkdir Projects</font><br>
+  and hit Enter. This creates a new folder called Projects. Type <font color="#0000FF" size="+1">dir</font> 
+  to verify that the new directory is there.</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif">Open specified directory</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif">The Borland compiler is in 
+  the directory called Bin (short for Binaries).<br>
+  To open the Bin directory:<br>
+  Type<br>
+  <font size="+1" color="#0000FF">cd../bin</font><br>
+  This will take you up one directory, and then down again all in one command. 
+  The command prompt should indicate that you are in the Bin directory. Type <font size="+1" color="#0000FF">dir</font> 
+  to view the contents.</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif">Run a program from the Command 
+  Prompt</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif">The Borland C++ compiler application 
+  is called bcc32.exe. You execute the program by typing a command from the prompt, 
+  such as telling it to compile a piece of code for you. You do not actually run 
+  the application. If you do try to run the application, it will dump a list of 
+  commands to the screen. These are the various commands you use to tell the compiler 
+  what to do.<br>
+  To run the Borland compiler:<br>
+  Type<br>
+  <font size="+1" color="#0000FF">bcc32</font><br>
+  and hit Enter.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif"><img src="../Borland/images/borland_commands.jpg" width="834" height="545"></font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif">Create your first code</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif"> Type<br>
+  <font color="#0000FF">notepad hello.cpp</font><br>
+  Notepad opens and ask if it's O.K. to create a new file. Just hit Enter.<br>
+  Type the following code. Yes, actually type it. Don't just copy it out of the 
+  box . Put your lazy fingers on the keys and type.</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF">#include &lt;stdio.h&gt;</font></pre>
+      <pre><font color="#0000FF">int main ( void )
+{
+         printf ( &quot;Hello&quot; ) ;
+return 0 ;
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Go to File / Save As<br>
+  Save the file hello.cpp in the Projects folder you created earlier located at 
+  My Computer / Hard Drive ( C: / Borland / BCC55 / Projects ).</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif">Compile the code</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Now copy the next command 
+  if you like: (highlight the text in the box and go to Edit / Copy in your brower 
+  menu)</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td><font face="Geneva, Arial, Helvetica, san-serif">bcc32 -If:\Borland\BCC55\Include 
+      -Lf:\Borland\BCC55\Lib -n\Borland\BCC55\Projects \Borland\BCC55\Projects\hello.cpp 
+      </font></td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Of course that's assuming 
+  you are using the suggested Borland compiler and you installed it in the default 
+  folder as I did, which is the main hard drive. If not you will need to make 
+  the necessary adjustments to the path: ( -If:\YourCompiler'sDirectory\Include 
+  etc.) </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Now right click in the Command 
+  Prompt window and select Paste. Then hit Enter.<br>
+  If all went well your program should compile without any errors. You should 
+  find the newly created program called hello.exe in the Projects folder. To get 
+  there, navigate up out of the Bin directory and down into the Projects directory 
+  by<font color="#0000FF"> typing cd../projects</font>. Type <font color="#0000FF">dir</font> 
+  and you should see your new program. To run it, type<br>
+  <font color="#0000FF">hello</font><br>
+  The program executes and prints the word Hello to the Command Prompt window. 
+  Nothing spectacular, but congratulations! you're a programmer. Big whoop. Now 
+  get back to work.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">If your program didn't compile 
+  successfully, proceed directly to <a href="../C%2B%2B%20Tutorial/Borland/debugging.htm">Debugging</a>.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">First let's discuss how we 
+  called the compiler and then we'll talk about our code. While at first glance 
+  it looks like a long, intimidating string of complicated code, but the command 
+  to the compiler is fairly simple when you break it down.<br>
+  First we call the compiler:<br>
+  bcc32<br>
+  Remember earlier if we just call the compiler it prints out a list of commands? 
+  If we call the compiler followed by various parameters, it will execute them. 
+  Here we issue 3 parameters which tell the compiler where to find some necessary 
+  files. Some are in the Include directory located at C:\Borland\BCC55\Include\, 
+  some are in the Lib directory. ( -If for Include files -Lf for Library files 
+  ) The path is given so the compiler knows where to find these files. The command 
+  -n tells the compiler where to put the finished program: in the Projects directory 
+  and lastly, the path to the source code itself is given: \Borland\BCC55\Projects\hello.cpp. 
+  If you take away the long path info, it's not so intimidating. You can save 
+  the command in a text file for later use. Enter <font color="#0000FF">notepad 
+  compiler_commands.txt</font> into the Command Prompt. Paste the following shortcut:</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td><font face="Geneva, Arial, Helvetica, san-serif">bcc32 -If:\Borland\BCC55\Include 
+      -Lf:\Borland\BCC55\Lib -n\Borland\BCC55\Projects \Borland\BCC55\Projects\.cpp 
+      </font></td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Now when you want to compile 
+  another program you can open the page, insert the name of the .cpp file, copy 
+  and you're ready to paste into the command prompt and compile another program.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Note that once your have entered 
+  a few commands into the Command Prompt window, you can hit the up or down arrow 
+  keys to recall any commands you already entered. So once you have compiled one 
+  program and you want to compile another, you just arrow up till you find the 
+  command from the previous compile. Using the left arrow key, scroll the blinking 
+  cursor until it is underneath the period. Now hit the Backspace key to delete 
+  the name of the previous file and enter the new one. <br>
+  </font></p>
+</body>
+</html>

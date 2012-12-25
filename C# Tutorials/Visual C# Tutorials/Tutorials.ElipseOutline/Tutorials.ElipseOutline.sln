@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual C# Express 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorials.ElipseOutline", "Tutorials.ElipseOutline\Tutorials.ElipseOutline.csproj", "{1718885A-B002-4D16-9E0E-22A218BF8A8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1718885A-B002-4D16-9E0E-22A218BF8A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1718885A-B002-4D16-9E0E-22A218BF8A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1718885A-B002-4D16-9E0E-22A218BF8A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1718885A-B002-4D16-9E0E-22A218BF8A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

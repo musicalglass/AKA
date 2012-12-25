@@ -1,0 +1,257 @@
+<html>
+<head>
+<title>C# Tutorial / Loops</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#CC66FF">
+<h1 align="center"><font color="#FF9900" face="Arial, Helvetica, sans-serif">Loops</font></h1>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Consider this:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" color="#0000FF" size="+1">Console.Write 
+  ( &quot;10 &quot; ) ; <br>
+  Console.Write ( &quot;9 &quot; ) ; <br>
+  Console.Write ( &quot;8 &quot; ) ; <br>
+  Console.Write ( &quot;7 &quot; ) ; <br>
+  Console.Write ( &quot;6 &quot; ) ; <br>
+  Console.Write ( &quot;5 &quot; ) ; <br>
+  Console.Write ( &quot;4 &quot; ) ; <br>
+  Console.Write ( &quot;3 &quot; ) ; <br>
+  Console.Write ( &quot;2 &quot; ) ; <br>
+  Console.Write ( &quot;1 &quot; ) ; </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">That seems like a lot of 
+  work for a simple thing like a countdown doesn't it? After all, we're starting 
+  with a number, printing it, subtracting 1, printing it again, etc.. Seems like 
+  that should be a job for the computer to be doing.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Run the following program:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font face="Arial, Helvetica, sans-serif" color="#0000FF" size="+1">using System ; <br>class WhileLoop
+{
+         public static void Main ()
+         {
+         int Counter = 0 ; </font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" color="#0000FF" size="+1">         while ( Counter &lt; 10 )
+                 {
+                 Console.Write ( &quot;{0} &quot;, Counter ) ; 
+                 Counter++ ; 
+                 }
+         }
+} 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Basically the structure 
+  of a While Loop looks like this:</font></p>
+<p><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">while ( 
+  expression = true ) <i><b><br>
+  do something</b></i></font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">or</font></p>
+<p><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">while ( 
+  expression = true ) <br>
+  {<br>
+  <i><b>do something<br>
+  do something<br>
+  do something</b></i><br>
+  } </font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">As long as the expression 
+  is True, it will repeat it's task over and over. Once the expression becomes 
+  False, it will continue on it's merry way. In this case our expression contains 
+  a variable:<br>
+  ( <font color="#0000FF">Counter</font> &lt; 10 )<br>
+  Every time the While loop cycles through, it will increase that variable by 
+  1. <br>
+  <font color="#0000FF">++My_Variable</font> increases the value in increments 
+  of 1.<br>
+  <font color="#0000FF">--My_Variable</font> decreases the value in increments 
+  of 1. <br>
+  When Counter reaches a value of 10, the expression becomes false: Counter is 
+  no longer less than 10, and the program will break out of the loop immediately 
+  and continue executing whatever follows. The Counter value of 10 never gets 
+  printed.</font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Let's try counting down 
+  from 10 to 1:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">using System ;<br>class WhileLoop
+{
+         public static void Main ()
+         {
+         int iCounter = 10 ;</font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">         while ( iCounter &gt; 0)
+                  {
+                  Console.Write ( &quot;{0} \n&quot;, iCounter ) ;
+                  iCounter++ ;
+                  }
+          Console.Write ( &quot;Blastoff!&quot; ) ;
+         }
+} 
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Here we allow the user 
+  to input the starting value:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">using System;<br>class WhileInput
+{
+         public static void Main()
+         {
+         int iUser_Input ; 
+
+         Console.Write (&quot;\nEnter a starting number: &quot; );
+		 iUser_Input = int.Parse ( Console.ReadLine () ) ;</font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">         while ( iUser_Input&gt; 0)
+                  {
+                  Console.Write ( iUser_Input );<br>                  Console.Write ( &quot;\n&quot; );
+                  iUser_Input++;
+                  }
+          Console.Write ( &quot;Blastoff!\n&quot;
+         }
+} 
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">Do While</font></h3>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">using System;</font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">public class DoWhile
+{
+         static void Main ()
+         { 
+        <font color="#00FF00"> // Local Declarations </font>
+         int iUser_Input ;
+         int iSum = 0 ;</font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">          <font color="#00FF00">// Statements </font>
+         Console.WriteLine ( &quot;Enter some numbers ( 0 to stop ) :\n&quot; ) ; </font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">         do  {
+                iUser_Input = int.Parse ( Console.ReadLine () ) ;
+                iSum += iUser_Input ;
+                Console.WriteLine ( &quot;Total: {0}&quot;, iSum ) ;
+                }  while ( iUser_Input != 0 ) ;</font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">         Console.WriteLine ( &quot;\nProgram terminated&quot; ) ; 
+         Console.WriteLine ( &quot;Have a day. :| \n&quot; ) ; 
+         } <font color="#00FF00">// end Main</font>
+} <font color="#00FF00">// end class DoWhile</font>
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">In a nutshell, This will 
+  continue to <br>
+  DO { over &amp; over } While ( Expression = True )<br>
+  When ( Expression = False ) exit Do Loop<br>
+  and continue...</font></p>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">For Loops </font></h3>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">using System;<br>class ForLoop
+{
+         public static void Main()
+         {
+         <font color="#00FF00">// Variable Declaration</font>
+         int iCounter ; <font color="#00FF00">// Note: most people just declare this within the For Loop itself</font></font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#00FF00">         // Starting at 0 ; While Var is less than 10 ; Increment Var by 1 each loop</font><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">
+         for ( iCounter = 0 ; iCounter &lt; 10 ; iCounter++ )
+         Console.Write ( &quot;{0} &quot; , iCounter ) ;
+         }
+} 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">The basic For Loop is constructed 
+  like this:</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">for ( StartingValue ; EndingValue ; Increase/Decrease )</font>
+      <font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"><i><b>do something</b></i></font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">or you can loop two or 
+  more commands within curly brackets:</font></p>
+<pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">for ( StartingValue ; EndingValue ; Increase/Decrease    )
+</font><font face="Arial, Helvetica, sans-serif" size="+1"><b><font color="#0000FF">{<br>   <i>do something<br>   <i>do something</i> else<br>   <i>do something etc.
+</i></i>}</font></b></font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">In the above example we 
+  declared and assigned the value of iCounter at the top. We could just as easily 
+  have declared it within the For Loop:</font></p>
+<p><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1"> for ( 
+  int Counter = 10; Counter &gt;= 1 ; Counter-- )</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">using System;</font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">public class Countdown
+         {
+         static void Main()
+         {
+         Console.WriteLine ( &quot;Enter Limit&quot; ) ; 
+         int iLimit = int.Parse ( Console.ReadLine () ) ; <br>
+         for ( int iCounter = iLimit ; iCounter&gt;= 1 ; iCounter-- ) 
+               { <font color="#00FF00">//&lt;-- Loop everything between the brackets</font>
+               Console.WriteLine ( iCounter ) ; 
+               Console.WriteLine ( &quot;\n&quot; ) ; 
+               } <font color="#00FF00">// &lt;-- end For Loop</font><br>
+         Console.WriteLine ( &quot;Blastoff!&quot; ) ; 
+         } 
+} 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">or here's a shorter version 
+  of the same:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">using System;</font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">public class Countdown
+         {
+         static void Main()
+         {
+         Console.WriteLine ( &quot;\nEnter Limit&quot; ) ; 
+         for ( int i = int iLimit = int.Parse ( Console.ReadLine () ) ; i &gt;= 1 ; i-- ) 
+               { 
+               Console.WriteLine ( &quot;{0}\n&quot;, i ) ; 
+               } <br>
+         Console.WriteLine( &quot;Blastoff!\n&quot; ) ; 
+         } 
+} <br></font></pre>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">using System;</font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">class ForLoop
+ {
+         public static void Main()
+         { 
+         Console.Write ( &quot;\nHow to become a programmer: \nPress the Enter key\n&quot; ) ;
+         Console.Read () ; <br>
+        <font color="#00FF00"> // Start at 1 ; While Var is less than or equal to 10 ; Increment Var by 1 each loop</font>
+         for ( int iCounter = 1 ; iCounter &lt;= 10 ; iCounter++ )
+               { 
+               Console.Write ( &quot;Lesson &quot; ) ;
+               Console.Write ( iCounter ) ;
+               Console.Write ( &quot;: Practice\n&quot; ) ;
+               } 
+         }
+} 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="+1">On to the 
+  Next Lesson: <a href="arrays.htm">Arrays</a><br>
+  Back to the Previous Lesson: <a href="relational_operators.htm">Relational Operators</a><br>
+  <a href="../index.htm">Index </a></font></p>
+</body>
+</html>

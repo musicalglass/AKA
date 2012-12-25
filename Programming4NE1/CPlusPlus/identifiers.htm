@@ -1,0 +1,469 @@
+<html>
+<head>
+<title>C++ Tutorial / Identifiers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#CC66FF">
+<h1 align="center"><font face="Arial, Helvetica, sans-serif" color="#FF9900">Identifiers 
+  ( Variables)</font></h1>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Identifiers allow us to 
+  give names to data or objects.<br>
+  Consider this:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" color="#0000FF" size="+1">x = 1 ;</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Here we have assigned a 
+  value of 1 to a variable named x. <br>
+  Since there are different types of variables, we should specify that this variable 
+  is an integer ( a whole number ):</font></p>
+<p><font face="Arial, Helvetica, sans-serif" color="#0000FF" size="+1">int x = 
+  1 ;</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">This is known as a <i>Variable 
+  Declaration</i>. <br>
+  Try the following example:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Variable.cpp
+Print the value of a Variable 
+*/
+
+#include &lt;iostream&gt; <br>using namespace std;   
+  <br>int main ( void )<br>{<br>/* Local Declarations */<br>int a = 42 ;
+<br>/* Statements */<br>cout  &lt;&lt; a ;
+<br>return 0;<br>}
+</font>
+</pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Notice how this prints 
+  42 to the screen, the value of the integer variable <font color="#0000FF">a</font>, 
+  not the letter a. But you don't have to use just letters. In fact, it's not 
+  always good practice to write this way. Although using cryptic abbreviations 
+  is a good way to prevent others from reading your hard work, you'll quickly 
+  find that rather than confounding your adversaries the only person you're confusing 
+  is yourself.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Therefore, it's much easier 
+  to use nice descriptive variable names.</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Variable.cpp
+Print the value of a Variable 
+*/
+
+#include &lt;iostream&gt; <br>using namespace std; 
+    <br>int main ( void )<br>{<br>/* Local Declarations */<br>int MyVariable = 42 ;
+<br>/* Statements */<br>cout &lt;&lt; MyVariable ;
+<br>return 0;
+}</font></pre>
+      <pre>&nbsp; 
+       </pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Same code, just a little 
+  easier to understand. </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Notice how we didn't write:</font></p>
+<pre><font color="BLUE" size="+1" face="Arial, Helvetica, sans-serif">// <font color="RED">Wrong</font> way to declare a variable 
+    int My Number = 1 ;</font></pre>
+<p><font color="RED" face="Arial, Helvetica, sans-serif" size="+1">Variable names 
+  must be one word</font><font face="Arial, Helvetica, sans-serif" size="+1"> 
+  all together so the computer knows where one command ends, and another begins. 
+  This will work:</font></p>
+<pre><font color="BLUE" size="+1" face="Arial, Helvetica, sans-serif">// Variable names must be 1 word 
+	int My_Number = 1 ;</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Also, <font color="RED">you 
+  can't begin variable names with a number</font>:</font></p>
+<pre><font color="BLUE" size="+1" face="Arial, Helvetica, sans-serif">// <font color="RED">Wrong</font> 
+ int 01_Player = 1 ;
+
+// Right 
+ int Player_01 = 1 ;
+
+// Right 
+ int Player01_Score = 1 ;
+
+// Right
+ int P0000374 = 1 ;</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1"> If no value is specified, 
+  it will be created with an arbitrary value. Since RAM is reusable space, the 
+  value will be whatever was left in there from any previous applications. Perhaps 
+  the word &quot;Hello&quot; left over from the previous exercise. If you want 
+  to wipe it out, you can assign a value of zero to it.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Also no foul language:</font></p>
+<pre><font color="BLUE" size="+1" face="Arial, Helvetica, sans-serif">	int @&amp;%*!_Player = 0 ; // Naughty naughty, won't even be read</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">...in other words no special 
+  characters in Variable names:</font></p>
+<pre><font color="BLUE" size="+1" face="Arial, Helvetica, sans-serif">// <font color="RED">Wrong</font>
+	int Score%_Player = 50 ;</font></pre>
+<pre><font color="BLUE" size="+1" face="Arial, Helvetica, sans-serif">// Right
+	int Score_Percent_Player = 50 ;</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">You can use any words you 
+  like, you could use your own name:</font></p>
+<pre><font color="BLUE" size="+1" face="Arial, Helvetica, sans-serif">	int Charlie = 16 ;</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">But you will confuse the 
+  computer if you use any of the same words that are already commands like printf 
+  or return, so you should make up your own unique variable names.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Note also, if you declare 
+  the variable Charlie, calling charlie later will not work. It's case sensitive. 
+  </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">So basically you have letters, 
+  Capitol letters, numbers and the underscore. Also it's not a good idea to begin 
+  variable names with an underscore. _WrongFilename</font></p>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">Print 2 or more 
+  variables on the same line</font></h3>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Consider this:</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Variables2.cpp<br>Print the value of 2 Variables one after the other<br>*/<br>#include &lt;iostream&gt; 
+using namespace std;  </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void )
+{
+/* Local Declarations */
+         int x = 42 ;
+         int y = 24 ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Statements */
+         cout &lt;&lt; x &lt;&lt; y ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0;
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">This will print 4224. To 
+  add a space between the numbers, use a space in parenthesis.</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Variables2Spaced.cpp<br>Print the value of 2 Variables separated by a space<br>*/<br>#include &lt;iostream&gt; 
+using namespace std;  </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void )
+{
+/* Local Declarations */
+         int x = 42 ;
+         int y = 24 ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Statements */
+         cout &lt;&lt; x &lt;&lt; &quot; &quot; &lt;&lt; y ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0;
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h3><font face="Arial, Helvetica, sans-serif" size="+1">Print on two lines<br>
+  </font></h3>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Vars2Lines.cpp<br>Print the value of x on one line
+and y on the next line<br>*/<br>#include &lt;iostream&gt; 
+using namespace std;  </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void )
+{
+/* Local Declarations */
+         int x = 42 ;
+         int y = 24 ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Statements */
+         cout &lt;&lt; x &lt;&lt; endl &lt;&lt; y  ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0;
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h3><font face="Arial, Helvetica, sans-serif" size="+1">Variables in a sentence<br>
+  </font></h3>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* VariableSentence.cpp<br>Print the value of x in a sentence<br>*/<br>#include &lt;iostream&gt; 
+using namespace std;  </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void )
+{
+/* Local Declarations */
+         int x = 42 ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Statements */
+         cout &lt;&lt; &quot;The value of x is: &quot; &lt;&lt; x  &lt;&lt; &quot;.&quot; ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0;
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<font size="+1" face="Arial, Helvetica, sans-serif"><br>
+Note how we use a space inside the parenthesis to separate the variable.<br>
+</font> 
+<p><font face="Arial, Helvetica, sans-serif" size="+1">These are all examples 
+  of <i>constant</i> variables. They don't actually vary very much, do they? You 
+  assign a value and it stays that way. To do something a little more useful, 
+  we can make a variable which changes according to user input:</font></p>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">User input</font></h3>
+<p><font face="Arial, Helvetica, sans-serif">The <font color="#0000FF">cin</font> 
+  command is similar to the cout command, except you pump the value into the variable: 
+  <br>
+  <font color="#0000FF">cin &gt;&gt; My_Variable</font></font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif">/* NumInOut.cpp
+* Number Input / Output
+* This program takes a number
+* input by the user and prints it to the screen
+* Written by: Your Name
+* Date: 11/23/05
+*/
+#include &lt;iostream&gt; 
+using namespace std; 
+
+int main ( void )
+{
+/* Local Declarations */
+int My_Number ;       </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif">	/* Statements */
+      cout &lt;&lt; &quot;Please enter a number: &quot; ;
+      cin &gt;&gt; User_Input ;</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif">      cout &lt;&lt; &quot;You entered &quot; &lt;&lt; User_Input ;</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif">return 0 ;
+} /* main */</font></pre>
+      <pre>&nbsp;</pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif">Notice that in this case it was not 
+  neccesary to assign a value to the variable: User_Input. You just declare it. 
+  The value is supplied by the User. </font></p>
+<h3><font face="Arial, Helvetica, sans-serif">Input on separate line</font></h3>
+<p><font face="Arial, Helvetica, sans-serif">Note how we added a space in the 
+  text string. When you run the program, the blinking cursor appears at the end 
+  of the line and the user input appears there as they type.<br>
+  If you want the user input to appear on it's own separate line, add the <font color="#0000FF">endl 
+  </font>command. </font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif">/* NewLine.cpp<br> Number Input / Output
+ This program takes a number
+ input by the user and prints it to the screen
+ Written by: Your Name
+ Date: 11/23/05
+*/       </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif">#include &lt;iostream&gt; 
+using namespace std; </font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif">int main ( void )
+{
+/* Local Declarations */
+         int UserInput ;</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif"> /* Statements */
+         cout &lt;&lt; endl ;<br>
+         cout &lt;&lt; &quot;Please enter a number:&quot; &lt;&lt; endl ;
+         cin &gt;&gt; UserInput ;</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif">         cout &lt;&lt; &quot;You entered: &quot; &lt;&lt; UserInput &lt;&lt; endl ;</font></pre>
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif">return 0 ;
+} /* main */
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif">Notice how putting endl before and 
+  after your code creates space before and after your output on the command line 
+  when you run your program.<br>
+  We also show that you can put the endl command on it's own separate line as 
+  at the top, or nestled within a group of other cout commands.</font></p>
+<h3><font color="#FF9900" face="Arial, Helvetica, sans-serif">Print Variables 
+  in a sentence</font><font face="Arial, Helvetica, sans-serif"><br>
+  </font></h3>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* InOutSentence.cpp<br>Number Input / Output 2<br>This program takes two numbers<br>input by the user and prints them in a sentence<br>Written by: Your Name<br>Date: 11/23/05<br>*/</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt;iostream&gt; 
+         using namespace std; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void )
+         {
+         /* Local Declarations */
+         int num1 ;
+         int num2 ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> /* Statements */
+         cout &lt;&lt; &quot;Please enter two numbers:&quot; &lt;&lt; endl ;
+         cin &gt;&gt; num1 &gt;&gt; num2 ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> cout &lt;&lt; &quot;You entered: &quot; &lt;&lt; num1 &lt;&lt; &quot; and &quot; &lt;&lt; num2 ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0 ;
+} /* main */
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Note that the program allows 
+  user input separated by either a space or by hitting the Enter key.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">In this case, since we 
+  are declaring more than one variable of the same type we also could have declared 
+  them on the same line:</font></p>
+<p><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> int num1, 
+  num2 ;</font><font size="+1" face="Arial, Helvetica, sans-serif"><br>
+  </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Remember that while you 
+  can assign numeric values to words or characters, to the computer they are still 
+  nothing but a bunch of numbers. As such, you can do mathematical calculations 
+  with variable names just as if they were numbers:</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Add2Vars.cpp<br>   Adding Variables<br>   This program adds two numbers<br>   input by the user<br>   Written by: Your Name<br>   Date: 11/23/05<br>*/       </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt;iostream&gt; 
+         using namespace std; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void )
+         {
+         /* Local Declarations */
+         int num1 ;
+         int num2 ;
+         int sum ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> /* Statements */
+         cout &lt;&lt; &quot;Please enter two numbers: &quot; ;
+         cin &gt;&gt; num1 &gt;&gt; num2 ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">         sum = num1 + num2 ; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">         cout &lt;&lt; &quot;The sum of &quot; ; 
+         cout &lt;&lt; num1 &lt;&lt; &quot; and &quot; &lt;&lt; num2 ; 
+         cout &lt;&lt; &quot; is &quot; &lt;&lt; sum ; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0 ;
+         } /* main */
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Note that the line of code 
+  which does the calculations: <font color="#0000FF">sum = num1 + num2</font> 
+  comes after the input. The computer reads and executes each line of code from 
+  top to bottom as it comes to it. Let say you had put the calculation up before 
+  the input like this: </font></p>
+<font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1"> sum = num1 
++ num2 ; // <font color="#FF0000">Wrong.</font> This part doesn't get calculated<br>
+cout &lt;&lt; &quot;Please enter two numbers: &quot; ;<br>
+cin &gt;&gt; num1 &gt;&gt; num2 ;</font> 
+<p><font face="Arial, Helvetica, sans-serif" size="+1">As you can see in this 
+  case that the sum is calculated before a value has even been input, so there 
+  is nothing to calculate.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Note that we also could 
+  have declared the variable, sum on the line it is used:<br>
+  <font color="#0000FF">int sum = num1 + num2 ;</font><br>
+  It is not neccesary in C++ to declare all of your variables at the top as in 
+  some other programming languages.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Also, we could have just 
+  as easily done it this way:<br>
+  <font color="#0000FF">cout &lt;&lt; num1 + num2</font><br>
+  This would print the sum of num1 and num2.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Of course, if you actually 
+  wanted to print x + y to the screen you would treat is as a string of text:</font></p>
+<p><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> cout &lt;&lt; 
+  &quot;x + y = &nbsp;&quot; ;<br>
+  cout &lt;&lt; x + y ;</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Try the above program substituting 
+  subtraction or multiplication:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1"><font color="#0000FF">int 
+  sum = num1 - num2 ;</font></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1"><font color="#0000FF">int 
+  sum = num1 * num2 ;</font></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Note that multiplication 
+  uses the algebraic asterisk symbol to avoid confusing it with x. <br>
+  Division is done with the forward slash: <b><font color="#0000FF">/</font></b></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Now here is where we run 
+  into a bit of a sticky wicket. Try using the above program to make a simple 
+  division calculator using the following line of code:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1"><font color="#0000FF">int 
+  sum = num1 / num2 ;</font></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Now run your calculator 
+  and try to divide 5 by 2. You will see that it returns a value of 2. Why? Remember 
+  that integer variables can only contain <i>whole numbers</i>. Everything after 
+  the decimal point will be dropped.<br>
+  To store fractional numbers you must declare the value to be a <i>floating point</i> 
+  variable:</font></p>
+<font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> /* Local 
+Declarations */ <br>
+int num1 ;<br>
+int num2 ;<br>
+float sum ;</font> 
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">Characters</font></h3>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Try running the NumInOut 
+  program again and enter a letter. Notice that an integer variable does not accept 
+  character input. An integer only accepts whole numbers.</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* InOutChar.cpp<br> Character Input / Output
+ This program takes a Character
+ input by the user and prints it to the screen
+ Written by: Your Name
+ Date: 11/23/05
+*/       </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt;iostream&gt; 
+using namespace std; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void )
+{
+/* Local Declarations */
+         char UserInput ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> /* Statements */<br>
+         cout &lt;&lt; &quot;Please enter a letter: &quot; ;
+         cin &gt;&gt; UserInput ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">         cout &lt;&lt; &quot;You entered &quot; &lt;&lt; UserInput ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0 ;
+} /* main */
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Using the variable type 
+  <font color="#0000FF">char</font> allows you to store letters.<br>
+  Try running the above example and entering your name. As you can see the char 
+  variable type only allows a single character. If you want to do a simple thing 
+  like store a whole string of text, you need to enter yet another mind bendingly 
+  over complicated-ass area of C++.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Strings</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">What would seem like a 
+  very elementary thing: maybe storing the word &quot;Hello&quot; in a variable 
+  for later use, should be a piece of cake in a modern, powerful, streamlined 
+  programming language like C++. In fact. in much earlier &quot;primitive&quot; 
+  computer languages it <i>was</i> simple:</font></p>
+<font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> /* <font color="#FF0000">No 
+such luck in C++!</font> If only life could be so simple */<br>
+string UserInput ;<br>
+cout &lt;&lt; &quot;Please enter your name: &quot; ;<br>
+cin &gt;&gt; UserInput ;<br>
+cout &lt;&lt; &quot;Hello, &quot; &lt;&lt; UserInput ; </font> 
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Nope, when C came out it 
+  didn't even have a provision for strings! Of course, the sensible people of 
+  the world immediately inquired when they were going to get off their asses and 
+  implement strings into their marvelous new programming language, to which the 
+  computer nerds promptly responded by smiling, adjusting their thick glasses 
+  and replying: &quot;What do we need strings for, when it's just as easy to store 
+  everything in an Array?&quot; Naturally after a prolonged, dumbfounded pause 
+  the beginners to the programming genre inquired: &quot;What the hell is an Array?&quot; 
+  to which came the answer: &quot;Well! Obviously you haven't read my 3 inch thick 
+  book <i>What Is a Computer?</i>&quot; They then made a hasty retreat back into 
+  their closets and parent's basements and that was all the answers we got out 
+  of them.<br>
+  Eventually some clever hackers made a header file for C which allowed you to 
+  use strings in a more traditional manner: string.h</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* HelloString.cpp
+   Classic &quot;Hello World&quot;
+   using string.h header file
+*/<br>#include &lt;iostream&gt;<br>#include &lt;string&gt;<br>using namespace std;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main() <br>{
+         string MyString = &quot;Hello&quot;;
+
+         cout &lt;&lt; MyString
+return 0;
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="+1">Next Lesson: 
+  <a href="operators.htm"> Operators</a></font></p>
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="+1"><a href="../index.htm">Index</a><br>
+  </font></p>
+</body>
+</html>

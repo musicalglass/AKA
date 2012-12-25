@@ -1,0 +1,11 @@
+compile all .cs files to .exe
+csc /out:hello.exe *.cs
+csc /nologo /out:hello.exe *.cs
+
+compile .dll
+csc /t:library /out:echo.dll echo.cs
+csc /nologo /t:library /out:echo.dll echo.cs
+
+compile Hello to require .dll
+csc /out:hello.exe /r:echo.dll hello.cs 
+csc /nologo /out:hello.exe /r:echo.dll hello.cs 

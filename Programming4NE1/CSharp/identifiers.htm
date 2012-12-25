@@ -1,0 +1,445 @@
+<html>
+<head>
+<title>C# Tutorial /  Identifiers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#CC66FF">
+<h1 align="center"><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Identifiers 
+  ( Variables)</font></h1>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Identifiers allow 
+  us to give names to data or objects.<br>
+  Consider this:</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">x 
+  = 1 ; </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Here we have assigned 
+  a value of 1 to a variable named <b><font color="#0000FF" size="+2">x</font></b><br>
+  This is known as a <i>Variable Declaration</i>. <br>
+  Since there are different types of variables, we should specify that this variable 
+  is an Integer ( a whole number )</font></p>
+<table width="100%" border="0" cellpadding="6">
+  <tr valign="top"> 
+    <td width="49%"> 
+      <p><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">int 
+        x = 1 ; </font></p>
+      <p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Try the following 
+        example:</font></p>
+    </td>
+    <td width="51%"> 
+      <table width="240" border="0" bgcolor="#FFFF99" align="right" cellpadding="10">
+        <tr> 
+          <td> 
+            <p><font face="Arial, Helvetica, sans-serif" color="#000000">Note: 
+              These are all <a href="index.htm#ConsoleApplication">Console Application</a> 
+              examples for the beginner's tutorial</font> </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<br>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#00FF00" face="Geneva, Arial, Helvetica, san-serif" size="+1">// Variable1.cs<br>//Print the value of a Variable to the screen</font><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1"><br><br>using System ; <br>public class WhoCares<br>{<br>	static void Main ( )<br>	{ <br>	int a ;<font color="#00FF00">  // Declare an Integer Variable ( whole number )</font><br>	a = 42 <font color="#00FF00">;  // Assign a value to Variable</font><br>	Console.Write ( a ) <font color="#00FF00">; // Write Variable to the screen</font><br>	}<br>}<br></font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Notice how this 
+  prints 42 to the screen, the value of the Integer Variable <font color="#0000FF">a</font>, 
+  not the letter a. But you don't have to use just letters. In fact, it's not 
+  always good practice to write this way. Although using cryptic abbreviations 
+  is a good way to prevent others from reading your hard work, you'll quickly 
+  find that rather than confounding your adversaries the only person you're confusing 
+  is yourself.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Therefore, it's 
+  much easier to use nice descriptive variable names.</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#00FF00" face="Geneva, Arial, Helvetica, san-serif" size="+1">//  Variable1.cs<br>// Print the value of a Variable to the screen</font><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1"><br><br>using System ; <br>public class WhoCares<br>{<br> 	 static void Main ( )<br> 	 { <br>  	   int MyVariable = 42;  <font color="#00FF00">// Declare an Integer and assign a value</font><br> 	   Console.Write ( MyVariable ) ; <font color="#00FF00">// Write Value to the screen</font><br> 	 }<br>}<br></font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Same code, just 
+  a little easier to understand.<br>
+  Notice how we didn't write:</font></p>
+<pre><font color="#00FF00" face="Geneva, Arial, Helvetica, san-serif" size="+1">// <font color="#FF0000">Wrong</font> way to declare a variable </font><font color="BLUE" face="Geneva, Arial, Helvetica, san-serif" size="+1">
+    int My Variable = 1;</font></pre>
+<p><font color="RED" face="Geneva, Arial, Helvetica, san-serif" size="+1">Variable 
+  names must be one word</font><font face="Geneva, Arial, Helvetica, san-serif" size="+1"> 
+  all together so the computer knows where one command ends, and another begins. 
+  This will work:</font></p>
+<pre><font color="#00FF00" face="Geneva, Arial, Helvetica, san-serif" size="+1">// Variable names must be 1 word </font><font color="BLUE" face="Geneva, Arial, Helvetica, san-serif" size="+1">
+	int My_Number  = 42;</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Also, <font color="RED">you 
+  can't begin variable names with a number</font>:</font></p>
+<pre><font color="#FF0000" face="Geneva, Arial, Helvetica, san-serif" size="+1">// Wrong </font><font color="BLUE" face="Geneva, Arial, Helvetica, san-serif" size="+1">
+ int 01_Player = 1 ;
+
+<font color="#00FF00">// Right </font>
+ int Player_01 = 1 ;
+
+<font color="#00FF00">// Right </font>
+ int Player01_Score  = 1 ;
+
+<font color="#00FF00">// Right </font>
+ int P0000374  = 1 ;</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1"> In C++ you could 
+  declare a variable without assigning a value to it. In C# you can declare a 
+  variable by itself but it's value must be specified somewhere:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#00FF00" face="Arial, Helvetica, sans-serif" size="+1">// Right<br></font><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">int MyVariable;</font><font color="#00FF00" face="Arial, Helvetica, sans-serif" size="+1"> // Declare an Integer ( MyVariable )
+<font color="#0000FF">MyVariable = 42;</font> // Assign a value to MyVariable
+<font color="#0000FF">Console.Write(MyVariable);</font> // Write Value to the screen
+</font></pre>
+      </td>
+  </tr>
+</table>
+<font size="+1"><br>
+</font>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#FF0000" size="+1" face="Arial, Helvetica, sans-serif">// Wrong<br></font><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int MyVariable;</font><font color="#00FF00" size="+1" face="Arial, Helvetica, sans-serif"> // Declare an Integer ( MyVariable )
+<font color="#0000FF">Console.Write( MyVariable );</font>  // No value was specified. Compiler error<br></font></pre>
+      </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Also no foul language:</font></p>
+<pre><font color="BLUE" face="Geneva, Arial, Helvetica, san-serif" size="+1"> </font><font color="BLUE" face="Geneva, Arial, Helvetica, san-serif" size="+1">int @&amp;%*!_Player ; <font color="#FF0000">// Naughty naughty, won't even be read</font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">...in other words 
+  no special characters in Variable names:</font></p>
+<pre><font color="#FF0000" face="Geneva, Arial, Helvetica, san-serif" size="+1">// Wrong </font><font color="BLUE" face="Geneva, Arial, Helvetica, san-serif" size="+1">
+ int Score%_Player ;</font></pre>
+<pre><font color="#00FF00" face="Geneva, Arial, Helvetica, san-serif" size="+1">//  Right</font><font color="BLUE" face="Geneva, Arial, Helvetica, san-serif" size="+1">
+ int Score_Percent_Player ;</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">You can use any 
+  words you like, you could use your own name:</font></p>
+<pre><font color="BLUE" face="Geneva, Arial, Helvetica, san-serif" size="+1"> int Charlie ;</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">But you will confuse 
+  the computer if you use any of the same words that are already commands like 
+  class or return, so you should make up your own unique variable names.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Note also, if you 
+  declare the variable Charlie, calling charlie later will not work. It's case 
+  sensitive. </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">So basically you 
+  have letters, Capitol letters, numbers and the underscore. Also it's not a good 
+  idea to begin variable names with an underscore. _WrongFilename</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Print 2 or 
+  more variables on the same line</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Consider this:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">// </font><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1"> Variables4.cs<br>// Print the value of 2 Variables one after the other<br><br>using System ; <br>public class MadeUpName <br>{ <br>	static void Main ( ) <br>	{  <br>	int Variable1 ;  
+	int Variable2 ;  
+<br>	Variable1 = 42 ;  <br>	Variable2 = 24 ;  
+<br>	Console.Write ( Variable1 ) ;  <br>	Console.Write ( Variable2 ) ;  <br>	}  <br>} <br></font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">This will print 
+  4224. To add a space between the numbers, you could use a space in parenthesis.</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">//</font><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1"> Variables5.cs<br>// Print the value of 2 Variables separated by a space<br><br>using System ; <br>public class MadeUpName<br>{<br>  	static void Main ( )<br> 	{ <br> 	int Variable1 = 7, Variable2 = 6 ;  // Declare two Integer Variables on the same line</font></pre>
+      <pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">     Console.Write ( Variable1 ) ; 
+     Console.Write ( &quot; &quot; ) ; 
+     Console.Write ( Variable2 ) ; 
+     }
+}<br></font></pre>
+    </td>
+  </tr>
+</table>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Print on 
+  two lines</font><font face="Geneva, Arial, Helvetica, san-serif"><br>
+  </font></h3>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">using System ; <br>public class AddSpace<br>{<br>	      static void Main ( )<br>	      { <br>    	  int Variable1 , Variable2 ; </font></pre>
+      <pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">         Variable1 = 7 ; 
+         Variable2 = 6 ; </font></pre>
+      <pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">          Console.WriteLine ( Variable1 ) ; 
+         Console.Write ( Variable2 ) ; 
+         }
+}<br></font></pre>
+    </td>
+  </tr>
+</table>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Variables 
+  in a sentence</font><font face="Geneva, Arial, Helvetica, san-serif"><br>
+  </font></h3>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">using System ; <br>public class NoseHair<br>{<br>	  static void Main ( )<br>	  { <br><font color="#00FF00">	  // Declare multiple Variables of the same type on the same line</font><br>	  int Day , Month , Year ; 
+<br>     Day = 1 ; <br>      Month = 11 ; <br>      Year = 06 ;
+
+  <font color="#00FF00">   // Variable will be inserted inside the quotes
+    // using {0} followed by a comma then VariableName</font><br>	  Console.Write (&quot;The Date is: {0} {1} {2}&quot; , Day , Month , Year ) ;
+     }
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<font face="Geneva, Arial, Helvetica, san-serif"><br>
+<font size="+1">Note how we use a space inside the parenthesis to separate the 
+variables.<br>
+</font></font> 
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">These are all examples 
+  of <i>constant</i> variables. They don't actually vary very much, do they? You 
+  assign a value and it stays that way. To do something a little more useful, 
+  we can make a variable which changes according to user input:</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">User input</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Use <font color="#0000FF">Console.Write</font> 
+  to get input from the keyboard. Here we store whatever the user enters into 
+  a variable and print it to the screen.</font></p>
+<table width="75%" border="1" align="center" cellpadding="6" cellspacing="0">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">using System;<br>class PrintInput<br>{<br>       public static void Main ()<br>	    {<br>	<br>	     string sUserInput ;<font color="#00FF00"> // Declare a String Variable</font></font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">         <font color="#00FF00">// Statements</font>
+         Console.Write ( &quot;Please enter some text: &quot; ) ; <font color="#00FF00">// Prompt the user for input</font><br>
+         sUserInput = Console.ReadLine() ; <font color="#00FF00">// Store whatever user types in Variable</font></font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">         Console.Write ( sUserInput ) ; 
+         }
+} 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Notice that in this 
+  case it was not neccesary to assign a value to the variable: <font color="#0000FF">sUserInput</font> 
+  , you just declare it. The value is supplied by the User. </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Input on 
+  separate line</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Note how we added 
+  a space in the text string. When you run the program, the blinking cursor appears 
+  at the end of the line and the user input appears there as they type.<br>
+  If you want the user input to appear on it's own separate line, add the <font color="#0000FF">\n 
+  </font>command. </font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">//</font><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1"> NewLine.cs<br>// Number Input / Output
+// This program takes a text string
+// input by the user and prints it to the screen
+// Written by: YourName
+// Date: 01/05/06</font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">using System;<br>class NewLine<br>{<br>         public static void Main ()<br>     	{<br>     	 string UserInput ; // Declare a String Variable</font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">         <font color="#00FF00">// Use \n to make blinking cursor appear on next line</font>
+         Console.Write ( &quot;\nPlease enter some text:\n&quot; ) ;<font color="#00FF00"> // &lt;-- Instead of user type appearing here
+         // &lt;-- User now types here</font>
+         UserInput = Console.ReadLine() ; </font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">         Console.Write ( &quot;You entered: &quot; ) ; 
+         Console.Write ( UserInput ) ; 
+         Console.Write ( &quot;\n&quot; ) ; 
+         }
+}<br></font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Notice how putting 
+  <font color="#0000FF">\n</font> before and after your code creates space before 
+  and after your output on the command line when you run your program.<br>
+  We also demonstrate that you can put the <font color="#0000FF">\n</font> command 
+  on it's own separate line as at the bottom, or nestled within a group of other 
+  string commands.</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Print input 
+  Variables in a sentence</font></h3>
+<table width="75%" border="1" align="center" cellpadding="6" cellspacing="0">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">using System;<br>class HelloName<br>{<br>       public static void Main ()<br>	    {<br>	<br>	     string sUserInput ;<font color="#00FF00"> // Declare a String Variable</font></font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">         // Statements
+         Console.Write ( &quot;\nWhat is your name? &quot; ) ; <font color="#00FF00">// Prompt the user for input</font>
+         sUserInput = Console.ReadLine() ; <font color="#00FF00">// Store whatever user types in Variable</font></font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">         Console.Write ( &quot;Hello, {0}! \n&quot; , sUserInput ) ; 
+         }
+} 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Numerical 
+  Input</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">If you just want 
+  to print some numerical values to the screen you can store them in a String 
+  Variable.<br>
+  However if you want to use those variables as numerical values you must first 
+  convert them to an Integer. </font><font face="Geneva, Arial, Helvetica, san-serif" size="+1">For 
+  Instance: </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" color="#FF0000" size="+1">// 
+  This won't work! you can't store a String in an Integer directly</font><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><br>
+  <font color="#0000FF">string MyString = &quot;6&quot; ; <br>
+  int MyInt = MyString ; </font></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">You must first Parse 
+  the numbers in the text string into their numerical equivalents:</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">MyInteger 
+  = int.Parse ( MyString ) ;</font></p>
+<table width="106%" border="0" cellpadding="6" align="center">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">using System;
+class StringToNumber
+{
+        public static void Main ()
+        {
+        string UserInput ; <font color="#00FF00">// Declare a String Variable to store user input</font>
+        int StringToNumber ; <font color="#00FF00">// Integer to store Parsed string numbers </font></font>        </pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">         Console.Write ( &quot;Please enter a number: &quot; ) ; 
+         UserInput = Console.ReadLine () ; <font color="#00FF00">// Store user input in String</font>
+         StringToNumber = int.Parse ( UserInput ) ; <font color="#00FF00">// Convert input String and store in Integer Variable</font></font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">         Console.Write ( &quot;You entered: &quot; ) ; 
+         Console.Write ( StringToNumber ) ; 
+         }
+} 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Now that you hopefully 
+  have a fundamental grasp of the concept: that a number stored in a String Variable 
+  is not quite the same as a Variable containing a numerical value. ( Phew! ) 
+  Here is the same code shortend by using Console.ReadLine directly in place of 
+  a String Variable:</font></p>
+<table width="75%" border="0" cellpadding="6" align="center">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">using System;
+class StringToNumber
+{
+         public static void Main ()
+        {
+        Console.Write ( &quot;Please enter a number: &quot; ) ;        </font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#00FF00" size="+1">         // Declare a Variable, convert user input String to Integer and
+         // store value in variable. All on one line </font><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">
+         int StringToNumber = int.Parse ( Console.ReadLine () ) ; </font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">         <font color="#00FF00">// Insert Variable into a sentence</font>
+         Console.Write ( &quot;You entered: {0}.&quot; , StringToNumber ) ; 
+         }
+} 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Remember that while 
+  you can assign numeric values to words or characters, to the computer they are 
+  still nothing but a bunch of numbers. As such, you can do mathematical calculations 
+  with variable names just as if they were numbers:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#00FF00" face="Geneva, Arial, Helvetica, san-serif" size="+1">// AddVars.cs<br>//   Adding Variables<br>//   This program adds two numbers input by the user<br>//   Written by: Your Name<br>//   Date: 01/05/06</font><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1"><br></font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">using System ; <br>public class AddVars<br>{<br>	     static void Main ( )<br>	     { <br>	      <font color="#00FF00">// Declare some variables</font><br>      	  int MyNum1 ; <br>	      int MyNum2 ; <br>	      int MySum ; </font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">         <font color="#00FF00">// Store values in a couple variables</font>
+         MyNum1 = 28 ; 
+         MyNum2 = 14 ; </font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">         <font color="#00FF00">// Add value of two variables and store in another variable</font>
+         MySum = MyNum1 + MyNum2 ; </font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">         Console.Write ( MySum ) ; 
+         }
+}
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">In this case, since 
+  we are declaring more than one variable of the same type we also could have 
+  declared them on the same line:</font></p>
+<p><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1"> 
+  int MyNum1, MyNum2, MySum ;</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Note that the line 
+  of code which does the calculations: <font color="#0000FF">sum = num1 + num2</font> 
+  comes after the input. The computer reads and executes each line of code from 
+  top to bottom as it comes to it. Let say you had put the calculation up before 
+  the input like this: </font></p>
+<font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1"> sum 
+= num1 + num2 ; // <font color="#FF0000">Wrong.</font> This part doesn't get calculated<br>
+Console.Write ( &quot;Please enter two numbers: &quot; );<br>
+cin &gt;&gt; num1 &gt;&gt; num2 ;</font> 
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">As you can see in 
+  this case that the sum is calculated before a value has even been input, so 
+  there is nothing to calculate.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Note that we also 
+  could have declared the variable, sum on the line it is used:<br>
+  <font color="#0000FF">int sum = num1 + num2 ;</font><br>
+  It is not neccesary in C++ to declare all of your variables at the top as in 
+  some other programming languages.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Also, we could have 
+  just as easily done it this way:<br>
+  <font color="#0000FF">Console.Write ( num1 + num2 ) ; </font><br>
+  This would print the sum of num1 and num2.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Of course, if you 
+  actually wanted to print x + y to the screen you would treat is as a string 
+  of text:</font></p>
+<p><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1"> 
+  Console.Write ( &quot;x + y = &nbsp;&quot; ) ; <br>
+  Console.Write ( x + y ) ; </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Try the above program 
+  substituting subtraction or multiplication:</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><font color="#0000FF">int 
+  MySum = MyNum1 - MyNum2 ; </font></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><font color="#0000FF">int 
+  <font color="#0000FF">MySum</font> = <font color="#0000FF">MyNum1</font> * <font color="#0000FF">MyNum2</font> 
+  ;</font></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Note that multiplication 
+  uses the algebraic asterisk symbol <font color="#0000FF">*</font> to avoid confusing 
+  it with x. <br>
+  Division is done with the forward slash: <b><font color="#0000FF">/</font></b></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Now here is where 
+  we run into a bit of a sticky wicket. Try using the above program to make a 
+  simple division calculator using the following line of code:</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><font color="#0000FF">int 
+  sum = num1 / num2 ;</font></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Now run your calculator 
+  and try to divide 5 by 2. You will see that it returns a value of 2. Why? Remember 
+  that integer variables can only contain <i>whole numbers</i>. Everything after 
+  the decimal point will be dropped.<br>
+  To store fractional numbers you must declare the value to be a <i>floating point</i> 
+  variable:</font></p>
+<font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1"> /* 
+Local Declarations */ <br>
+int num1 ;<br>
+int num2 ;<br>
+float sum ;</font> 
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Characters</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Another Variable 
+  type is Char. <br>
+  A Character Variable can only contain a single letter or <i>character</i>.</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#00FF00" face="Geneva, Arial, Helvetica, san-serif" size="+1">// InOutChar.cs<br>//  Character Input / Output
+// This program takes a single Character
+//  input by the user and prints it to the screen<br>//  Written by: YourName<br>//  Date: 01/05/06</font></pre>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF" size="+1">using System ; <br>public class AddVars<br>{<br>          static void Main ( )<br>         {
+         <font color="#00FF00">// Local Declarations </font>
+         char cUserInput ;</font></pre>
+      <pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">        <font color="#00FF00"> // Statements </font>
+         Console.Write ( &quot;Please enter a letter: &quot; ) ;
+         cUserInput = Console.ReadLine () ;</font></pre>
+      <pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">         Console.Write (&quot;You entered {0}&quot;, cUserInput ;<br>
+         } <font color="#00FF00">// end Main </font><br>} <font color="#00FF00">// end class AddVars </font><br></font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Using the variable 
+  type <font color="#0000FF">char</font> allows you to store letters.<br>
+  Try running the above example and entering your name. As you can see the char 
+  variable type only allows a single character. </font></p>
+<p align="center"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Next 
+  Lesson: <a href="operators.htm"> Operators</a><br>
+  </font><font face="Verdana, Arial, Helvetica, sans-serif" size="+1"><font face="Arial, Helvetica, sans-serif">Back 
+  to the Previous Lesson: <a href="programming.htm">Programming with C#</a></font></font></p>
+<p align="center"><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><a href="../index.htm">Index</a></font><font face="Geneva, Arial, Helvetica, san-serif"><br>
+  </font></p>
+</body>
+</html>

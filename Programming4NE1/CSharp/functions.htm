@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Functions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr>
+    <td>
+      <pre><font color="#0000FF">/* FunctionAdd.cpp
+   Demonstrates passing parameters to 
+   a function for simple addition
+*/
+#include &lt;iostream&gt;
+using namespace std ;       </font></pre>
+      <pre><font color="#0000FF">/* ------ Function Addition ------ */<br>int Addition ( int num1 , int num2 )
+{
+         int sum ;
+         sum = num1 + num2 ;
+         return ( sum ) ;
+} 
+/* ------- Addition End -------- */</font></pre>
+      <pre><font color="#0000FF">int main ( void )
+{
+         int My_Answer = Addition ( 1 , 2 ) ;
+         cout &lt;&lt; &quot;The result is &quot; &lt;&lt; My_Answer ;
+         return 0 ;
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="75%" border="1" align="center">
+  <tr>
+    <td> 
+      <pre><font color="#0000FF">/* FunctionHello.cpp
+   Hello World example using a Function
+*/
+         #include &lt;iostream&gt;
+         using namespace std; </font></pre>
+      <pre><font color="#0000FF">void My_Function ( void )
+         {
+         cout &lt;&lt; &quot;I function, therefore I am&quot;;
+         }</font></pre>
+      <pre><font color="#0000FF">int main ( void )
+         {
+         My_Function ();
+         return 0;
+         }
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p>In the above example we use the void function type, because the function takes 
+  no parameters and returns no value, it just prints something to the screen. 
+</p>
+</body>
+</html>

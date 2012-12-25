@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>Free C++ Programming</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#CC00FF">
+<h1 align="center"><font face="Geneva, Arial, Helvetica, san-serif">Free C# Programming</font></h1>
+<p><font face="Geneva, Arial, Helvetica, san-serif">OK, assuming you have already 
+  installed <a href="http://msdn.microsoft.com/vstudio/express/visualc/download/">free 
+  Visual C++ Express</a> from Microsoft you should now have the ability to author 
+  <i>Console</i> Applications, which you can run from the <i>Command Line</i>.<br>
+  A Console Application is not something you run on a game console like the Xbox 
+  or something. Basically a Console Application is something which you would run 
+  on old school computers which didn't have Windows.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">If you have installed the 
+  Microsoft Platform SDK, it should come with your free C# Command Line compiler. 
+  </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">If you installed Visual C++, 
+  you can <a href="#command">skip the next part</a> about adding the path. Visual 
+  C++ comes with it's own Command Prompt window which should be preconfigured 
+  for you. </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Adding the 
+  Compiler to the Path: Windows 9X</font></h3>
+<p><a href="index.htm#xp"><font face="Arial, Helvetica, sans-serif" size="+1">Windows 
+  XP users click here</font></a></p>
+<hr>
+<ol>
+  <li><font face="Geneva, Arial, Helvetica, san-serif"><a name=WndExpl></a>Start 
+    Windows Explorer and locate the folder where your <b><font size="+1">cl.exe</font></b> 
+    application is installed. Here is an example:</font><br>
+    &nbsp;<br>
+    <img src="images/SearchCL.jpg" width="738" height="466"> 
+  <li><font face="Geneva, Arial, Helvetica, san-serif">Right-click the path in 
+    the Address combo box and click Copy&nbsp; </font> 
+  <li><font face="Geneva, Arial, Helvetica, san-serif">Start Notepad and open 
+    the <b>C:\Autoexec.bat</b> file </font> 
+  <li><font face="Geneva, Arial, Helvetica, san-serif">Find the line that starts 
+    with <b>path</b>. If you don't see it, then on a new line, type <b>path</b> 
+    and press the Space bar </font> 
+  <li><font face="Geneva, Arial, Helvetica, san-serif"><a name=WndNote></a>If 
+    you already have a path line, type <font color="#FF9900" size="+1"><b>;</b></font> 
+    at the end, and paste the above path. Example:</font><br>
+    &nbsp;<br>
+    <img height=366 
+  src="../images/notepad2.gif" width=668 
+  border=0><br>
+    &nbsp;<br>
+    <font face="Geneva, Arial, Helvetica, san-serif">If you were creating your 
+    own new path, type the copied directory to the right side of path </font> 
+  <li><font face="Geneva, Arial, Helvetica, san-serif">Close Notepad. When asked 
+    whether you want to save the file, click Yes </font> 
+  <li><font face="Geneva, Arial, Helvetica, san-serif">Restart the computer <br>
+    <a name="xp"></a> </font></li>
+</ol>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">&nbsp; </font> 
+  <font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Adding the 
+  Compiler: Windows 2000/XP/2003</font> </h3>
+<hr>
+<ol>
+  <li><font face="Geneva, Arial, Helvetica, san-serif">Click Start / Control Panel 
+    </font> 
+  <li><font face="Geneva, Arial, Helvetica, san-serif">In Windows 2000 and XP 
+    (Home Edition or Professional), double-click System<br>
+    In Windows Server 2003, click System </font> 
+  <li><font face="Geneva, Arial, Helvetica, san-serif">In the System Properties 
+    dialog box, click the Advanced tab and click Environment Variables </font> 
+  <li><font face="Geneva, Arial, Helvetica, san-serif">In the System Variables 
+    section, click Path and click Edit </font> 
+  <li><font face="Geneva, Arial, Helvetica, san-serif">Press Home and press the 
+    right arrow key. Check if you have an entry that appears as Microsoft.NET\Framework\vXXXX 
+    where XXXX represents some numbers.<br>
+    If you don't see that entry, press End or get to the end of the string<br>
+    <br>
+    Type <font color="#0000FF" size="+1"><b>;</b></font> followed by the complete 
+    path to the compiler:<br>
+    &nbsp;<br>
+    <font color="#0000FF">;C:\Program%Files\Microsoft%Platform%SDK\Bin\win64\x86\AMD64</font></font>
+  <li><font face="Geneva, Arial, Helvetica, san-serif">Click OK on each dialog 
+    box</font></li>
+</ol>
+<a name="command"></a>
+<hr>
+<p><font face="Geneva, Arial, Helvetica, san-serif">To start with we want to open 
+  a Command Prompt. In Windows, you can usually find it under Programs/Accesories. 
+  Or you can just click on the Start menu, select Run, type <font color="#0000FF" size="+1"><b>cmd</b></font><b><font size="+1"> 
+  </font></b>and hit Enter.<br>
+  If you have Visual C++ installed, you can get to the Command Window that comes 
+  with it by going to <font color="#0000FF">Start / Program Files / Visual C++ 
+  2005 Express Edition / Visual Studio Tools / Visual Studio 2005 Command Prompt</font></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">You should see something like 
+  this:<br>
+  <img src="../images/commandline1.gif" width="704" height="228"> </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">If you blow the window up 
+  to full screen size you'll get an idea of what computers looked like before 
+  there was Windows, everything was done at the text level, and that's where we're 
+  going to be spending a a good deal of time for a while.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Depending on your computer 
+  you may see something a little different, mine looks like this:</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif"><img src="../Borland/images/command_prompt.jpg" width="705" height="486"></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">We want to start at the root 
+  directory like this:</font></p>
+<p><img src="../Borland/images/command_prompt_C.jpg" width="833" height="544"></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">C: represents your main hard 
+  drive. Yours may be a different letter, D: perhaps.<br>
+  If yours already looks like this, that's fine. If yours looks more like mine 
+  with a couple of folder names after it<br>
+  Type the following:<br>
+  <font size="+2" color="#0000FF">cd..</font></font><font size="+2" face="Geneva, Arial, Helvetica, san-serif"> 
+  </font><font face="Geneva, Arial, Helvetica, san-serif"><br>
+  and hit Enter. (That's CD period period)<br>
+  This should move you up one Directory:</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif"><img src="../Borland/images/command_prompt2.jpg" width="833" height="544"></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Type <font color="#0000FF">CD..</font> 
+  again and hit Enter. This should move you up another level.<br>
+  Continue entering CD.. until you can go no higher. You have reached the top 
+  level of your Hard Drive.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif"><img src="../Borland/images/command_prompt3.jpg" width="833" height="544"></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Type<br>
+  <font size="+1" color="#0000FF">dir</font><br>
+  and hit Enter.<br>
+  This should display the contents of your hard drive:</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif"><img src="../Borland/images/command_prompt4.jpg" width="833" height="544"></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">You can see there may be one 
+  or two files and a number of folders, or DIRectories. <br>
+  </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif">Create a new Directory from 
+  the Command Prompt</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Make a Directory to store 
+  your code in:<br>
+  Type<br>
+  <font size="+1" color="#0000FF">md C++</font><br>
+  and hit Enter. This creates a new folder called C++. Type <font color="#0000FF" size="+1">dir</font> 
+  to verify that the new directory is there.</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif">Open specified directory</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif">To open the C++ directory:<br>
+  Type<br>
+  <font size="+1" color="#0000FF">cd c++</font><br>
+  You will see the command prompt change to show that you are now in the C++ directory.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Inside that directory, let's 
+  make another directory for our first project called Hello:<br>
+  Type<br>
+  <font size="+1" color="#0000FF">md Hello<br>
+  </font>then type <font color="#0000FF">dir </font>to verify that the new Hello 
+  directory was created.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Open the Hello directory:<br>
+  Type<br>
+  <font size="+1" color="#0000FF">cd hello</font><br>
+  </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif">Create your first code</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif"> Type<br>
+  <font color="#0000FF" size="+1">notepad hello.cpp</font><br>
+  Notepad opens and ask if it's OK to create a new file. Just hit Enter.<br>
+  Type the following code:</font></p>
+<div align="center"><font size="+1"><a href="GoBack.htm"><img src="../images/hello.jpg" width="704" height="219" border="0"></a></font> 
+</div>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Go to File / Save As<br>
+  Save the file hello.cpp in the Hello folder you created earlier located at My 
+  Computer / Hard Drive ( C: / C++ / Hello ). From the Command Prompt, you should 
+  now be able to type <font color="#FF9900" size="+1">dir</font> and see your 
+  newly created file: hello.cs</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif">Compile the code</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif">To compile your code: from 
+  the Command Prompt type:<br>
+  <font color="#FF9900">cl hello.cpp</font><br>
+  If all went well your program should compile without any errors. You should 
+  find the newly created program called hello.exe in the Hello folder. Type <font color="#FF9900" size="+1">dir</font> 
+  and you can see your new program. To run it, type<br>
+  <font color="#FF9900" size="+1">hello</font><br>
+  The program executes and prints the message to the Command Prompt window. Nothing 
+  spectacular, but congratulations! you're a programmer. Big whoop. Now get back 
+  to work.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Note that once your have entered 
+  a few commands into the Command Prompt window, you can hit the Up or Down Arrow 
+  keys to recall any commands you already entered. So once you have compiled one 
+  program, if you need to compile it a second time, you just arrow up till you 
+  find the command from the previous compile and hit Enter. Now hit the Arrow 
+  Down key and there's the name of the file. Hit Enter to run the program again. 
+  Saves typing.</font></p>
+<p align="center"><font face="Geneva, Arial, Helvetica, san-serif"><a href="source.htm#%20Tutorial/debugging.htm"><font size="+1">Next 
+  Lesson</font></a><font size="+1"> Debugging</font><br>
+  </font></p>
+</body>
+</html>

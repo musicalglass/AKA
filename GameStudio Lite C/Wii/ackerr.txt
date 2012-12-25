@@ -1,0 +1,2 @@
+Error in  'MAIN' line 9: syntax error
+< void toggleIR (var handle, WIIMOTE* buffer) >

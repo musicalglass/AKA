@@ -1,0 +1,297 @@
+<title>Conditional Statements - DarkBasic Professional</title>
+<BODY COLOR=black BGPROPERTIES=FIXED bgcolor="#FFFFFF">
+<h1 align="center"><font face="Verdana, Arial, Helvetica, sans-serif">Conditional 
+  Statements </font></h1>
+<p align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="+1">Using 
+  IF , THEN , AND, OR</font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">Consider the following:</font></p>
+<pre><font face="Courier New, Courier, mono" color="BLUE" size="+1"> cout &lt;&lt; &quot;Hello World&quot; ;
+ cout &lt;&lt; &quot;Goodbye&quot; ;</font></pre>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">By now an experienced programmer 
+  like yourself should be able to read this bit of code and tell exactly what 
+  it does: print Hello World on one line and Goodbye on the next, right?</font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">Say we want to print one 
+  or the other. But based on what? We could make it so if the user enters a number 
+  it will print one or the other. We could make it so it randomly prints one or 
+  the other. We could have it say either / or depending on what time of day it 
+  is. In all of these cases, we want to set up a <i>Condition</i> and then do 
+  something depending on whether that Condition is met or not. Sounds like a good 
+  job for a Variable.</font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">First let's describe what 
+  we would like to do:</font></p>
+<pre><font face="Courier New, Courier, mono" color="BLUE"><font size="+1"> // Declare a Variable
+
+ // If Variable says one thing, then print Hello World
+ // If Variable says another thing, then print Goodbye</font></font></pre>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">First let's make up a name 
+  and declare our Variable:</font></p>
+<pre><font face="Courier New, Courier, mono" color="BLUE"><font size="+1"> int My_Condition = 1 ;</font></font></pre>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">Next we want to say: if 
+  the Variable has a certain value, do something:</font></p>
+<pre><font face="Courier New, Courier, mono" color="BLUE"><font size="+1"> if ( My_Condition == 1 )<br> cout &lt;&lt; &quot;Hello World&quot; ;</font></font></pre>
+<table width="75%" border="0" bgcolor="#FFFF99" cellspacing="6" align="center">
+  <tr> 
+    <td><font face="Verdana, Arial, Helvetica, sans-serif">Yes, you read that 
+      right. I said <font color="#0000FF" size="+1"><b>==</b></font><br>
+      This is not a typographical error. All along in this tutorial, every time 
+      we have used the = sign it was an <i>Assignment</i>. We were assigning a 
+      value to a variable.<br>
+      In this instance, we are doing a <i>Comparison</i>. If we are checking to 
+      see whether value A is <i><b>equal to</b></i> value B, we use <b><font size="+1">==</font></b><br>
+      They could have just as easily done it the other way around. But Nooooooooo.<br>
+      Get used to tapping the key twice and think &quot;Equal To&quot;.</font></td>
+  </tr>
+</table>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">This will execute everything 
+  written on the same line after THEN if the value of the variable </font><font face="Verdana, Arial, Helvetica, sans-serif" color="BLUE">My_Condition 
+  </font><font face="Verdana, Arial, Helvetica, sans-serif">matches. Run the following 
+  example to verify this:</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF">/*<br> ------------------------------------<br> IfConst.cpp<br> If statements using constant variable<br> ------------------------------------<br>*/<br>#include &lt;iostream&gt; <br>using namespace std; </font></pre>
+      <pre><font color="#0000FF">int main ( void )
+{
+       int My_Constant = 1 ;
+         
+       if ( My_Constant == 1 )
+       cout &lt;&lt; &quot;Hello&quot; ;</font></pre>
+      <pre><font color="#0000FF">       if ( My_Constant == 2 )
+       cout &lt;&lt; &quot;Goodbye&quot; ;</font></pre>
+      <pre><font color="#0000FF">return 0 ;
+} /* main */
+       </font></pre>
+      <pre><font color="BLUE"></font></pre>
+      </td>
+  </tr>
+</table>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">This will print Hello to 
+  the screen. Now if we change the Variable My_Constant to 2, re-compile and run 
+  it again, and it will print Goodbye.</font></p>
+<p>== is the equal comparison <br>
+  &gt; greater than <br>
+  &lt; less than <br>
+  &gt;= is greater than or equal to <br>
+  &lt;= less than or equal to <br>
+  != is the not equal to comparison </p>
+<p>&nbsp;</p>
+<p>The comparasions can be assigned to a bool variable like this:</p>
+<p><font color="#0000FF">bool xtest = (x&gt;10) &amp;&amp; (x&lt;15);<br>
+  if (xtest) cout &lt;&lt; &quot;x is between 10 and 15&quot;) &lt;&lt; endl;<br>
+  if (!xtest) cout &lt;&lt; &quot;x is not between 10 and 15&quot; &lt;&lt; endl;</font></p>
+<p>This last segment could also use an else:</p>
+<p><font color="#0000FF">bool xtest = (x&gt;10) &amp;&amp; (x&lt;15);<br>
+  if (xtest) cout &lt;&lt; &quot;xtest is true&quot; &lt;&lt; endl;<br>
+  else cout &lt;&lt; &quot;xtest is false&quot; &lt;&lt; endl;</font></p>
+<p>A very common mistake made by programmers moving from other languages is using 
+  the assignment operator, =, instead of the equals operator, == (double equal 
+  signs). Both of these operators are valid in an if, but an assignment is rarely 
+  used in this case.</p>
+<p><font color="#0000FF">if (x = 5) //this is ALWAYS true since it will evaluate 
+  for 5, which is non-zero<br>
+  if (x == 5) //this is probably what the programmer meant</font></p>
+<p><br>
+  &amp;&amp; means and <br>
+  <font color="#0000FF">if ((x &gt; 10) &amp;&amp; (x &lt; 15)) cout &lt;&lt; 
+  &quot;x is between 10 and 15&quot; &lt;&lt; endl;<br>
+  <br>
+  if ((x != 5) &amp;&amp; (x != 6)) cout &lt;&lt; &quot;x is neither 5 nor 6&quot; 
+  &lt;&lt; endl;</font><br>
+</p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">Using the AND and OR commands 
+  is par for the course in C++. In any other language AND and OR are reserved 
+  words. If you mean AND you just type <font color="#0000FF">and</font>. In C++ 
+  you type:<br>
+  <font color="#0000FF">&amp;&amp;</font><br>
+  if you want to say OR you type:<br>
+  <font color="#0000FF"><b>||</b></font><br>
+  You will find this symbol located just above the Enter key along with the backslash 
+  character <b>\</b> Hold the shift key.</font></p>
+<h3><font face="Verdana, Arial, Helvetica, sans-serif">OR</font></h3>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF">/*<br> ------------------------------------<br> IfConst.cpp<br> If statements using constant variable<br> ------------------------------------<br>*/<br>#include &lt;iostream&gt; <br>using namespace std; </font></pre>
+      <pre><font color="#0000FF">int main ( void )
+{</font></pre>
+      <pre><font color="#0000FF" face="Courier New, Courier, mono"> int My_Constant = 1
+
+ if</font><font color="#0000FF">((</font><font color="#0000FF" face="Courier New, Courier, mono"> My_Constant</font><font color="#0000FF"> == 1 ) || ( </font><font color="#0000FF" face="Courier New, Courier, mono">My_Constant</font><font color="#0000FF"> == 2 ))</font><font color="#0000FF" face="Courier New, Courier, mono"> <br> cout &lt;&lt; "Heads" &lt;&lt; endl ;
+ if My_Constant == 2 cout &lt;&lt; "Tails" ;
+
+</font><font color="#0000FF">return 0 ;
+} /* main */<br></font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">Like before if the variable 
+  = 1, it will print Heads<br>
+  but now if you change the variable to 2,<br>
+  </font><font face="Verdana, Arial, Helvetica, sans-serif">it will print Heads 
+  on one line and Tails on the next.</font></p>
+<h3><font face="Verdana, Arial, Helvetica, sans-serif">AND</font></h3>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">Using AND will return a 
+  value only if more than one condition is met.</font></p>
+<table width="75%" border="1" align="center">
+  <tr>
+    <td> 
+      <pre><font face="Courier New, Courier, mono" color="BLUE">/* Using AND with constant variable */ 
+#include &lt;iostream&gt; 
+using namespace std ; 
+{ 
+         int My_Coin = 1 ; 
+         int User_Input ;<br>
+         cout &lt;&lt; "Enter a number: 1 or 2 " ; 
+         cin &gt;&gt; User_Input ; 
+         
+         if ( User_Input == 1 ) 
+         cout &lt;&lt; "Heads" ; <br>
+         if ( User_Input == 2 )
+         cout &lt;&lt; "Tails" ; <br>
+         if ( ( User_Input == 1 ) &amp;&amp; ( My_Coin == 1 ) ) 
+         cout &lt;&lt; "You Win!" ; <br>
+return 0 ; 
+} 
+</font><font face="Courier New, Courier, mono" size="+1" color="BLUE">         </font></pre>
+      </td>
+  </tr>
+</table>
+<h3><font face="Verdana, Arial, Helvetica, sans-serif">IF statements using Input 
+  Strings</font></h3>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">So now of course, instead 
+  of using numeric input as in the previous exercises, we could ask the user to 
+  enter &quot;y&quot; or &quot;no&quot; by using char instead of int when declaring 
+  the Variable</font><font face="Verdana, Arial, Helvetica, sans-serif">:</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font face="Courier New, Courier, mono" color="BLUE">/* Using AND with char variable */ 
+#include &lt;iostream&gt; 
+using namespace std ; 
+{ 
+         char User_Input ;<br>
+         cout &lt;&lt; "Would You like to play a game? y / n " ; 
+         cin &gt;&gt; User_Input ; 
+         
+         if ( User_Input == &quot;y&quot; ) 
+         cout &lt;&lt; "Allright" ; <br>
+         if ( User_Input == &quot;n&quot; )
+         cout &lt;&lt; "Goodbye" ; <br>
+return 0 ; 
+} 
+</font><font face="Courier New, Courier, mono" size="+1" color="BLUE">         </font></pre>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Note that this will only accept 
+  the lower case y or n as an input. If the user happened to enter a capitol Y, 
+  nothing would happen.<br>
+  You could make a provision for that using OR:</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE"> IF (( User_Choice 
+  = &quot;y&quot; )|| ( User_Choice = &quot;Y&quot; )) cout &lt;&lt; &quot;Allright&quot; 
+  ; </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">That will work fine with single 
+  text characters. If you want to use a character string, you will need to include 
+  the string.h header file.</font></p>
+<table width="75%" border="1" align="center">
+  <tr>
+    <td>
+      <pre><font color="#0000FF">/* IfString.cpp
+   User input must match string exactly
+*/
+         #include &lt;iostream&gt;
+         #include &lt;string&gt;
+         using namespace std ;</font></pre>
+      <pre><font color="#0000FF">int main ( void )
+{
+         /* Local Declarations */
+         string User_Input ; </font></pre>
+      <pre><font color="#0000FF">/* Statements */
+         cout &lt;&lt; &quot;Would you like to play a game?&quot; &lt;&lt; endl ;<br>         cout &lt;&lt; &quot;Please enter yes or no&quot; ;
+         cin &gt;&gt; User_Input ;<br>
+         if ( User_Input == &quot;yes&quot; )
+         cout &lt;&lt; &quot;OK!&quot; ;</font></pre>
+      <pre><font color="#0000FF">         if ( User_Input == &quot;no&quot; )
+         cout &lt;&lt; &quot;Aw Nutz!&quot; ;</font></pre>
+      <pre><font color="#0000FF">return 0 ;
+} /* main */</font></pre>
+</td>
+  </tr>
+</table>
+<h3><font face="Geneva, Arial, Helvetica, san-serif">IF ELSE statements</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif">In the previous example we 
+  used two separate IF statements for two possible conditions. You could also 
+  use ELSE following the IF condition:</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font face="Courier New, Courier, mono" color="BLUE">/* IfElse.cpp */ 
+#include &lt;iostream&gt; 
+using namespace std ; 
+{ 
+         int User_Input;<br>
+         cout &lt;&lt; "Pick a number from 1 - 10" ; 
+         cin &gt;&gt; User_Input ; 
+         
+         if ( User_Input == 4) 
+         cout &lt;&lt; "Correct" ; <br>
+         else
+         cout &lt;&lt; "Sorry, you guessed wrong" ; <br>
+return 0 ; 
+} 
+</font><font face="Courier New, Courier, mono" size="+1" color="BLUE">         </font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Now the computer will only 
+  accept one possible correct answer. Anything else will return the other result.<br>
+  This can be useful for instance if you want to ensure that whatever the user 
+  enters was what you expected. Say you wanted somebody to enter the number 4 
+  and instead they typed &quot;four&quot;.<br>
+  If the user input doesn't match what we wanted, we can return a default message:</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF">/* IfElseString.cpp
+   User input must match string exactly<br>   otherwise display default message
+*/
+         #include &lt;iostream&gt;
+         #include &lt;string&gt;
+         using namespace std ;</font></pre>
+      <pre><font color="#0000FF">int main ( void )
+{
+         /* Local Declarations */
+         string User_Input ; </font></pre>
+      <pre><font color="#0000FF">/* Statements */
+         cout &lt;&lt; &quot;Would you like to play a game?&quot; &lt;&lt; endl ;<br>         cout &lt;&lt; &quot;Please enter yes or no&quot; ;
+         cin &gt;&gt; User_Input ;<br>
+         if ( User_Input == &quot;yes&quot; )
+         cout &lt;&lt; &quot;OK!&quot; ;</font></pre>
+      <pre><font color="#0000FF">         if ( User_Input == &quot;no&quot; )
+         cout &lt;&lt; &quot;Aw Nutz!&quot; ;
+
+         else
+         cout &lt;&lt; &quot;That does not compute&quot; &lt;&lt; endl &lt;&lt; &quot;Computer expected yes or no&quot;</font></pre>
+      <pre><font color="#0000FF">return 0 ;
+} /* main */</font></pre>
+    </td>
+  </tr>
+</table>
+<p>In the above example, each IF statement executes one line of code. <br>
+  If we want to execute two or more statements, we need to put them within curly 
+  brackets:</p>
+<p><font color="#0000FF"> if ( User_Input == &quot;no&quot; ) <br>
+  {<br>
+  cout &lt;&lt; &quot;Aw Nutz!&quot; endl ;</font><br>
+  <font color="#0000FF">cout &lt;&lt; &quot;I'm so depressed&quot; endl ;</font> 
+  <br>
+  <font color="#0000FF">cout &lt;&lt; endl ;<br>
+  cout &lt;&lt; &quot;Would you like some toast?&quot; ;<br>
+  } </font><br>
+  <br>
+</p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">On to the <a href="relational_operators.htm">NEXT 
+  LESSON</a> Relational Operators<br>
+  </font></p>
+</BODY>

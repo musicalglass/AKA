@@ -1,0 +1,124 @@
+<title>C++ Tutorial / Relational Operators</title>
+<BODY COLOR=black BGPROPERTIES=FIXED bgcolor="#000000" text="#CC66FF">
+<h1 align="center"><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Relational 
+  Operators</font></h1>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Let's say we want to determine 
+  whether it's morning, afternoon or evening based on the hour of day, between 
+  1 and 24, for instance</font></p>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE" size="+1"> </font><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE"><font size="+1">Hour_Of_Day = 11 ;</font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Now all we need to do is look 
+  at the value of Hour_Of_Day and if it is below a certain value, we know it's 
+  morning or if it's over another value, we know it's evening. This is accomplished 
+  with relational operators:</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE" size="+1">==</font><font face="Geneva, Arial, Helvetica, san-serif" size="+1"> 
+  </font><font face="Geneva, Arial, Helvetica, san-serif">( Equal To )<br>
+  <font color="BLUE" size="+1">&lt;</font><font size="+1"> </font>( Less Than 
+  )<br>
+  <font color="BLUE" size="+1">&gt;</font><font size="+1"> </font>( Greater Than 
+  )<br>
+  <font color="BLUE" size="+1">&lt;=</font><font size="+1"> </font>( Less Than 
+  <i><b>or</b></i> Equal To )<br>
+  <font color="BLUE" size="+1">&gt;=</font><font size="+1"> </font>( Greater Than 
+  <i><b>or</b></i> Equal To )<br>
+  <font color="BLUE" size="+1">!= </font>( Not Equal To)</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Equal To:</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Use <font color="#0000FF" size="+1">=</font> 
+  to assign a value to a variable:</font></p>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="BLUE">My_Value = 7 ;
+
+My_New_Variable = My_Variable ;
+
+My_New_Variable = ( First_Variable + Second_Variable )</font><font face="Geneva, Arial, Helvetica, san-serif"> ;
+</font></pre>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Using == 
+  as a Conditional Statement:</font></h3>
+<pre><font color="BLUE" size="+1" face="Geneva, Arial, Helvetica, san-serif"> if My_Number == 7 </font><font size="+1" face="Geneva, Arial, Helvetica, san-serif"><i>do something</i></font></pre>
+<pre><font color="BLUE" size="+1" face="Geneva, Arial, Helvetica, san-serif"> if My_String == &quot;hello&quot; </font><font size="+1" face="Geneva, Arial, Helvetica, san-serif"><i>do something</i></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif"><b><font color="#FF9900">Not 
+  Equal To:</font></b></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Use != to denote that two 
+  values are <i>not</i> the same:</font></p>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE"><font size="+1">if</font><font size="+1"> User_Password != &quot;Open_Sesame&quot; <br>cout &lt;&lt; &quot;Sorry, you do not have authorization&quot;</font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif"><b><font color="#FF9900">Less 
+  Than:</font></b></font></p>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE" size="+1"> 4 &lt; 64537</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Quite simply put: Whatever 
+  is on the smaller side of the symbol &lt; is <i>less than</i> whatever's on 
+  the larger side.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif"><b><font color="#FF9900">Greater 
+  Than:</font></b></font></p>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE" size="+1"> </font><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE"><font size="+1">96 &gt; 12</font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif">If we said that 96 is greater 
+  than 12, we know that to be true, correct? I hope this isn't getting too complicated 
+  too fast.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">So we can use <font size="+1" color="#0000FF">if</font> 
+  to make a conditional statement using <font color="#0000FF" size="+1">&lt;</font> 
+  or <font color="#0000FF" size="+1">&gt;</font>:</font></p>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE"> <font size="+1">if</font><font size="+1">  ( 96 &gt; 12 )<br> cout &lt;&lt; &quot;96 is Greater Than 12&quot; ;</font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif">This of course will print 
+  immediately since we know the condition to be true. It would be the same as 
+  saying:</font></p>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE" size="+1"> if</font><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE"><font size="+1">  ( 1 = 1 )<br> cout &lt;&lt; &quot;Brilliant Watson!&quot; ;</font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif">However, if we said:</font></p>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE" size="+1"> </font><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE"><font size="+1">if</font><font size="+1"> ( 1 &gt; 12 ) <br> cout &lt;&lt; &quot;1 is not Greater Than 12&quot; ; </font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif">it would print absolutely 
+  nothing, since we know for a fact that the conditional statement 1 &gt; 12 is 
+  false. </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">That doesn't do a whole lot 
+  for us until we factor in Variables. Since we know that Variables can vary, 
+  we can set up a condition where if the Variable is above or below a certain 
+  number, it can trigger all kinds of events.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Right, so if we took the hour 
+  of the day, between 1 and 24, and wanted to determine whether it was A.M. or 
+  P.M. clearly we could say:</font></p>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE" size="+1"> </font><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE"><font size="+1">if</font><font size="+1"> ( My_Variable &lt; 12 ) <br> cout &lt;&lt; &quot;Good Morning&quot; ; 
+ if ( My_Variable &gt; 12 ) <br> cout &lt;&lt; &quot;Good Evening&quot; ; </font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif">That works. However, there 
+  is a small paradox. If it happens to be 12, this will return false since 12 
+  is neither greater than nor less than 12. It is right on the money. <br>
+  We could fix it this way using OR:</font></p>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE" size="+1">if ( ( </font><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE"><font size="+1"> My_Variable &lt; 12 ) || ( My_Variable = 12 ) )
+ cout &lt;&lt; &quot;Good Morning&quot; ; </font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif">However there is a shorter 
+  way to do it, using &lt;=</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif"><b><font color="#FF9900">Less 
+  Than or Equal to</font></b></font></h3>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE" size="+1"> if ( </font><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE"><font size="+1">My_Variable &lt;= 12 ) <br> cout &lt;&lt; &quot;Good Morning&quot; ; </font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Now we are saying 12 or anything 
+  below it.</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif"><b><font color="#FF9900">Greater 
+  Than or Equal to</font></b></font></h3>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" color="BLUE"> <font size="+1">if</font><font size="+1"> ( My_Variable &gt;= 18 ) <br> cout &lt;&lt; &quot;Good Morning&quot; ;</font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif">Now we are saying 18 or anything 
+  higher.</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif"><b><font color="#FF9900">Between 
+  two Numbers</font></b></font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif">O.K., next hitch is that Afternoon 
+  is in the middle. That means that it is anything over 12 AND under 18. We can 
+  use AND to ensure that it meets both conditions. Assuming we want 12 noon to 
+  be considered mid day:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> </font><font face="Arial, Helvetica, sans-serif" color="BLUE"><font size="+1">if (( Time_Of_Day &gt;= 12 ) &amp;&amp; ( Time_Of_Day &lt; 18 )) <br> cout &lt;&lt; &quot;Good Afternoon&quot; ; </font></font></pre>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">So here would be the finished 
+  solution:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1">/*
+ AmPm.cpp
+	Calculate part of day based on Hour
+*/
+#include &lt;iostream&gt;
+using namespace std ; 
+int main ( void )<br>{
+ cout &lt;&lt; &quot;Please enter the hour 0 - 24&quot;
+ cin &gt;&gt;  int Time_Of_Day
+ 
+ if Time_Of_Day &lt; 12 <br> cout &lt;&lt; &quot;Good Morning&quot; ; <br>
+ if (( Time_Of_Day &gt;= 12 ) &amp;&amp; ( Time_Of_Day &lt; 18 )) <br> cout &lt;&lt; &quot;Good Afternoon&quot; <br>
+ if ( Time_Of_Day &gt;= 18 ) <br> cout &lt;&lt; &quot;Good Evening&quot;
+
+return 0 ;
+}</font></pre>
+<p><font face="Verdana, Arial, Helvetica, sans-serif">On to the Next Lesson: <a href="loops.htm">Loops</a> 
+  <br>
+  Back to the Previous Lesson: <a href="operators.htm">Operators</a></font></p>
+<p align="center"><font face="Verdana, Arial, Helvetica, sans-serif"><a href="../index.htm">Index</a><br>
+  </font></p>
+</BODY>

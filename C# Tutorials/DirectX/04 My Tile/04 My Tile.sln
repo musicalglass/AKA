@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual C# Express 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 My Tile", "04 My Tile\04 My Tile.csproj", "{14E1E02B-B07A-4D38-8E05-5F89195B29B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14E1E02B-B07A-4D38-8E05-5F89195B29B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E1E02B-B07A-4D38-8E05-5F89195B29B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E1E02B-B07A-4D38-8E05-5F89195B29B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E1E02B-B07A-4D38-8E05-5F89195B29B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

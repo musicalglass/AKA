@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Shuffle the Deck</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="75%" border="1" align="center">
+  <tr>
+    <td>
+      <pre><font color="#0000FF">#include &lt;iostream&gt;       </font></pre>
+      <pre><font color="#0000FF">using namespace std ;</font></pre>
+      <pre><font color="#0000FF">int main ( void )
+{
+/* Create an Array of 53 Cards
+   Store Value from 1 to 52 in corresponding Array location,
+   shuffle the deck,
+   and Print the values to the screen
+*/
+/* Local Declarations */
+         const int Cards_Num = 52 ;
+         int Deck[ Cards_Num ] ; // Create an Array of 53 cards 0 - 52</font></pre>
+      <pre><font color="#0000FF">/* Starting at 1, cycle through each and insert 
+   appropriate number in each by storing current value of i
+*/
+         for ( int i = 1 ; i &lt;= Cards_Num ; i++ )
+         Deck[ i ] = i ;</font></pre>
+      <pre><font color="#0000FF"> cout &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF">/* Print them out sequentially */
+         for ( int i = 1 ; i &lt;= Cards_Num ; i++ )
+         cout &lt;&lt; Deck[ i ] &lt;&lt; &quot; &quot; ;</font></pre>
+      <pre><font color="#0000FF"> cout &lt;&lt; endl &lt;&lt; endl ;</font></pre>
+      <pre><font color="#0000FF">/* ========= Shuffle the deck ======== */
+/* Set Random Seed = Time Requires include time.h */
+         srand ( time ( NULL ) ) ;</font></pre>
+      <pre><font color="#0000FF">   for ( int i = 1 ; i &lt;= Cards_Num ; i++ ) 
+       {
+         int a = ( rand() % Cards_Num ) + 1 ;
+         int b = ( rand() % Cards_Num ) + 1 ;</font></pre>
+      <pre><font color="#0000FF">         Deck[ 0 ] = Deck[ b ] ; // Store random card in extra space 0
+         Deck[ b ] = Deck[ a ] ; // Swap two random cards
+         Deck[ a ] = Deck[ 0 ] ; // Put spare card back in leftover space
+       }
+         
+         /* Print them out sequentially */
+         for ( int i = 1 ; i &lt;= Cards_Num ; i++ )
+         cout &lt;&lt; Deck[ i ] &lt;&lt; &quot; &quot; ;</font></pre>
+      <pre><font color="#0000FF"> cout &lt;&lt; endl ; 
+
+return 0 ;
+} /* main */
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<br>
+Notice how using an array of 53 spaces comes in handy for shuffling the deck. 
+The extra space left over at Deck[0] comes in handy as a temporary swap space 
+for moving cards from one place to another. 
+</body>
+</html>

@@ -1,0 +1,200 @@
+<html>
+<head>
+<title>Beginning Programming with C#</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#CC66FF">
+<h1 align="center"><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Programming 
+  in C#</font></h1>
+<p align="left"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Note: 
+  This C# tutorial was translated over from an earlier C++ tutorial. As it is 
+  still a work in progress, it may still contain some erroneous statements pertaining 
+  to C++</font></p>
+<table width="75%" border="0" bgcolor="#FFFF99" align="center" cellpadding="6">
+  <tr> 
+    <td><font face="Geneva, Arial, Helvetica, san-serif" color="#000000">NerdNotes: 
+      Every C# program has:<br>
+      a <b>Global Declaration</b> section at the beginning<br>
+      and one or more <b>Classes</b>. </font> 
+      <p><font face="Geneva, Arial, Helvetica, san-serif" color="#000000">Global 
+        declarations are available to the entire program.</font></p>
+      <p><font face="Geneva, Arial, Helvetica, san-serif" color="#000000">One 
+        class must be named <i><b>Main</b></i>.</font></p>
+      <p><font face="Geneva, Arial, Helvetica, san-serif" color="#000000">Classes 
+        consist of two parts:<br>
+        the <b>Declarations</b> section <br>
+        and the <b>Statements</b> section.</font></p>
+      <p><font face="Geneva, Arial, Helvetica, san-serif" color="#000000">Declarations 
+        within a class are called <b>Local Declarations</b>.<br>
+        Local declarations are only available to the <b>Namespace</b> that contain 
+        them.</font></p>
+</td>
+  </tr>
+</table>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Reinventing 
+  the wheel</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">When you write programs, 
+  there are a lot of parts that you will use over and over.<br>
+  To avoid having to type the same things all the time, one idea might be to have 
+  a file containing all those &quot;frequent phrases&quot; or things that you 
+  find yourself typing a lot. Then whenever you need to reuse a bit of code, you 
+  could open the file, copy that bit, then paste it into your existing code.<br>
+  Over time, let's say now you have 100 different programs which all have the 
+  same identical section of code in them. If you think about it, instead of having 
+  the exact same code residing in 100 different places on your hard drive, wouldn't 
+  it be more efficient to have that one frequently used bit of code stored in 
+  it's own, separate file? Then when you want to include that bit of code in your 
+  program, you could just make a little pointer to that file. That's what C# does, 
+  by allowing us to include lots of bits of code which have already been written 
+  for us. Now instead of typing or even copying and pasting bits of code, we can 
+  include prewritten bits of code in our file with a single line of code:</font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">using System ; </font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">In our first program, 
+  we want to do something fairly simple: print something to the screen, so we 
+  can verify that everything is working properly. Something short, like &quot;hello&quot;.<br>
+  Even to do such a simple task requires just a whole bunch of things you need 
+  to tell the computer. Every time you want the computer to output something to 
+  the screen, you need a bunch of code. Every time you want to make it so you 
+  can type input into the program, you need a bunch of code. The Namespace <font color="#0000FF">System</font> 
+  contains many of the basic commands needed for input and output which you can 
+  call upon from your code.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">A quick breakdown 
+  of the Hello World example:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">using System ; <br>class Hello<br>{<br>	static void Main ( )<br>	{ <br>	Console.Write ( &quot;Hi There!&quot; ) ; <br>	}<br>} <br></font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">As I said at the 
+  beginning, every C# program has Global Declarations at the beginning, but for 
+  our first program, we won't have to write any. They've all been written for 
+  us:</font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">using System ; </font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">O.K. now that our 
+  global definitions are out of the way, we will create our first Class starting 
+  with a Declaration:</font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">using System ; class Hello</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Everything in this 
+  class will be contained in curly brackets:</font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">using System ; class Hello <b>{  }</b></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Like this:</font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">using System ; class Hello <b>{</b></font><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><b> </b><font color="#FF0000">// code goes here</font> <font color="#0000FF"><b>}</b></font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Now inside that 
+  class' curly brackets, we shall place another class. One class in every C# program 
+  must be named Main. It is the main entry point of the program.</font></p>
+<pre><font size="+1" color="#0000FF" face="Geneva, Arial, Helvetica, san-serif">Main ( )</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">In this case, it 
+  is our only class.<br>
+  The class can have various parameters. In this case, there aren't any. To be 
+  sure, we can specify that the parameter list is void:</font></p>
+<pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><b><font color="#0000FF">void</font></b><font color="#0000FF"> Main (  )</font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">There's different 
+  ways to declare it. Without getting too technical, we'll just say this is a 
+  static class:</font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">static void Main ( )</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Likewise, everything 
+  within the class: Main will also be within curly brackets:</font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">static void Main ( ) {  }</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">You now have a complete 
+  C# program which does nothing, like a blank sheet of paper.</font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">using System ; class Hello { static void Main ( ) {</font><font face="Geneva, Arial, Helvetica, san-serif" size="+1"> <font color="#FF0000">// code goes here</font> <font color="#0000FF">} }</font></font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Our first code is 
+  very simple. All it does is call on another class which has already been written 
+  for us: Write. </font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">System.Console.Write ( &quot;Hi There! &quot; ) ; </font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">In this case we 
+  have already specified that we are <font color="#0000FF">using System</font> 
+  so we can shorten the command:</font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">Console.Write ( &quot;Hi There! &quot; ) ; </font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">The semicolon tells 
+  the computer that it has come to the end of the Statement. <br>
+  You could have more that one line of code on the same line:</font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">Console.Write ( &quot;In the beginning there was nothing.... &quot; ) ; Console.Write ( &quot; which exploded.&quot; ) ; </font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">So here is our finished 
+  program:</font></p>
+<table width="75%" border="1" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">using System ; class Hello { static void Main ( ) { Console.Write ( &quot;Hi There!&quot; ) ; } } <br></font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">That's it. When 
+  you compile and run the program it should print whatever you put between the 
+  quotation marks to the screen.<br>
+  While it's still quite small, you can see that it can be hard to tell where 
+  one command ends and another begins. To keep things organized and a little more 
+  readable, it's generally considered good grammar to break the commands up, each 
+  on their own line:</font></p>
+<table width="75%" border="1" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">using System ; <br>class Hello<br>{<br> 	static void Main ( )<br> 	{ <br> 	Console.Write ( &quot;Hi Your_Name_Here!&quot; ) ; <br> 	}<br>} <br></font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Now you can see 
+  how it's much easier to tell where the body of the class Main is: between the 
+  opening and closing brackets, and it's easier to distinguish each of the Statements. 
+  ( One )</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">You can spread things 
+  out a good bit and the computer ignores the whitespace. With a few exceptions.</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">Comments</font></h3>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Comments allow you 
+  to leave notes to yourself all over your work. </font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">/*   this is a comment  */</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Everything between 
+  the opening /* and the closing */ will be ignored by the compiler.</font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif">/*
+  This is also a comment
+   This part is invisible to the compiler
+*/</font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">If you're writing 
+  a short, one line comment , C# allows you to also use <b><font size="+2">//</font></b> 
+  at the beginning of a comment .<br>
+  </font></p>
+<pre><font color="#0000FF" size="+1" face="Geneva, Arial, Helvetica, san-serif"> //  This line prints some text to the screen<br>Console.Write ( &quot;Hi There!&quot; ) ; </font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">You can put a comment 
+  after a command to remind you what it does:</font></p>
+<pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">Console.Write ( &quot;Hi There!&quot; ) ; // Overkill, since it's blatantly obvious what this line does!</font></pre>
+<p> <font face="Geneva, Arial, Helvetica, san-serif" size="+1">Note: no end command 
+  is required using // This can be used as long as it's on the same line.</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1"> You can use comments 
+  to help you hash out a program before you begin coding:</font></p>
+<pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">//  01 layout for standard output program </font></pre>
+<pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">// Global Declarations </font></pre>
+<pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">using System ; <br>class PrintSomething<br>{
+	static void Main ( )<br>	{
+   // Local Declarations will go here</font></pre>
+<pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">   // Statements 
+   // Print something to the screen </font></pre>
+<pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">	} // end Main 
+} // end Hello </font></pre>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Right, let's print 
+  something on two lines. Try running this:</font></p>
+<table width="75%" border="1">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">using System ; <br>public class TwoWords<br>{<br>	static void Main ( )<br>	{ <br>	Console.Write ( &quot;Hello&quot; ) ; <br>	Console.Write ( &quot;Hello&quot; ) ;<br>	}<br>}<br></font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">If we do this, it 
+  will print HelloHello. If we want to print on a new line, we specify that by 
+  adding <font color="#0000FF"><b>\n</b> </font>within the quotations:</font></p>
+<table width="75%" border="1">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif" size="+1">using System ; <br>public class Two_Words<br>{<br>	static void Main ( )<br>	{ <br>	Console.Write ( &quot;Hello\n&quot; ) ; <br>	Console.Write ( &quot;Hello&quot; ) ;<br>	}<br>}<br></font></pre>
+    </td>
+  </tr>
+</table>
+<h3 align="center"><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif"><br>
+  </font><font face="Geneva, Arial, Helvetica, san-serif">Next page <a href="identifiers.htm">Identifiers</a></font></h3>
+<h3 align="center"><font face="Geneva, Arial, Helvetica, san-serif"><a href="../index.htm">Index</a><br>
+  </font></h3>
+</body>
+</html>

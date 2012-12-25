@@ -1,0 +1,5 @@
+csc /target:library Counter.cs
+ generates Counter.dll
+
+csc /reference:Counter.dll Prog.cs
+generates Prog.exe

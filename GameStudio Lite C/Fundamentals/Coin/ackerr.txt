@@ -1,0 +1,2 @@
+Error in  'MAIN' line 19: syntax error
+< 	on_space random_Toss() ;  >

@@ -1,0 +1,2 @@
+csc Counter.cs Prog.cs
+ generates Prog.exe

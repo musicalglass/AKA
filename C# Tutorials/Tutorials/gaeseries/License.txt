@@ -1,0 +1,27 @@
+MathMatic versions
+==================
+MathMatic "JUNIOR Edition" is freeware.
+It is directed towards young students and
+provides multiplication tables basics 
+(multipliers limited to 1, 2, 3 and 10).
+It never expires and has no nag screens.
+
+MathMatic "STUDENT Edition" is subject to
+a registration fee. After registration, you
+receive a reg. code which will lift the above
+mentioned bounding of multipliers.
+
+Upgrading from "Junior" to "Student" does
+not require a new installation. Please
+visit our Website from within MathMatic
+interface for more information.
+
+You are not allowed to disassemble, reverse
+engineer, decompile or modify any part of
+the program or its accompanying files.
+
+MathMatic is Copyright (c) 2001-2005
+Codexcel, CH-1032 Romanel
+
+http://www.codexcel.com/sw/mathmatic/
+

@@ -1,0 +1,13 @@
+MathMatic Distribution
+======================
+
+You can freely distribute the unregistered "Junior Edition" of MathMatic
+under its archive form (Zip) as downloaded from our Web site.
+No charge may be covered for the distribution, except for the 
+cost of the supporting media. You are not allowed to modify
+any file contained in the archive.
+
+MathMatic is Copyright (c) 2001-2005
+Codexcel, CH-1032 Romanel
+
+http://www.codexcel.com/sw/mathmatic/

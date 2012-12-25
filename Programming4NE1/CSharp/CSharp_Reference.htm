@@ -1,0 +1,1130 @@
+<html>
+<head>
+<title>C# Reference</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#CC00FF">
+<h1 align="center"><font face="Geneva, Arial, Helvetica, san-serif">C# Reference</font></h1>
+<h2><font face="Geneva, Arial, Helvetica, san-serif"><a name="arrays"></a><font color="#0000FF">// 
+  Arrays </font> </font> </h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">type [ * ] <font color="#00FF00">// 
+  [ * ] is the set: [ ] [ , ] [ , , ] [ etc. ]</font><br>
+  + array-name =<br>
+  [<br>
+  new type [ dimension+ ] [ * ] * ; <font color="#00FF00">OR</font><br>
+  { value1, value2, etc. } ;<br>
+  ]</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Array 
+  Example </font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">byte[ ] bMyArray = new byte[ 10 ] ; 
+int[ ] iMyArray = { 0, 1, 2 } ; 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif"><a name="attributes"></a><font color="#0000FF">// 
+  Attributes </font></font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">[ [ target: ] ? 
+  attribute_name ( positional-param+ <font color="#00FF00">OR</font><br>
+  [ named-param+, [ named-param = expr ] + ) ? ]</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Attributes 
+  Example </font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">[ assembly : CLSCompliant ( false ) ] 
+[ WebMethod ( true,  Description = &quot;My web method&quot; ) ] 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif"><a name="break"></a><font color="#0000FF">// 
+  Break statement </font></font></h2>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900" size="+1">break ; </font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="checked"></a>// 
+  Checked </font><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><br>
+  checked ( expr )</font></h2>
+<h3><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif">// Checked 
+  Example</font><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><br>
+  </font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font size="+1" face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">short x = 32767</font></pre>
+    </td>
+  </tr>
+</table>
+<br>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font size="+1" face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">int i = checked ( ( short ) ++x ) ;   <font color="#00FF00">// Throws exception</font></font><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#00FF00"></font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif"><a name="checked2"></a>// 
+  Checked</font></h2>
+<p><font size="+1" face="Geneva, Arial, Helvetica, san-serif">checked statement 
+  ; </font></p>
+<p><font size="+1" face="Geneva, Arial, Helvetica, san-serif"><font color="#00FF00">OR</font> 
+  </font></p>
+<p><font size="+1" face="Geneva, Arial, Helvetica, san-serif">checked<br>
+  {<br>
+  </font><font size="+1" face="Geneva, Arial, Helvetica, san-serif">statement_block 
+  <br>
+  } </font></p>
+<h3><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif">// Checked 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font size="+1" face="Geneva, Arial, Helvetica, san-serif" color="#FF9900">public short foo ( ) 
+  {
+  short x = 32767 ; 
+  checked <font color="#00FF00">// Throws exception</font>
+     {
+     return ++x ; 
+     }
+  }
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif"><a name="unchecked"></a>// 
+  Unchecked</font></h2>
+<p> <font size="+1" face="Geneva, Arial, Helvetica, san-serif">unchecked ( expr 
+  ) </font></p>
+<h3><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif">// Unchecked 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td>
+      <pre><font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">short y = 32767 ; 
+int j = unchecked ( ( short ) ++y ) ; 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif"><a name="unchecked2"></a>// 
+  Unchecked</font></h2>
+<p><font size="+1" face="Geneva, Arial, Helvetica, san-serif">unchecked statement 
+  ; </font></p>
+<p><font size="+1" face="Geneva, Arial, Helvetica, san-serif"><font color="#00FF00">OR</font></font></p>
+<p><font size="+1" face="Geneva, Arial, Helvetica, san-serif">unchecked <br>
+  {<br>
+  statement_block <br>
+  } </font></p>
+<h3><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif">// Unchecked 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">public short bar ( ) 
+{
+short y = 32767 ; 
+    unchecked <font color="#00FF00">// Silently overflows</font>
+    { 
+    return ++y ; 
+    }
+} 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif"><a name="class"></a>// 
+  Class Declaration</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? unsafe? 
+  access_modifier?<br>
+  new?<br>
+  [ abstract <font color="#00FF00">OR</font> sealed ]?<br>
+  class class_name<br>
+  [ : base_class <font color="#00FF00">OR</font> : interface+ <font color="#00FF00">OR</font> 
+  : base-class, interface+ ]?<br>
+  { class_members }</font></p>
+<h3><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif">// Class 
+  Declaration Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">public class MyClass  : Base, IFoo 
+  {
+  // ...
+  }
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="constant"></a>// 
+  Constant Declaration</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">const type [ variable 
+  = const_expr ]+ ; </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Constant 
+  Declaration Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">const int MyConstant = 42 ; </font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif"><a name="constant_fields"></a>// 
+  Constant Fields</font></h2>
+<p><font size="+1" face="Geneva, Arial, Helvetica, san-serif">attributes? access_modifier?<br>
+  new?<br>
+  const type [ constant_name = constant_expr ]+ ; </font></p>
+<h3><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif">// Constant 
+  Fields Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">internal const byte MyConstByte = 42 ; </font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font color="#0000FF" face="Geneva, Arial, Helvetica, san-serif"><a name="continue"></a>// 
+  Continue Statement </font></h2>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">continue ; </font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="delegates"></a>// 
+  Delegates </font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? unsafe? 
+  access_modifier?<br>
+  new?<br>
+  delegate<br>
+  [ void <font color="#00FF00">OR</font> type ]<br>
+  delegate_name { parameter_list } ;</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Delegates 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">public delegate void
+  MyHandler ( object s, EventArgs e ) ; 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="destructors"></a>// 
+  Destructors</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? unsafe? 
+  <br>
+  ~class_name ( )<br>
+  { </font><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><br>
+  statement_block <br>
+  } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Destructors 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">~SomeClass( ) 
+  { 
+  // destructor code 
+  } 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="do_while"></a>// 
+  Do While Loops</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">do <br>
+  statement <br>
+  while ( Boolean expr ) ; </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><font color="#00FF00">OR</font></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">do <br>
+  { <br>
+  statement_block <br>
+  } <br>
+  while ( Boolean expr ) ; </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Do While 
+  Example</font><font face="Geneva, Arial, Helvetica, san-serif"><br>
+  </font> </h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif"><font size="+1" color="#FF9900">int i = 0 ; 
+  do 
+  { 
+  Console.WriteLine ( i++ ) ; 
+  } while ( i &lt; 10 ) ; 
+</font></font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="empty"></a>// 
+  Empty Statements</font><font face="Geneva, Arial, Helvetica, san-serif"><br>
+  <font size="+2">&nbsp;;</font></font></h2>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Empty 
+  Statements Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">i = 0 ; 
+  while ( i++ &lt; 10 ) 
+  ;  <font color="#00FF00">// Take no Action</font> 
+ Console.WriteLine ( i ) ;<font color="#0000FF">  <font color="#00FF00">// Prints 11</font></font> 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2> <font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="enums"></a>// 
+  Enums</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? access_modifier?<br>
+  new?<br>
+  enum enum_name [ : integer_type ]? <br>
+  {<br>
+  [ attributes? enum_member_name [ = value ]? ]* <br>
+  }</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif"> <font color="#0000FF">// 
+  Enums Example</font></font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">[ Flags ] public Enum Color : long
+  {
+  Red = 0xff00,
+  Green = 0x00ff00,
+  Blue = 0x0000ff
+  } ; 
+ <font color="#00FF00"> // ...</font>
+<font color="#00FF00">  // prints &quot;Green&quot; &quot;Red&quot;</font>
+  Color yellow = ( Color ) 0xffff00 ; 
+  Console.WriteLine ( yellow ) ; 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="events"></a>// 
+  Events</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? unsafe? 
+  access_modifier?<br>
+  [<br>
+  [ [ sealed <font color="#00FF00">OR</font> abstract ]? override ] <font color="#00FF00">OR</font><br>
+  new? [ virtual <font color="#00FF00">OR</font> static ]?<br>
+  ]?<br>
+  event delegate_type event_name</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif"> <font color="#0000FF">// 
+  Events Example</font></font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">event MyDelegate OnClickedSomething ; 
+<font color="#00FF00">  // ...</font>
+  OnClickedSomething ( arg1, arg2 ) ; 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2> <font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="events_accessors"></a>// 
+  Event Accesors</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? unsafe? 
+  access_modifier?<br>
+  [<br>
+  [ [ sealed <font color="#00FF00">OR</font> abstract ]? override ] <font color="#00FF00">OR</font><br>
+  new? [ virtual <font color="#00FF00">OR</font> static ]?<br>
+  ]?<br>
+  event delegate_type event_accesor_name<br>
+  {<br>
+  attributes? add { statement_block }<br>
+  attributes? remove { statement_block }<br>
+  }</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif"> <font color="#0000FF">// 
+  Event Accesors Example</font></font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">event MyDelegate OnAction 
+{ 
+    add 
+    { 
+    // ... 
+    } 
+
+    remove 
+    { 
+    // ... 
+    } 
+} 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2> <font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="expression"></a>// 
+  Expression Statements</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">[ variable = ]? 
+  expr ; </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif"> <font color="#0000FF">// 
+  Expression Statements Examples</font><br>
+  </font><font face="Geneva, Arial, Helvetica, san-serif"> </font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">a = 10 * 10 ; </font></pre>
+    </td>
+  </tr>
+</table>
+<br>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900" size="+1">a++ ; </font></pre>
+    </td>
+  </tr>
+</table>
+<br>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900" size="+1">b = ++a ; </font></pre>
+    </td>
+  </tr>
+</table>
+<h2> <font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="fields"></a>// 
+  Fields</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? unsafe? 
+  access_modifier?<br>
+  new?<br>
+  static?<br>
+  [ readonly <font color="#00FF00">OR</font> volatile ]? <br>
+  type [ field_name [ == expr ]? ]+ ;</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Fields 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">protected int agent = 0x007 ; </font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="fixed"></a>// 
+  Fixed Statements</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">fixed ( [ value_type 
+  <font color="#00FF00">OR</font> void ]* name = [ &amp; ]? expr )<br>
+  statement_block</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif"> <font color="#0000FF">// 
+  Fixed Statements Example</font></font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">byte[ ] b = { 0, 1, 2 } ; 
+  fixed ( byte* p = b )
+  { 
+  *p = 100 ;  <font color="#00FF00">// b[0] = 100 </font>
+  } 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2> <font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="for_loops"></a>// 
+  For Loops</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">for ( statement 
+  ; Boolean_Expr ; statement? ) <br>
+  statement </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><font color="#00FF00">OR</font> 
+  </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">for ( statement 
+  ; Boolean_Expr ; statement? ) <br>
+  {<br>
+  </font><font face="Geneva, Arial, Helvetica, san-serif" size="+1">statement_block 
+  <br>
+  } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// For Loops 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">for ( int j = 0 ; j &lt; 10 ; j++ )
+  Console.WriteLine ( j ) ;  <font color="#00FF00">// prints 0 - 9
+</font></font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="foreach"></a>// 
+  For Each Loop</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">foreach ( type_value 
+  in IEnumerable )<br>
+  statement </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><font color="#00FF00">OR</font> 
+  </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">foreach ( type_value 
+  in IEnumerable )<br>
+  { <br>
+  statement_block <br>
+  } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// For Each 
+  Loop Example</font><font face="Geneva, Arial, Helvetica, san-serif"><br>
+  </font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900" size="+1">StringCollection sc = new StringCollection ( ) ; 
+sc.Add ( &quot;Hello&quot; ) ; 
+sc.Add ( &quot; World&quot; ) ; 
+  foreach ( String s in sc )
+  Console.WriteLine ( s ) ;
+</font></pre>
+      </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="goto"></a>// 
+  Goto Statement</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">goto statement_label 
+  ; <br>
+  goto case_constant ; </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Goto Example</font><font face="Geneva, Arial, Helvetica, san-serif"><br>
+  </font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">i = 0 ; 
+MyLabel:
+if (++i &lt; 100 )
+goto MyLabel ; 
+Console.WriteLine ( i ) ; 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif"><a name="ifelse"></a><font color="#0000FF">// 
+  If-Else Statement</font></font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">if ( Boolean_expr 
+  ) <br>
+  statement <font color="#00FF00">OR</font> { statement_block } <br>
+  else <br>
+  statement <font color="#00FF00">OR</font> { statement_block } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// If-Else 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">if ( choice == &quot;A&quot; )
+  {
+  <font color="#00FF00">// ... </font>
+  <font color="#00FF00">// ... </font>
+  }
+
+elseif ( choice == &quot;B&quot; )
+  {
+  <font color="#00FF00">// ... </font>
+  <font color="#00FF00">// ... </font>
+  }
+
+ else
+  <font color="#00FF00">// ... 
+</font></font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif"><a name="indexers"></a><font color="#0000FF">// 
+  Indexers</font></font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? unsafe? 
+  access_modifier?<br>
+  [<br>
+  [ [ sealed <font color="#00FF00">OR</font> abstract ]? override ] <font color="#00FF00">OR</font><br>
+  new? [ virtual <font color="#00FF00">OR</font> abstract <font color="#00FF00">OR</font> 
+  static ]? <br>
+  ]?<br>
+  type this [ attributes? [ type_arg ]+ ]<br>
+  {<br>
+  attributes? get // read only<br>
+  { statement_block } <br>
+  attributes? set // write only<br>
+  { statement_block } <br>
+  attributes? get // read-write<br>
+  { statement_block } <br>
+  attributes? set <br>
+  { statement_block } <br>
+  } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#0000FF">// 
+  Indexers Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td>
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">string this [ int index ]<br>{<br>	get<br>	{<br>	return somevalue ; <br>	}<br>	set<br>	{<br>	<font color="#00FF00">// do something with implicit &quot;value&quot; arg</font><br>	} <br>} <br></font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="instance"></a>// 
+  Instance Constructors</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? unsafe? 
+  access_modifier? <br>
+  class_name ( parameter_list ) <br>
+  [ :[ base <font color="#00FF00">OR</font> this ] ( argument_list ) ]? <br>
+  { statement_block } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Instance 
+  Constructors Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">MyClass ( int i ) 
+  {
+  <font color="#00FF00">// perform initialization</font>
+  } 
+  <font color="#00FF00">// initialize with default</font>
+  MyClass ( ) : this ( 42 ) { } 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="interfaces"></a>// 
+  Interfaces </font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? unsafe? 
+  access_modifier? <br>
+  new?<br>
+  interface interface_name<br>
+  [ : base_interface+ ]? <br>
+  { interface_members }</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Interface 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">interface IFoo :  IDisposable, IComparable
+  {
+  <font color="#00FF00">// member declaration</font>
+  } 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="lock"></a>// 
+  Lock Statement</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">lock ( expr ) <br>
+  statement ;</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" color="#00FF00" size="+1">OR</font><font face="Geneva, Arial, Helvetica, san-serif" size="+1"> 
+  </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">lock ( expr ) <br>
+  { <br>
+  statement_block<br>
+  } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Lock Statement 
+  Example </font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">lock ( this ) 
+  { 
+  int tmp = a ; 
+  a = b ; 
+  b = tmp ; 
+  } 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="method"></a>// 
+  Method Declaration Syntax</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? unsafe? 
+  access_modifier?<br>
+  [<br>
+  [ [ sealed <font color="#00FF00">OR</font> abstract ]? override ] <font color="#00FF00">OR</font><br>
+  new? [ virtual <font color="#00FF00">OR</font> abstract <font color="#00FF00">OR</font> 
+  static extern ]? <br>
+  ]?<br>
+  [ void <font color="#00FF00">OR</font> type ]<br>
+  method_name ( parameter_list ) <br>
+  { statement_block } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Method 
+  Declaration Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">public abstract int MethA ( object o ) ; 
+public virtual void MethB ( int i, object o ) 
+  { 
+  <font color="#00FF00">// statement_block</font>
+  } 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="namespace"></a>// 
+  Namespace</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">namespace name+<br>
+  {<br>
+  using_statement*<br>
+  [ namespace_declaration <font color="#00FF00">OR</font><br>
+  type_declaration ]* <br>
+  } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Namespace 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900" size="+1">namespace CompanyName.ProjectName 
+{ 
+using System ; 
+interface IFoo : IComparable { } 
+public class MyClass { } 
+} 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="parameter"></a>// 
+  Parameter List </font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">[ attributes? [ 
+  ref <font color="#00FF00">OR</font> out ]? type arg ]*<br>
+  [ params attributes? type [ ] arg ]? </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Parameter 
+  List Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">void MethA ( ref int a, out int b ) 
+  {
+  b = ++a ; 
+  } 
+  void MetB ( params string [ ] args ) 
+  { 
+  foreach ( string s in args ) 
+  Console.WriteLine ( s ) ; 
+  } 
+  <font color="#00FF00">// ...</font>
+  int a = 20, b ; 
+  MethA ( ref a, out b ) ; 
+  Console.WriteLine ( &quot;a = {0}, b = {1}&quot;,  a, b ) ; 
+  MethB ( &quot;Hello &quot;, &quot;World&quot; ) ; 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="properties"></a>// 
+  Properties</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? unsafe? 
+  access_modifier?<br>
+  [<br>
+  [ [ sealed <font color="#00FF00">OR</font> abstract ]? override ] <font color="#00FF00">OR</font><br>
+  new? [ virtual <font color="#00FF00">OR</font> abstract <font color="#00FF00">OR</font> 
+  static ]? <br>
+  ]? <br>
+  type property_name <br>
+  { [ <br>
+  attributes? get <font color="#00FF00">// read only</font><br>
+  { statement_block } <br>
+  attributes? set <font color="#00FF00">// write only</font><br>
+  { statement_block }<br>
+  attributes? get <font color="#00FF00">// read-write</font><br>
+  { statement_block }<br>
+  attributes? set <br>
+  { statement_block } <br>
+  ] } </font></p>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" color="#FF9900" size="+1">private string name ; 
+public string Name 
+{ 
+   get 
+   { 
+   return name ; 
+   } 
+
+   set 
+   { 
+   name = value ; 
+   } 
+}
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="return"></a>// 
+  Return Statement</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">return expr? ; </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Return 
+  Statement Examples</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">return ; </font></pre>
+    </td>
+  </tr>
+</table>
+<br>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">return x ; </font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="statement"></a>// 
+  Statement <font color="#00FF00">OR</font> Statement_Block</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">statement ;</font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#00FF00">OR</font></p>
+<p><font size="+1" face="Geneva, Arial, Helvetica, san-serif">{ <br>
+  statement ; <br>
+  statement ; <br>
+  statement ; <br>
+  etc. ; <br>
+  } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Statement 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1">Console.Write ( &quot;Hello&quot; )  ; </font></pre>
+    </td>
+  </tr>
+</table>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Statement_Block 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1">{   <font color="#00FF00">// Execute everything between the curly brackets</font>
+Console.Write ( &quot;Hello&quot; )  ; 
+Console.Write ( &quot; &quot; )  ; 
+Console.Write ( &quot;World&quot; )  ; 
+} 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="static"></a>// 
+  Static Constructors</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? unsafe? 
+  extern? <br>
+  static class_name ( ) <br>
+  { statement_block } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Static 
+  Constructors Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">static MyClass ( ) 
+{ 
+<font color="#00FF00">// initialize static members </font>
+} 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="struct"></a>// 
+  Struct Declaration</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">attributes? unsafe? 
+  access_modifier? <br>
+  new?<br>
+  struct struct_name [ : interface+ ]?<br>
+  { struct_members }</font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Struct 
+  Declaration Example </font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">public struct TwoFer
+  { 
+  public int part1, part2 ; 
+  } 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="switch"></a>// 
+  Switch Statement </font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" color="#CC00FF" size="+1">switch 
+  ( expr ) <br>
+  { <br>
+  [ case constant_expr : statement* ]*<br>
+  [ default : statement* ]?<br>
+  } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Switch 
+  Example </font> </h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">switch ( choice ) 
+  { 
+  case &quot;A&quot;: 
+  <font color="#00FF00">// do something</font>
+  break ; 
+  case &quot;B&quot; : 
+  <font color="#00FF00">// do something, then branch to A</font>
+  goto case &quot;A&quot; ; 
+  case &quot;C&quot; : 
+  case &quot;D&quot; : 
+  <font color="#00FF00">// do something</font>
+  break ; 
+  default: 
+  Console.Write ( &quot;Bad Choice&quot; ) ; 
+  break ; 
+  } 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="throw"></a>// 
+  Throw Statement</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">throw exception_expr? 
+  ; </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Throw 
+  Example</font><font face="Geneva, Arial, Helvetica, san-serif"><br>
+  </font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">throw new Exception ( &quot;something's wrong&quot; ) ; </font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="try"></a>// 
+  Try Statements</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">try { statement_block 
+  } <br>
+  [ catch ( exception type value? )? <br>
+  { statement_block } ]+ <font color="#00FF00">OR</font><br>
+  finally { statement_block } </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1"><font color="#00FF00">OR</font></font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">try { statement_block 
+  } <br>
+  [ catch ( exception type value? )? <br>
+  { statement_block } <br>
+  finally { statement_block } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Try Statements 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">try 
+  { 
+  <font color="#00FF00">// do something </font>
+  } 
+  catch ( Exception ) 
+  { 
+  <font color="#00FF00">// recover</font> 
+  } 
+  finally
+  { 
+  <font color="#00FF00">// This will always be called </font>
+  } 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="using"></a>// 
+  Using Statement </font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">using ( declaration_expr 
+  ) <br>
+  statement ; </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#00FF00">OR</font><font face="Geneva, Arial, Helvetica, san-serif" size="+1"> 
+  </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">using ( declaration_expr 
+  ) <br>
+  { <br>
+  statement_block <br>
+  } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Using 
+  Example</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">using ( StreamReader s = new StreamReader ( &quot;ReadMe.txt&quot; ) ) 
+{ 
+ <font color="#00FF00">// ...</font>
+} 
+<font color="#00FF00">// s is disposed here</font>
+</font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="variable"></a>// 
+  Variable Declaration</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">type [ variable 
+  [ = expr ]? ]+ ; </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// Variable 
+  Declaration Examples</font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">int  MyVariable = 42 ; </font></pre>
+    </td>
+  </tr>
+</table>
+<br>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">long Var1, Var2, Var3 ;  <font color="#00FF00">// Declare 3 variables on the same line</font></font></pre>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="variable"></a>// 
+  Value and Reference Types</font></h2>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="integral"></a>// 
+  Integral Types </font></h3>
+<table width="100%" border="0" cellpadding="6">
+  <tr> 
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">sbyte</font></td>
+    <td width="*"> 
+      <p><font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">sbyte</font></p>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="6">
+  <tr> 
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">short</font></td>
+    <td width="*"> 
+      <p><font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">short</font></p>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="6">
+  <tr> 
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">int</font></td>
+    <td width="*"> 
+      <p><font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">int 
+        MyInteger = 42; </font></p>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="6">
+  <tr> 
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">long</font></td>
+    <td width="*"> 
+      <p><font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">long</font></p>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="6">
+  <tr> 
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">byte</font></td>
+    <td width="*"> 
+      <p><font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">byte</font></p>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="6">
+  <tr> 
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">ushort</font></td>
+    <td width="*"> 
+      <p><font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">ushort</font></p>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="6">
+  <tr> 
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">uint</font></td>
+    <td width="*"> 
+      <p><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">uint</font></p>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="6">
+  <tr> 
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">ulong</font> 
+    </td>
+    <td width="*"> 
+      <p><font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">ulong</font></p>
+    </td>
+  </tr>
+</table>
+<font face="Geneva, Arial, Helvetica, san-serif" size="+1"><br>
+</font>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="float"></a>// 
+  Floating Point Types </font></h3>
+<table width="100%" border="0" cellpadding="6">
+  <tr> 
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">float</font></td>
+    <td width="*"> 
+      <p><font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">float</font><font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif"> 
+        MyFloatingPoint = &quot;27.00356&quot; ; </font></p>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="6">
+  <tr> 
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">double 
+      </font></td>
+    <td width="*"> 
+      <p><font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">double</font></p>
+    </td>
+  </tr>
+</table>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="char"></a>// 
+  Char Type</font></h3>
+<table width="100%" border="0" cellpadding="6">
+  <tr>
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">char</font></td>
+    <td width="*"> <font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">char 
+      MyCharacter = &quot;A&quot; ; </font></td>
+  </tr>
+</table>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="bool"></a>// 
+  Bool Type</font></h3>
+<table width="100%" border="0" cellpadding="6">
+  <tr> 
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">bool</font></td>
+    <td width="*"> <font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">bool 
+      MyBoolean = true ; </font></td>
+  </tr>
+  <tr>
+    <td width="200">&nbsp;</td>
+    <td width="*"><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">bool 
+      IsNoon = ( Hour &gt; 11 &amp;&amp; Hour &lt; 13 );</font></td>
+  </tr>
+</table>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="object"></a>// 
+  Object Type</font></h3>
+<table width="100%" border="0" cellpadding="6">
+  <tr> 
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">object</font></td>
+    <td width="*"> <font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">object</font></td>
+  </tr>
+</table>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="string"></a>// 
+  String Type</font></h3>
+<table width="100%" border="0" cellpadding="6">
+  <tr> 
+    <td width="200"><font face="Geneva, Arial, Helvetica, san-serif" size="+1">string</font></td>
+    <td width="*"> 
+      <p><font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif">string</font><font size="+1" color="#FF9900" face="Geneva, Arial, Helvetica, san-serif"> 
+        MyString = &quot;Hello World&quot; ; </font></p>
+    </td>
+  </tr>
+</table>
+<h2><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF"><a name="while"></a>// 
+  While Loops</font></h2>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">while ( Boolean_expr 
+  ) <br>
+  statement ; </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#00FF00">OR</font><font face="Geneva, Arial, Helvetica, san-serif" size="+1"> 
+  </font></p>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1">while ( Boolean_expr 
+  ) <br>
+  { <br>
+  statement_block <br>
+  } </font></p>
+<h3><font face="Geneva, Arial, Helvetica, san-serif" color="#0000FF">// While 
+  Loop Example </font></h3>
+<table width="75%" border="0" cellpadding="10" align="center" bgcolor="#000000">
+  <tr> 
+    <td> 
+      <pre><font face="Geneva, Arial, Helvetica, san-serif" size="+1" color="#FF9900">int i = 0 ; 
+  while ( i &lt; 10 ) 
+  { 
+  Console.WriteLine ( i++ ) ; 
+  } 
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Geneva, Arial, Helvetica, san-serif" size="+1"> </font> </p>
+</body>
+</html>

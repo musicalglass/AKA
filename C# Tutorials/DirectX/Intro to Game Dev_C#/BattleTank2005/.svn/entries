@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="19"
+   name=""
+   committed-date="2005-03-28T19:45:01.601912Z"
+   url="http://ares3.sytes.net/svn/Hobbyist/Games/1.%20Introduction%20to%20Game%20Development/C%23/BattleTank2005"
+   last-author="dpierson"
+   kind="dir"
+   uuid="126e713f-9840-b846-a618-1597db717849"
+   prop-time="2005-04-13T18:29:10.440593Z"
+   revision="30"/>
+<entry
+   name="DirectXSupport"
+   kind="dir"/>
+<entry
+   committed-rev="19"
+   name="BattleTank2005.csproj"
+   text-time="2005-04-13T18:29:10.456218Z"
+   committed-date="2005-03-28T19:45:01.601912Z"
+   checksum="95fad0a621c1de84082b4f9e82f52458"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:09.940593Z"/>
+<entry
+   committed-rev="17"
+   name="GameEngine.Designer.cs"
+   text-time="2005-04-13T18:29:10.471843Z"
+   committed-date="2005-03-28T17:09:00.581425Z"
+   checksum="8bf862e4325a28b4e06e98873ae80b2b"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:09.971843Z"/>
+<entry
+   committed-rev="19"
+   name="GameEngine.cs"
+   text-time="2005-04-13T18:29:10.503093Z"
+   committed-date="2005-03-28T19:45:01.601912Z"
+   checksum="5888c698fd1f7a6e618a120390503e55"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:09.987468Z"/>
+<entry
+   committed-rev="17"
+   name="Program.cs"
+   text-time="2005-04-13T18:29:10.518718Z"
+   committed-date="2005-03-28T17:09:00.581425Z"
+   checksum="659db5c46dc44f78ea17d8a2bcb04ecf"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:10.003093Z"/>
+<entry
+   name="Properties"
+   kind="dir"/>
+</wc-entries>

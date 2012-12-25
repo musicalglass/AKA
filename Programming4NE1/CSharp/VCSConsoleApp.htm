@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Create a Console Application using Visual C# Express 2005</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#CC66FF">
+<h3 align="center"><font color="#FF9900" face="Arial, Helvetica, sans-serif">Create 
+  a Console Application using Visual C# Express 2005</font></h3>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">OK, assuming you've already 
+  installed <a href="http://msdn.microsoft.com/vstudio/express/visualcsharp/">free 
+  Visual C#</a>, launch the application:</font></p>
+<p><font face="Arial, Helvetica, sans-serif"><img src="images/LaunchVCSharp.jpg" width="350" height="212" border="0"></font></p>
+<p><font face="Arial, Helvetica, sans-serif"> <font size="+1">The application 
+  opens with a default Start Page which you can close right away if you like.</font></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><img src="images/VCCloseStart.jpg" width="368" height="239"></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Click on the New Project 
+  button </font></p>
+<p><font face="Arial, Helvetica, sans-serif"><img src="images/VCNewProject.jpg" width="285" height="211"><br>
+  <font size="+1">( or go to File / New Project )</font></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">This brings up a small 
+  box of predefined projects. </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Select Console Application</font></p>
+<p><font face="Arial, Helvetica, sans-serif"><img src="images/VCConsole.jpg" width="432" height="277"></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">you could go with the default 
+  name of ConsoleApplication1 or<br>
+  double click on the name, type Hello and hit Enter.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Eventually a window opens 
+  with a default C# Console Application created for you.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Click one time under the 
+  word Main and hit Enter. Now type:<br>
+  <font color="#0000FF">Co</font><br>
+  a little popup window opens with a list of System Namespaces to choose from<br>
+  you can use the up and down arrow keys to scroll through the list until you 
+  find the name<br>
+  <font color="#0000FF">Console</font></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><img src="images/popup.jpg" width="576" height="238"><br>
+  <br>
+  <font size="+1">Hit Enter and Visual C# completes the word for you<br>
+  Now type a period followed by a W<br>
+  scroll to the word WriteLine and hit enter<br>
+  Now we type the rest of the line so it reads as follows:</font></font></p>
+<p><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">Console.WriteLine 
+  ( &quot;Hello YourName!&quot; ) </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">after a few seconds a little 
+  red squiggly line appears to tell us that the line of code is incomplete. </font></p>
+<p><img src="images/Squiggly.jpg" width="522" height="210"></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Add a semicolon <font color="#0000FF" size="+2"><b>;</b></font> 
+  at the end and it disappears.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">So your finished code should 
+  look like this:</font></p>
+<table width="75%" border="0" cellpadding="6" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">using System ;
+using System.Collections.Generic ;
+using System.Text ;       </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">namespace Hello
+{
+     class Program
+     {
+        static void Main ( string [ ] args )
+        {
+             Console.WriteLine ( &quot;Hello YourName!&quot; ) ; 
+        }
+     }
+}
+       </font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">To compile your application, 
+  hit the F5 key<br>
+  When your code finishes compiling, the application launches immediately, opens 
+  a console window displaying the word Hello and promptly exits, closing the console 
+  window. If you blinked you might have missed it. </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">To see your creation, hold 
+  Ctrl and hit F5</font></p>
+<div align="center"><font face="Arial, Helvetica, sans-serif" size="+1">Next Lesson 
+  <a href="../debugging.htm">Debugging</a></font> <br>
+  <a href="../index.htm"><font size="+1" face="Arial, Helvetica, sans-serif">Index 
+  </font></a><br>
+</div>
+</body>
+</html>

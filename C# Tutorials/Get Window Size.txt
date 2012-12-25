@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace WindowsApplication1
+{
+    public partial class MyForm : Form
+    {
+        public MyForm()
+        {
+            InitializeComponent();
+            whatever();
+        }
+        public void whatever ()
+        {
+        int MyWidth = 0, MyHeight = 0 ;
+        MyWidth  = this.Width ;
+        MyHeight  = this.Height ;
+        label1.Text = MyWidth.ToString () ;
+        }
+
+
+    }
+}

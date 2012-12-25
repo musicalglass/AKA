@@ -1,0 +1,63 @@
+
+< >
+DEFINITIONS.C  (): Sound/Music  background.wav not found 
+
+< >
+DEFINITIONS.C  (): Sound/Music  chicken.wav not found 
+
+< >
+DEFINITIONS.C  (): Can't open counter.bmp   
+
+< >
+DEFINITIONS.C  (): Can't open gameOver.bmp   
+
+< >
+DEFINITIONS.C  (): Can't open Rules.bmp   
+
+< >
+DEFINITIONS.C  (): Can't open gameStart.bmp   
+
+< >
+DEFINITIONS.C  (): Sound/Music  plop.wav not found 
+
+< >
+DEFINITIONS.C  (): Can't open quitButton.bmp   
+
+< >
+DEFINITIONS.C  (): Can't open quitButtonPressed.bmp   
+
+< >
+DEFINITIONS.C  (): Can't open quitButton.bmp   
+
+< >
+DEFINITIONS.C  (): Can't open restartButton.bmp   
+
+< >
+DEFINITIONS.C  (): Can't open restartButtonPressed.bmp   
+
+< >
+DEFINITIONS.C  (): Can't open restartButton.bmp   
+
+< >
+DEFINITIONS.C  (): Can't open rulesButton.bmp   
+
+< >
+DEFINITIONS.C  (): Can't open rulesButtonPressed.bmp   
+
+< >
+DEFINITIONS.C  (): Can't open rulesButton.bmp   
+
+< >
+DEFINITIONS.C  (): Sound/Music  splat.wav not found 
+
+< >
+DEFINITIONS.C  (): Can't open startButton.bmp   
+
+< >
+DEFINITIONS.C  (): Can't open startButtonPressed.bmp   
+
+< >
+DEFINITIONS.C  (): Can't open startButton.bmp   
+
+< >
+DEFINITIONS.C  (): Sound/Music  whoosh2.wav not found 

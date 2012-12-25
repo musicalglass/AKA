@@ -1,0 +1,4 @@
+csc hello.cs
+csc /nologo hello.cs
+csc /nologo /out:My_Application.exe hello.cs
+csc /nologo /out:"My Application".exe hello.cs

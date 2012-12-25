@@ -1,0 +1,125 @@
+<title>C# Tutorial / Relational Operators</title>
+<BODY COLOR=black BGPROPERTIES=FIXED bgcolor="#000000" text="#CC66FF">
+<h1 align="center"><font face="Arial, Helvetica, sans-serif" color="#FF9900">Relational 
+  Operators</font></h1>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Let's say we want to determine 
+  whether it's morning, afternoon or evening based on the hour of day, between 
+  1 and 24, for instance</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> Hour_Of_Day = 11 ;</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Now all we need to do is 
+  look at the value of Hour_Of_Day and if it is below a certain value, we know 
+  it's morning or if it's over another value, we know it's evening. This is accomplished 
+  with relational operators:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1">==</font><font face="Arial, Helvetica, sans-serif" size="+1"> 
+  ( Equal To )<br>
+  <font color="BLUE">&lt;</font> ( Less Than )<br>
+  <font color="BLUE">&gt;</font> ( Greater Than )<br>
+  <font color="BLUE">&lt;=</font> ( Less Than <i><b>or</b></i> Equal To )<br>
+  <font color="BLUE">&gt;=</font> ( Greater Than <i><b>or</b></i> Equal To )<br>
+  <font color="BLUE">!= </font>( Not Equal To)</font></p>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">Assign</font></h3>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Use = to assign a value 
+  to a variable:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" size="+1" color="BLUE">My_Value = 7 ;
+
+My_New_Variable = My_Variable ;
+
+My_New_Variable = ( First_Variable + Second_Variable )</font><font face="Arial, Helvetica, sans-serif" size="+1"> ;</font><font face="Arial, Helvetica, sans-serif">
+</font></pre>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">Using == as a Conditional 
+  Statement</font></h3>
+<pre><font color="BLUE" size="+1" face="Arial, Helvetica, sans-serif"> if My_Number == 7 </font><font size="+1" face="Arial, Helvetica, sans-serif"><i>do something</i></font></pre>
+<pre><font color="BLUE" size="+1" face="Arial, Helvetica, sans-serif"> if My_String == &quot;hello&quot; </font><font size="+1" face="Arial, Helvetica, sans-serif"><i>do something</i></font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1"><b>Not Equal To:</b></font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Use != to denote that two 
+  values are <i>not</i> the same:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1">if User_Password != &quot;Open_Sesame&quot; <br>Console.Write ( &quot;Sorry, you do not have authorization&quot; ; </font></pre>
+<h3><font face="Arial, Helvetica, sans-serif"><b><font color="#FF9900">Less Than</font></b></font></h3>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> 4 &lt; 64537</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Quite simply put: Whatever 
+  is on the smaller side of the symbol &lt; is <i>less than</i> whatever's on 
+  the larger side.</font></p>
+<h3><font face="Arial, Helvetica, sans-serif"><b><font color="#FF9900">Greater 
+  Than</font></b></font></h3>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> </font><font face="Arial, Helvetica, sans-serif" color="BLUE"><font size="+1">96 &gt; 12</font></font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">If we said that 96 is greater 
+  than 12, we know that to be true, correct? I hope this isn't getting too complicated 
+  too fast.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">So we can use IF to make 
+  a conditional statement using &lt; or &gt;:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> if  ( 96 &gt; 12 )<br>Console.Write ( &quot;96 is Greater Than 12&quot; ) ;</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">This of course will print 
+  immediately since we know the condition to be true. It would be the same as 
+  saying:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> if  ( 1 = 1 )<br> Console.Write ( &quot;Brilliant Watson!&quot; ) ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">However, if we said:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> if ( 1 &gt; 12 ) <br> Console.Write ( &quot;1 is not Greater Than 12&quot; ) ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">it would print absolutely 
+  nothing, since we know for a fact that the conditional statement 1 &gt; 12 is 
+  false. </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">That doesn't do a whole 
+  lot for us until we factor in Variables. Since we know that Variables can vary, 
+  we can set up a condition where if the Variable is above or below a certain 
+  number, it can trigger all kinds of events.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Right, so if we took the 
+  hour of the day, between 1 and 24, and wanted to determine whether it was A.M. 
+  or P.M. clearly we could say:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> if ( My_Variable &lt; 12 ) <br> Console.Write ( &quot;Good Morning&quot; ) ;  
+ if ( My_Variable &gt; 12 ) <br>Console.Write ( &quot;Good Evening&quot; ) ;  </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">That works. However, there 
+  is a small paradox. If it happens to be 12, this will return false since 12 
+  is neither greater than nor less than 12. It is right on the money. <br>
+  We could fix it this way using OR.<br>
+  The Cryptic-ass symbol for OR is || :</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1">if ( (  My_Variable &lt; 12 ) || ( My_Variable = 12 ) )
+Console.Write ( &quot;Good Morning&quot; ) ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">However there is a shorter 
+  way to do it, using &lt;=</font></p>
+<h3><font face="Arial, Helvetica, sans-serif"><b><font color="#FF9900">Less Than 
+  or Equal to</font></b></font></h3>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> if ( My_Variable &lt;= 12 ) <br> Console.Write ( &quot;Good Morning&quot; ) ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Now we are saying 12 or 
+  anything below it.</font></p>
+<h3><font face="Arial, Helvetica, sans-serif"><b><font color="#FF9900">Less Than 
+  or Equal to</font></b></font></h3>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> if ( My_Variable &gt;= 18 ) <br>Console.Write ( &quot;Good Morning&quot; ) ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Now we are saying 18 or 
+  anything higher.</font></p>
+<h3><font face="Arial, Helvetica, sans-serif"><b><font color="#FF9900">Between 
+  two Numbers</font></b></font></h3>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">O.K., next hitch is that 
+  Afternoon is in the middle. That means that it is anything over 12 AND under 
+  18. We can use AND to ensure that it meets both conditions. Assuming we want 
+  12 noon to be considered mid day:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> if (( Time_Of_Day &gt;= 12 ) &amp;&amp; ( Time_Of_Day &lt; 18 )) <br>Console.Write ( &quot;Good Afternoon&quot; ) ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">So here would be the finished 
+  solution:</font></p>
+<table width="75%" border="0" cellpadding="6" align="center">
+  <tr> 
+    <td> 
+      <pre><font face="Arial, Helvetica, sans-serif" color="#00FF00" size="+1">// Calculate part of day based on Hour</font><font face="Arial, Helvetica, sans-serif" color="#0000FF" size="+1">
+using System;
+class AmPm
+{
+       public static void Main()
+       {
+       Console.Write ( &quot;Please enter the hour 0 - 24: &quot; ) ;
+       int iTimeOfDay = int.Parse ( Console.ReadLine () ) ;        </font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" color="#0000FF" size="+1">         if ( iTimeOfDay &lt; 12 ) 
+         Console.Write ( &quot;Good Morning&quot; ) ;
+         if ( ( iTimeOfDay &gt;= 12 ) &amp;&amp; ( iTimeOfDay &lt; 18 ) )
+         Console.Write ( &quot;Good Afternoon&quot; ) ;
+         if ( iTimeOfDay &gt;= 18 ) 
+         Console.Write ( &quot;Good Evening&quot; ) ;
+         } 
+} 
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="+1">On to the 
+  Next Lesson: <a href="loops.htm">Loops</a> <br>
+  Back to the Previous Lesson: <a href="operators.htm">Operators</a><br>
+  <a href="../index.htm">Index </a><br>
+  </font></p>
+</BODY>

@@ -1,0 +1,3 @@
+
+< red^green,blue = 1 ;>
+COORDINATES.C 6:1  (): Number syntax green   

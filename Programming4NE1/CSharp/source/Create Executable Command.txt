@@ -1,0 +1,2 @@
+csc /out:Name_Of_Executable.exe FileName.cs
+csc /out:"Executable Name".exe FileName.cs

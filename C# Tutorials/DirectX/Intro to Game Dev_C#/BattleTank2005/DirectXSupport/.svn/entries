@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="19"
+   name=""
+   committed-date="2005-03-28T19:45:01.601912Z"
+   url="http://ares3.sytes.net/svn/Hobbyist/Games/1.%20Introduction%20to%20Game%20Development/C%23/BattleTank2005/DirectXSupport"
+   last-author="dpierson"
+   kind="dir"
+   uuid="126e713f-9840-b846-a618-1597db717849"
+   revision="30"/>
+<entry
+   committed-rev="19"
+   name="dxmutmisc.cs"
+   text-time="2005-04-13T18:29:09.909343Z"
+   committed-date="2005-03-28T19:45:01.601912Z"
+   checksum="8c7ac1490c8b1a75f5bbac7eeb5014dd"
+   last-author="dpierson"
+   kind="file"
+   prop-time="2005-04-13T18:29:09.846843Z"/>
+</wc-entries>

@@ -1,0 +1,258 @@
+<html>
+<head>
+<title>Visual C# Express Getting Started with Windows Forms</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#CC66FF">
+<h1><font face="Arial, Helvetica, sans-serif" color="#FF9900">Getting started 
+  with Visual C# Express 2005</font></h1>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Assuming you have already 
+  installed Visual C#, let's launch our application.</font><font face="Arial, Helvetica, sans-serif"><br>
+  <img alt="Visual Studio Icon." src="images/LaunchVCSharp.jpg" width="350" height="212"><br>
+  <font size="+1">The application opens with a default Start Page which you can 
+  close right away if you like.</font></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><img src="images/VCCloseStart.jpg" width="368" height="239"></font></p>
+<p> <font size="+1" face="Arial, Helvetica, sans-serif">Click on the <b>New Project</b> 
+  button </font><font face="Arial, Helvetica, sans-serif"><br>
+  <br>
+  <img alt="Creating a brand new project." src="images/VCNewProject.jpg" width="285" height="211"><br>
+  ( or go to <b>File / New Project </b> )<font size="+1"><br>
+  <br>
+  A window opens with a list of Project Templates. <br>
+  Double-Click <b>Windows Application<br>
+  </b></font></font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Eventually your new file 
+  opens and you'll see what appears to be an empty Form window.<br>
+  To compile it into an application, hit the <b>F5</b> key.</font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">An empty Windows application 
+  opens with the basic controls. You can blow the window up to full screen, minimize 
+  it, open it again from the Windows Menu and close it. When you close the application 
+  you are returned to the compiler.<br>
+  <br>
+  You should see the Solution Explorer window over on the right side of the application.<br>
+  If you don't see the Solution Explorer, go to <b>View / Solution Explorer</b>.</font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Right-Click on Form1.cs 
+  and select <b>View Code</b>.<br>
+  </font><font face="Arial, Helvetica, sans-serif"><br>
+  <img alt="Adding a Reference." src="images/VCViewCode.jpg" width="300" height="384"><br>
+  <br>
+  <font size="+1">The Code Editor opens in the main window. Now Right-Click on 
+  <b>Program.cs</b> to open that as well.</font></font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">You can flip back and forth 
+  between the pages by clicking on the Tabs at the top:</font><font face="Arial, Helvetica, sans-serif"><br>
+  <br>
+  <img alt="Choosing the References." src="images/VCTabs.jpg" width="370" height="262"><br>
+  <font size="+1"><br>
+  To see a bit more of your code, hide the Solution Explorer by clicking on the 
+  thumbtack icon:</font></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><img src="images/VCAutoHide.jpg" width="238" height="269"> 
+  </font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">The Solution Explorer collapses 
+  into a tab along the side of your window. <br>
+  To access it now, simply hold your mouse over the Tab and the window pops open:</font></p>
+<p><font face="Arial, Helvetica, sans-serif"><img src="images/VCSolutionPop.jpg" width="280" height="332"></font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Make sure that Program.cs 
+  is visible by clicking on the Tab at the top of the page if necessary.<br>
+  After the part that says <font color="#0000FF">static void Main()</font>, inside 
+  the curly brackets <font color="#0000FF"><b>{ }</b></font> you can replace the 
+  3 lines of code thusly:</font></p>
+<table width="75%" border="0" cellpadding="6" align="center">
+  <tr> 
+    <td> 
+      <pre><font size="+1" face="Arial, Helvetica, sans-serif">static void Main() <br>{ <br><font color="#0000FF">  MessageBox.Show ( &quot;Hello YourName!&quot; ) ; </font><br>}</font> 
+
+</pre>
+    </td>
+  </tr>
+</table>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Hit the F5 key and, Wow! 
+  Your first hacked Windows Application! <br>
+  After you hit the OK button, you are returned to the code editor. <br>
+  Does the excitement never end? </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">OK, let's forget about 
+  this crude compiler test and get on with it. <br>
+  Let's start a New Project:<br>
+  <img alt="Creating a brand new project." src="images/VCNewProject.jpg" width="285" height="211"> 
+  (or hit <font color="#0000FF">Ctrl + Shift N</font> )<br>
+  <font color="#0000FF"><br>
+  <font color="#CC66FF">A window opens asking if you want to save your work. Just 
+  click Discard or hit <font color="#0000FF">Tab <font color="#CC66FF">,</font> 
+  Enter </font></font></font></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><font size="+1">If you do not choose 
+  a name, then a default name will be assigned: "WindowsApplication1".<br>
+  Change the name to: <b>Tutorials.UsingAForm</b> and click OK.</font><br>
+  <br>
+  <img src="images/VCWindozeApp.jpg" width="504" height="370"> </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">This should open a default 
+  windows application.<br>
+  Hit F7 to open Form1.cs</font></p>
+<p><font face="Arial, Helvetica, sans-serif"><font size="+1">First we have our 
+  <i><font color="#FF9900">Using Directives</font></i> added by Visual C#, such 
+  as: <font color="#0000FF">System</font> and <font color="#0000FF">System.Windows.Form</font>. 
+  These allow us to access the Windows Operating System and tell it that we want 
+  to create a Form window. </font></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><font size="+1">Next we have a <i><font color="#FF9900">Namespace 
+  Declaration</font></i> <br>
+  Tutorial writers seem to waste pages and pages trying to explain what Namespaces 
+  are and never seem to get anywhere. It's quite simple really:<br>
+  Let's say you have two programmers working for the same company. Bob over in 
+  Dept. A writes some code and stores the company's customer profiles in a variable 
+  called X. Meanwhile over in Dept. B, John the programmer is implementing another 
+  piece of code which stores the company's laundry list in another variable called 
+  X. Of course you can imagine the merry mixups that occur when the two parts 
+  of the program are brought together and one day the customer database gets overwritten 
+  with the dirty towels list.<br>
+  </font></font><font face="Arial, Helvetica, sans-serif"><font size="+1">What 
+  the Namespaces allow you to do is put Bob's code in one container like so:</font></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><font size="+1" color="#0000FF">namespace 
+  BobsCode<br>
+  {<br>
+  int x = CustomerDatabase ; <br>
+  etc... <br>
+  }</font></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><font size="+1">and John's code in 
+  it's own container:</font></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><font size="+1" color="#0000FF">namespace 
+  JohnsCode<br>
+  {<br>
+  int x = DirtyLaundry ; <br>
+  etc... <br>
+  }</font></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><font size="+1">Now you can put both 
+  pieces of code on the same page and the variable names won't clash.<br>
+  One suggested format is <b><font color="#0000FF">YourCompanyName.YourProject</font></b><font color="#0000FF">Name</font>. 
+  </font></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><font size="+1">You can have Namespaces 
+  spread over more than one file. Flip back and forth between Form1.cs and Program.cs 
+  and observe that they both share the same Namespace. This allows you to organize 
+  a big project into smaller separate files. If they are within the same Namespace, 
+  to the computer it's as if they were together on the same page.</font></font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">In Form1.cs, click after 
+  the end of the line that says InitializeComponent(); and hit Enter to create 
+  a new line. Type <b><font color="#0000FF">sys<br>
+  </font></b>a window should pop open with the word System highlighted. Simply 
+  hit Enter and Visual C# completes the rest of the word for you.</font></p>
+<p><font face="Arial, Helvetica, sans-serif"><img src="images/VCSystem.jpg" width="498" height="293"></font><font size="+1" face="Arial, Helvetica, sans-serif"> 
+  </font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Now type a period. A list 
+  of available namespaces in the System namespace appears. You can use the Arrow 
+  Keys to scroll up and down this list and explore the available namespaces.</font><font face="Arial, Helvetica, sans-serif"><font size="+1"><br>
+  <br>
+  In this case, we have created a two level namespace. First <b>Tutorials,</b> 
+  then <b>UsingAForm</b>. Try typing <font color="#0000FF">tu</font> in the code 
+  window. Note that the popup window has jumped to Tutorials in the list. Simply 
+  hit Enter and Auto Completion types the rest of the word for you. Now type a 
+  period and UsingAForm shows as the only Namespace available in the Tutorials 
+  Namespace. Type a <b>u</b> or hit the down arrow and hit Enter and it will write 
+  it for you. If you put a dot after <font color="#0000FF">UsingAForm</font> it 
+  will show you the class we have created: Form1 in the list.</font><br>
+  <br>
+  <img alt="Showing you whats inside the namespaces we created." src="images/VCViewClasses.jpg" width="624" height="339"></font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">OK let's delete the Tutorials.UsingAForm.etc... 
+  line we were just playing around with.</font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">The name Form1 is just 
+  a generic name put out there and we don't necessarily want to keep it that way.<br>
+  After <font color="#0000FF">public partial class</font>, double-click on <b>Form1</b> 
+  and change it to <b>MyForm</b>. Note that some little red squiggly lines appear 
+  under some of the names indicating that something has gone wonky. Visual C# 
+  has some built in features which will automatically update any immediate discrepencies. 
+  <br>
+  Observe that if you hold your mouse over the little red squiggly bit, a menu 
+  tab pops open from which you can now select the option to update any dependencies 
+  you may have overlooked.</font></p>
+<p><font face="Arial, Helvetica, sans-serif"><img src="images/SquigglyDropdown.jpg" width="403" height="222"></font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Select <b>Rename 'Form1' 
+  to 'MyForm'</b> and observe that the name has been updated in more than one 
+  place in your code. Any necessary adjustments are also made to files which are 
+  normally hidden.</font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">To illustrate, I want you 
+  to hold <b>Ctrl Z</b> until you see that MyForm has changed back to Form1. OK, 
+  Everything is back the way it was. You can hit the <b>F5</b> key to see that 
+  the application is indeed not broken. <br>
+  OK, let's close that and double click the word Form1 to select it.<br>
+  Hold <b>Ctrl H</b>. The <b>Find and Replace</b> window opens.<br>
+  In the <b>Replace With</b> field, enter <b>MyForm. </b>Under <b>Look In</b>, 
+  make sure you select <b>Current Project</b> and click <b>Replace All</b>. A 
+  Window pops up indicating that 5 ocurrences have been changed. Hit <b>Enter</b> 
+  or click <b>OK</b>. <br>
+  Observe that a new page has also opened in the Editor Window now called <b>Form1.Designer.cs</b><br>
+  This is one of the pages of code which Visual C# creates for you automatically 
+  which handles a bunch of routine Windows crap. At first glance however, you 
+  may not see that the word MyForm has actually been updated in the code file.<br>
+  If you scroll down to the bottom, you'll see a line which says <b><font color="#0000FF">private 
+  void InitializeComponent()</font> <font color="#0000FF">.....</font></b><br>
+  if you click on the <b>+</b> sign to the left of that, you will see that it 
+  expands the text. This is another nifty feature of Visual C# which allows you 
+  to close groups of code up into nice manageable chunks.<br>
+  OK let's close Form1.Designer.cs to get it out of our way by clicking on the 
+  little black <b>X,</b> and be sure that Form1.cs is the active window by clicking 
+  on the Form1.cs Tab at the top.</font><font size="+1" face="Arial, Helvetica, sans-serif"><br>
+  <br>
+  Update the code as follows:</font></p>
+<table width="75%" border="0" cellpadding="6" align="center">
+  <tr> 
+    <td> 
+      <pre><font face="Arial, Helvetica, sans-serif" color="#0000CC" size="+1">using System;
+       using System.Collections.Generic;
+       using System.ComponentModel;
+       using System.Data;
+       using System.Drawing;
+       using System.Text;
+       using System.Windows.Forms;       </font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" color="#0000CC" size="+1">namespace Tutorials.UsingAForm
+{
+    public partial class MyForm : Form
+    {
+         public MyForm()
+         {
+         InitializeComponent();
+         }</font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" color="#0000FF" size="+1"><b> protected override void OnPaint( PaintEventArgs e )
+         {
+         e.Graphics.DrawString ( &quot;Hello Windows&quot;, this.Font,
+         Brushes.Black, 10, 10);
+         }</b></font></pre>
+      <pre><font face="Arial, Helvetica, sans-serif" color="#0000CC" size="+1">   }
+}
+</font><font face="Arial, Helvetica, sans-serif" color="#0000FF" size="+1">
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Hit the F5 key to see your 
+  creation. </font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Upon running this code, 
+  we will get a Form window. Near the top corner of that Window it should say 
+  "Hello Windows". </font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Let's have a little fun 
+  with the colors. Double-click on the word Black and hit the Backspace key 2 
+  times to delete the ColorName and the period before it. Now type another period 
+  in it's place. A window appears with a list of available color presets. Scroll 
+  down to a new color name and hit Enter. <br>
+  Try changing the numbers to 150, 50<br>
+  Observe how increasing the first number moves the text to the right, while <u>increasing</u> 
+  the second number moves it further <u>down</u>.<br>
+  Go ahead and play with that a bit..... <br>
+  Allright, back to work.<br>
+  </font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Let's change the name that 
+  appears in the menu bar at the top of the Form Window.<br>
+  Update the following bit of code in the <i><b>Constructor</b></i>.</font></p>
+<table width="75%" border="0" cellpadding="6" align="center">
+  <tr> 
+    <td> 
+      <pre><font size="+1" face="Arial, Helvetica, sans-serif">    public partial class MyForm : Form
+    {
+         public MyForm()
+         {
+         InitializeComponent();
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text = "My Window";</b>
+         }<br></font></pre>
+    </td>
+  </tr>
+</table>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Hit F5, etc...</font></p>
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="+1"><a href="../index.htm">Index</a></font></p>
+</body>
+</html>

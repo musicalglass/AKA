@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>C++ Tutorial / Arrays</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#CC66FF">
+<h1 align="center"><font face="Arial, Helvetica, sans-serif" color="#FF9900">Arrays</font></h1>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Arrays are like a deck 
+  of blank cards you can write values on. Let's say we want to create a deck of 
+  52 cards. It would be a pain to have to write 52 separate variables. Say we 
+  want to take each card's value and add 1 to it. Instead of writing 52 lines 
+  of code to handle each card, we can create an Array called deck. Now we can 
+  make changes to the entire deck, or to individual cards by referring to them 
+  by their corresponding number.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Declare an Array of Integers</font></p>
+<p><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> int Deck[ 
+  52 ] ;</font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">In this case we have actually 
+  declared 53 separate variables numbered 0 - 52. We will ignore the variable 
+  which exists at position 0 and only use positions 1 - 52. Let's say we want 
+  to store a value of 14 in position number 1.</font></p>
+<p><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">Deck[ 1 
+  ] = 14 ;</font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">or pass the value stored 
+  in position 1 to a variable:</font></p>
+<p><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">MyVariable 
+  = Deck[ 1 ] ;</font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">or move a value from one 
+  position in the array to another:</font></p>
+<p><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">Deck[ 0 
+  ] = Deck[ 14 ] ;</font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">We can assign the values 
+  to each field when we declare the array and the size is automatically set depending 
+  on the number of variables.<br>
+  </font></p>
+<p></p>
+<p><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int Deck 
+  [ ] = { 14, 2, 3, 4, 5 } ;</font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">This would automatically 
+  generate an array of 5 variables containing the values specified. The variables 
+  are automatically numbered 0 - 4:</font></p>
+<p><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">Deck[ 0 
+  ]</font><font size="+1" face="Arial, Helvetica, sans-serif"><br>
+  <font color="#0000FF">Deck[ 1 ]</font><br>
+  <font color="#0000FF">Deck[ 2 ]</font><br>
+  <font color="#0000FF">Deck[ 3 ]</font><br>
+  <font color="#0000FF">Deck[ 4 ]</font></font> </p>
+<p></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* HelloArray.cpp<br>   This is the classic &quot;Hello World&quot;<br>   using an Array<br>*/<br>#include &lt;iostream&gt;<br>using namespace std ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void )
+{
+       /* Local Declarations */
+       char MyString[] = &quot;Hello&quot; ; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">       /* Statements */
+       cout &lt;&lt; MyString ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0 ;
+} /* main */
+</font></pre>
+    </td>
+  </tr>
+</table>
+<font size="+1" face="Arial, Helvetica, sans-serif"><br>
+</font> 
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* ArrayName.cpp<br>   Print user name to the screen<br>   using an Array<br>*/<br>#include &lt;iostream&gt;<br>using namespace std ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ()
+{
+         char UserName [60] ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">         cout &lt;&lt; &quot;Please, enter your name: &quot; ;
+         cin &gt;&gt; UserName ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">         cout &lt;&lt; &quot;Hello, &quot; &lt;&lt; UserName &lt;&lt; &quot;!&quot; ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0 ;
+} /* main */
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* DeckCards.cpp
+   Create an Array of 52 Cards (53 technically)
+   Store Value from 1 to 52 in corresponding Array location
+   using a For Loop ( ignoring location 0 )
+   Then print the values to the screen
+*/
+#include &lt;iostream&gt;
+using namespace std ;       </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void )
+{</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Local Declarations */
+         int i ; 
+         const int Cards = 52 ; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Create an Array of 53 Cards */
+         int Deck[ Cards ] ; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Starting at 1, cycle through each and 
+   insert the appropriate number 
+   by assigning the current value of i
+   to the corresponging array location
+   each time the loop cycles through
+*/
+         for ( i = 1 ; i &lt;= Cards ; i++ )
+         Deck[i] = i ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Use another For Loop to print them out sequencially */
+         for ( i = 1 ; i &lt;= Cards ; i++ )
+         {
+         cout &lt;&lt; Deck[i] ;
+         cout &lt;&lt; endl ;
+         }</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0 ;
+} /* main */
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Note here that instead 
+  of declaring our array with a number:</font></p>
+<p><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1"> int Deck[ 
+  52 ] ; </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">We instead declared the 
+  value as a variable</font></p>
+<p><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1"> const 
+  int Cards = 52 ; <br>
+  int Deck[ Cards ] ; </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">In this case, we have declared 
+  the integer variable as being Constant. Notice that the variable: Cards, is 
+  used in more than one place in the program. Let's say that later you want to 
+  make another program which uses a deck of 24 cards. Now all we have to do is 
+  change the value one time at the top of our code and every instance is automatically 
+  updated. This illustrates the advantage of using structured programming and 
+  declaring your variables at the top of your program. </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">On to the Next Lesson: 
+  <a href="random.htm">Random Numbers</a></font></p>
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="+1"><a href="../index.htm">Index</a><br>
+  </font></p>
+</body>
+</html>

@@ -1,0 +1,3 @@
+
+< digits(35, 24, "currentEntHandle = %0.f", arial_font, 1, currentEntHandle);>
+MAIN.C 2:3  (): Font unknown arial_font   

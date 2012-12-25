@@ -1,0 +1,243 @@
+<title>C# Tutorial / Operators</title>
+<BODY COLOR=black BGPROPERTIES=FIXED bgcolor="#000000" text="#CC66FF">
+<h1 align="center"><font face="Arial, Helvetica, sans-serif" color="#FF9900">C# 
+  Operators</font></h1>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Consider this:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" size="+1"> 1 + 2 = 3</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Hopefully you don't have 
+  to consider it very long. If so, perhaps instead of programming, one might consider 
+  a career in auto body maintenance or something.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Now let's look at it this 
+  way:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" size="+1"> 3 = 1 + 2</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">In both instances, we are 
+  saying the exact same thing: that the value on either side of the <i>Operator</i> 
+  &quot; = &quot; is the same. You follow me so far? If you like, you can stop 
+  now and go off and meditate on that for a couple weeks. Otherwise, read on:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Try this simple program:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">public class NumAdd<br>{<br>       static void Main ( )
+       {
+         System.Console.Write ( 1 + 2 ) ;
+       }
+}</font>
+
+</pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">This will print 3 to the 
+  screen, not 1 + 2. To a computer, the value of a whole number and the value 
+  of a mathematical calculation are one and the same. After all, adding up numbers 
+  is a computer's only purpose in life. If you leave any mathemematical equations 
+  lying around, it will just go ahead and solve them without you even asking it 
+  to, just out of sheer boredom. Like the impatient math whiz in school who always 
+  blurts out the answers to all the math questions as soon as the teacher writes 
+  them on the board.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Just as a quick reminder, 
+  if you did want to print 1 + 2 you would make it a Text String:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">using System ; <br>public class PrintEquation<br>{<br>       static void Main( )
+       {
+       Console.Write ( &quot;1 + 2 = &quot; ) ;
+       Console.Write ( 1 + 2 ) ;
+       }
+}</font><font face="Arial, Helvetica, sans-serif" size="+1"><br></font>
+</pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">We also know that we can 
+  store numeric values in Variables, right?</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> My_First_Number = 1 ; 
+ My_Second_Number = 2 ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Even though we can turn 
+  numbers into words, that is only for our convenience, inside the computer, they 
+  are still nothing but a bunch of numbers. As such, you can do mathematical calculations 
+  on Variables just like they were numbers:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> My_First_Number + My_Second_Number</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">This will calculate the 
+  value of the two Variables. If we have declared the values in advance, as in 
+  the previous code example, it will return a value of 3.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Although of course, while 
+  we can declare a Variable anywhere we want, we can't use it, then declare it:</font></p>
+<pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">Console.Write </font><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1">( MyVariable ) ;
+<font color="#00FF00">// <font color="#FF0000">Wrong!</font> You must declare the Variable value first </font>
+int MyVariable = 1 ;</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">The computer will read 
+  from the top down. So clearly this would print the current value, and then reset 
+  the Variables, but we wouldn't see those results, unless we called on the print 
+  command a second time.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">You can Declare all of 
+  your Variables listed at the top of various parts of your program and then call 
+  on them later, perhaps numerous times by different parts of your code. This 
+  can help you keep your Variables organized by keeping them grouped together.</font></p>
+<h3><font face="Arial, Helvetica, sans-serif">Addition using Variables</font></h3>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">using System ; <br>public class AddNums<br>{<br>static void( Main  )
+       {
+       //  Local Declarations
+       int num1 = 5 ;
+       int num2 = 10 ;
+
+       // Statements
+       Console.Write ( num1 + num2 ) ; 
+       }
+}</font>
+
+</pre>
+    </td>
+  </tr>
+</table>
+<pre><font face="Arial, Helvetica, sans-serif" size="+1">This will print the number 15 to the screen.</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">We could make a simple 
+  calculator program which adds two numbers input by the user:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">using System ; <br>public class AddInput <br>{<br>     static void  Main( )<br>     {<br>     Console.Write ( &quot;Please enter two numbers: &quot; ) ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">     <font color="#00FF00">// Store user input string in a Variable</font>
+     string TempStringVariable = Console.ReadLine() ;
+     <font color="#00FF00">// Convert String Variable and store in Integer Variable</font>
+     int num1 = int.Parse( TempStringVariable ) ; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">     <font color="#00FF00">// This one does the exact same thing using only one line</font>
+     int num2 = int.Parse( Console.ReadLine() ) ; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">     int sum = num1 + num2 ; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">     Console.Write ( &quot;The sum of {0} and {1} is {2}&quot;, num1, num2, sum ) ; 
+     Console.ReadLine() ; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">     }<font color="#00FF00"> // end class Main</font>
+} <font color="#00FF00">// end class AddInput</font><br>
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Note that we also could 
+  have declared the variable: sum, on the line it is used:<br>
+  <font color="#0000FF">int sum = num1 + num2 ;</font><br>
+  It is not neccesary in C# to declare all of your variables at the top as in 
+  some other programming languages.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Also, we could have just 
+  as easily done it this way:<br>
+  <font color="#0000FF">Console.Write ( num1 + num2 ) ;</font><br>
+  This would print the sum of num1 and num2.</font> </p>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">Subtraction with 
+  Variables</font></h3>
+<pre><font face="Arial, Helvetica, sans-serif" size="+1" color="BLUE"> int First_Number = 3 ;
+ int Second_Number = 2 ;
+ 
+</font><font face="Arial, Helvetica, sans-serif" size="+1"><font color="#0000FF">Console.Write (</font></font><font face="Arial, Helvetica, sans-serif" size="+1" color="BLUE"> First_Number - Second_Number ) ;</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Try making your own subtraction 
+  calculator program. I realize this is a tough assignment all at once.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">O.K., so we know we can 
+  store a numeric value in a Variable:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> My_Number = 6 ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">We can store the results 
+  of equations in a Variable:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> My_Calculation = 2 + 3 ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">We can also store the value 
+  of one Variable in a new Variable:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> My_Total = My_Calculation ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">or even the results of 
+  Calculations using Variables:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> My_Income = My_Paycheck - My_Taxes ; </font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">As in the following example:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF">using System ; 
+public class VariableEquation
+{
+        static void Main ()
+       {<br>       int First_Number = 1 ; 
+       int Second_Number = 2 ; 
+
+       int My_Answer = First_Number + Second_Number ; 
+
+       Console.Write ( My_Answer );</font> <font face="Arial, Helvetica, sans-serif" size="+1" color="#0000FF"><br>    }<br>}</font></pre>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">Multiplication</font></h3>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Use the * symbol for multiplication. 
+  This simple program will calculate how many months are in a given number of 
+  years:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" size="+1" color="BLUE">using System ; 
+public class MonthsInYear
+{
+       static void Main ()
+       {<br>       int Number_Of_Years = 4 ;
+       Console.Write ( Number_Of_Years * 12 ) ; 
+</font><font color="#0000FF" face="Arial, Helvetica, sans-serif" size="+1">       }
+} </font></pre>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">Division</font></h3>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Use the / symbol to divide. 
+  This will calculate how old you are in dog years:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" size="+1" color="BLUE">using System ; 
+public class DivideStuff
+{
+       static void Main ()
+       {<br>      User_Age = 21 ;
+
+       Console.Write ( &quot;That's &quot; ) ; 
+       Console.Write ( User_Age / 7 ) ; 
+       Console.Write ( &quot; in dog years&quot; ) ; <br>       }<br>}</font></pre>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">Fractional Numbers 
+  </font></h3>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Note that it rounds off 
+  the number automatically. For instance if you were to change the User_Age to 
+  13, it would return a value of 1, not 1.8571428 etc. or the correct value of 
+  13 divided by 7. But once it reaches 14, it returns a value of 2. That is because 
+  we are using Integer variables which can only store <i>whole numbers</i>. That's 
+  useful for most simple program commands. But if you needed to program something 
+  which required the use of fractional numbers, or floating point calculations: 
+  a calculator program for instance, there is a special numeric variable for that, 
+  <i>Float:</i></font></p>
+<pre><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> float My_Number ;</font></pre>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Try the above program again 
+  using</font><font face="Arial, Helvetica, sans-serif" color="BLUE" size="+1"> 
+  float User_Age = 13 </font><font face="Arial, Helvetica, sans-serif" size="+1">to 
+  make it a fractional number.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">So why not just use floats 
+  for everything? Because they use more memory. If you know that you are only 
+  going to be storing whole numbers in a Variable, you're better using and Integer.</font></p>
+<table width="75%" border="0" bgcolor="#FFFF99" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <p><font face="Arial, Helvetica, sans-serif" color="#000000">Note: Math 
+        geeks who went to college to learn everything about trigonometry and computer 
+        science will generally bore you to sleep by filling the first part of 
+        every programming book with endless chapters about every data type under 
+        the sun and will insist that you know everything about what's going on 
+        under the hood of your computer and how each type of variable is stored 
+        as ones and zeros and blah blah blah and zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz................... 
+        </font></p>
+      <p><font face="Arial, Helvetica, sans-serif" color="#000000">Although understanding 
+        the different data types is important, I think we can give you a pretty 
+        damn good understandning of programming fundamentals before we go numbing 
+        your brain with a bunch of technogeek crap.<br>
+        </font></p>
+    </td>
+  </tr>
+</table>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">Long Equations </font></h3>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Consider this:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">1 + 2 * 3</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">I'm sure you know the answer 
+  to that, right? You would probably add 1 and 2, then multiply that by 3, resulting 
+  in a total of 9, correct?</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">A computer however, may 
+  not necessarily do math from left to right. It may decide to do all the multiplication 
+  first, then add the 1 resulting in a total of 7. So you might not get the results 
+  you expected. Without getting too deeply into the way Your compiler handles 
+  math, there is a way to force the computer to calculate certain parts before 
+  others, by putting them into parenthesis:</font></p>
+<pre><font face="Arial, Helvetica, sans-serif" size="+1" color="#00FF00">// This will add 1 and 2 first </font><font face="Arial, Helvetica, sans-serif" size="+1" color="BLUE">
+ ( 1 + 2 ) * 3
+
+<font color="#00FF00">// This will multiply 2 by 3 first </font>
+ 1 + ( 2 * 3 ) </font></pre>
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="+1"><br>
+  On to the Next Lesson: <a href="relational_operators.htm">Relational Operators</a><br>
+  Back to the Previous Lesson: <a href="identifiers.htm">Identifiers</a><br>
+  <a href="../index.htm">Index</a> </font></p>
+</BODY>

@@ -1,0 +1,262 @@
+<html>
+<head>
+<title>C++ Tutorial / Loops</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#CC66FF">
+<h1 align="center"><font face="Arial, Helvetica, sans-serif" color="#FF9900">Loops 
+  using C++</font></h1>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Consider this:</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">cout &lt;&lt; &quot;10&quot; 
+  &lt;&lt; endl ;<br>
+  cout &lt;&lt; &quot;9&quot; &lt;&lt; endl ;<br>
+  cout &lt;&lt; &quot;8&quot; &lt;&lt; endl ;<br>
+  cout &lt;&lt; &quot;7&quot; &lt;&lt; endl ;<br>
+  cout &lt;&lt; &quot;6&quot; &lt;&lt; endl ;<br>
+  cout &lt;&lt; &quot;5&quot; &lt;&lt; endl ;<br>
+  cout &lt;&lt; &quot;4&quot; &lt;&lt; endl ;<br>
+  cout &lt;&lt; &quot;3&quot; &lt;&lt; endl ;<br>
+  cout &lt;&lt; &quot;2&quot; &lt;&lt; endl ;<br>
+  cout &lt;&lt; &quot;1&quot; &lt;&lt; endl ;</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">That seems like a lot of 
+  work for a simple thing like a countdown doesn't it? After all, we're starting 
+  with a number, printing it, subtracting 1, printing it again, etc.. Seems like 
+  that should be a job for the computer to be doing.</font></p>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">While Loop</font></h3>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">Run the following program:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* While.cpp <br>   Countdown from constant number to 1 
+   Written by: Dillinger
+   Date: 12/08/05<br>*/<br>#include &lt;iostream&gt;<br>using namespace std;       </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void )
+         {
+         int Counter = 10;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">         while ( Counter &gt;= 1 )
+           {
+             cout &lt;&lt; Counter ;
+             --Counter ;
+             cout &lt;&lt; endl ;
+           }</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> cout &lt;&lt; &quot;Blastoff!&quot; ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0;
+} /* main */
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Basically the structure 
+  of a While Loop looks like this:</font></p>
+<p><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">while ( 
+  expression = true ) <i><b>do something</b></i></font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">or</font></p>
+<p><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">while ( 
+  expression = true ) <br>
+  {<br>
+  <i><b>do something<br>
+  do something<br>
+  do something</b></i><br>
+  } </font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">As long as the expression 
+  is true, it will repeat it's task over and over. Once the expression becomes 
+  false, it will continue on it's merry way. In this case our expression contains 
+  a variable:<br>
+  ( <font color="#0000FF">Counter</font> &gt;= 1 )<br>
+  Every time the While loop cycles through, it will decrease that variable by 
+  1. <br>
+  <font color="#0000FF">--My_Variable</font> decreases the value in increments 
+  of 1.<br>
+  <font color="#0000FF">++My_Variable</font> increases the value in increments 
+  of 1.<br>
+  When Counter reaches a value of 0, the expression becomes false: Counter is 
+  no longer greater than or equal to 1, and the program will break out of the 
+  loop immediately and continue executing whatever follows. The Counter value 
+  of 0 never gets printed.</font></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Let's try counting up from 
+  1 to 10:</font></p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* WhileUp.cpp <br>   Countdown from constant number to 1
+   Written by: Dillinger
+   Date: 12/08/05 <br>*/<br>#include &lt;iostream&gt;<br>using namespace std;       </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void )
+         {
+         int Counter = 1;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">         while ( Counter &lt;= 10 )
+           {
+             cout &lt;&lt; Counter ;
+             ++Counter ;
+             cout &lt;&lt; endl ;
+           }</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> cout &lt;&lt; &quot;Blastoff!&quot; ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0;
+} /* main */
+</font></pre>
+    </td>
+  </tr>
+</table>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">Here we allow the user 
+  to input the starting value:<br>
+  </font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* WhileInput.cpp <br>   Countdown from user specified number to 1 
+   Written by: Dillinger
+   Date: 12/08/05
+*/<br>#include &lt;iostream&gt;<br>using namespace std;       </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ()
+{
+int Counter ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">         cout &lt;&lt; &quot;Enter the starting number: &quot;;
+         cin &gt;&gt; Counter ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">   while ( Counter &gt;= 1 )
+      {
+         cout &lt;&lt; Counter &lt;&lt; endl ;
+         --Counter;
+      }</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">         cout &lt;&lt; &quot;Blastoff!&quot; &lt;&lt; endl ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0;
+}
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">Do While</font></h3>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* DoWhile.cpp
+   Add a list of integers.
+   Keep going until Expression = True
+   Written by: Dillinger
+   Date: 12/10/05
+*/       </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt;iostream&gt;
+using namespace std ; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">int main ( void )
+{
+/* Local Declarations */
+         int User_Input ;
+         int sum = 0 ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* Statements */
+         cout &lt;&lt; &quot;Enter some numbers ( 0 to stop ) : &quot; &lt;&lt; endl ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">     do
+       {
+         cin &gt;&gt; User_Input ; 
+         sum += User_Input ;
+         cout &lt;&lt; &quot;Total: &quot;&lt;&lt; sum &lt;&lt; endl ;
+       }
+      while ( User_Input != 0 ) ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">         cout &lt;&lt; endl &lt;&lt; &quot;Program terminated &quot; &lt;&lt;endl ;
+         cout &lt;&lt; &quot;Have a day. :|&quot; &lt;&lt; endl ; 
+
+return 0 ;
+} /* main */
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">In a nutshell, This will 
+  continue to DO { over &amp; over } While ( Expression = True )<br>
+  When ( Expression = False ) exit do loop<br>
+  and continue</font></p>
+<h3><font face="Arial, Helvetica, sans-serif" color="#FF9900">For Loops </font></h3>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* ForLoop.cpp
+   Print decreasing numbers from 10 to 1
+   Written by: Dillinger
+   Date: 12/08/05
+*/       </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt;iostream&gt;
+using namespace std ;
+int main ( void )
+{<br>      int Counter = 10 ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">      for ( Counter ; Counter &gt;= 1 ; Counter-- )
+         cout &lt;&lt; Counter &lt;&lt; endl ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">         cout &lt;&lt; &quot;Blastoff!&quot; ; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0 ;
+} /* main */
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">The basic For Loop is constructed 
+  like this:</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">for ( StartingValue ; EndingValue ; Increase/Decrease )</font>
+      <font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"><i><b>do something</b></i></font></pre>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">or you can loop two or 
+  more commands within curly brackets:</font></p>
+<pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">for ( StartingValue ; EndingValue ; Increase/Decrease    )
+</font><font size="+1" face="Arial, Helvetica, sans-serif"><b><font color="#0000FF">{<br>   <i>do something<br>   <i>do something</i> else<br>   <i>do something etc.
+</i></i>}</font></b></font></pre>
+<p><font size="+1" face="Arial, Helvetica, sans-serif">In the above example we 
+  declared and assigned the value of Counter at the top. We could just as easily 
+  have declared it within the For Loop:</font></p>
+<p><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> for ( 
+  int Counter = 10; Counter &gt;= 1 ; Counter-- )</font></p>
+<table width="75%" border="1" align="center">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* ForLoopCountDown.cpp
+   Print decreasing number series 
+   from user specified limit to 1<br>   Written by: Dillinger<br>   Date: 12/09/05<br>*/       </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt;iostream&gt;
+         using namespace std;
+         int main ( void )</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">{
+         /* Local Declarations */
+         int i ; 
+         int limit ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">         /* Statements */
+         cout &lt;&lt; endl &lt;&lt; &quot; This program will count down from &quot; &lt;&lt; endl ;
+         cout &lt;&lt; &quot; the number you specify to 1.&quot; &lt;&lt; endl &lt;&lt; endl ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">         cout &lt;&lt; &quot; Please enter a number: &quot; ;
+         cin &gt;&gt; limit ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">      for ( i = limit ; i &gt;= 1 ; i-- )
+         cout &lt;&lt; i &lt;&lt; endl ; </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0 ;
+} /* main */
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="75%" border="1" align="center" cellpadding="6">
+  <tr> 
+    <td> 
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">/* ForLoopCountUp.cpp
+   Print increasing number series from 1 to user specified limit
+   Written by: Your_Name
+   Date:
+*/       </font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">#include &lt;iostream&gt;
+using namespace std ;
+int main ( void )
+{</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">     /* Statements */
+         cout &lt;&lt; &quot;This program will count up from 1&quot; ;
+         cout &lt;&lt; &quot; to the number you specify.&quot; &lt;&lt; endl ;
+
+         cout &lt;&lt; &quot;Please enter a number: &quot; ;
+         cin &gt;&gt; int limit ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif"> for ( int Counter = 1 ; Counter &lt;= limit ; Counter++ )
+         cout &lt;&lt; Counter &lt;&lt; endl ;</font></pre>
+      <pre><font color="#0000FF" size="+1" face="Arial, Helvetica, sans-serif">return 0 ;
+} /* main */
+</font>       </pre>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif" size="+1">On to the Next Lesson: 
+  <a href="arrays.htm">Arrays</a><br>
+  Back to the Previous Lesson: <a href="relational_operators.htm">Relational Operators</a></font></p>
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="+1"><a href="../index.htm">Index</a></font></p>
+<p>&nbsp;</p>
+</body>
+</html>
