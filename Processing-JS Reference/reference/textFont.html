@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Processing.js</title>
+    <script src="/js/processing.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="http://processingjs.org/"><img src="http://processingjs.org/images/header.png"
+ width="177" height="42"></a>
+      </div>
+      <span class="tagline">a port of the Processing Visualization Language</span>
+<hr>
+
+
+<table cellpadding="4" cellspacing="4" border="0" class="ref-item" width="721">
+
+	<tr class="name-row">
+
+		<th scope="row">Name</th>
+
+		<td><h3>textFont()</h3></td>
+
+
+
+	</tr>
+
+
+
+  
+
+  <tr class="pjs">
+
+		<th scope="row">Processing.js Behavior</th>
+
+		<td>Font support for the Canvas element varies across browsers. FireFox currently has the best support, but still uses a pre-defined set of fonts. (Documentation to follow soon.) Good alternatives to the browser's Canvas-font functions are available: such as the <a href="http://bocoup.com/processing-js/docs/index.php?page=Cross-Browser%20Canvas%20Fonts">Glyph method</a>. See also: <a href="http://jim.studt.net/canvastext/">Canvas Text</a>, <a href="http://canvas.burnttoys.net/bauhaus.html">BurntToys Bauhaus</a>.
+
+		<br /><br /><p><b>Please use the following demos to learn how fonts can be rendered in Firefox with Processing.js: <a href="http://processingjs.org/learning/basic/letters">Letters</a>, <a href="http://processingjs.org/learning/basic/words">Words</a>, <a href="http://processingjs.org/source/text-width/text-width.html">width()</a></b></p>
+
+    </td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Examples</th>
+
+		<td><div class="example"><img src="/reference/textFont_.gif" alt="example pic" /><pre class="margin">PFont metaBold;
+
+// The font "Meta-Bold.ttf" must be located in the 
+
+// current sketch's "data" directory to load successfully
+
+metaBold = loadFont("Meta-Bold.ttf");
+
+textFont(metaBold, 44); 
+
+text("word", 15, 50);</pre></div></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Description</th>
+
+
+
+		<td>Sets the current font. The font must be loaded with <b>loadFont()</b> before it can be used. This font will be used in all subsequent calls to the <b>text()</b> function. If no <b>size</b> parameter is input, the font will appear at its original size (the size it was created at with the "Create Font..." tool) until it is changed with <b>textSize()</b>. <br /><br /> Because fonts are usually bitmaped, you should create fonts at the sizes that will be used most commonly. Using textFont() without the size parameter will result in the cleanest-looking text. <br /><br /> With the JAVA2D and PDF renderers, it's also possible to enable the use of native fonts via the command hint(ENABLE_NATIVE_FONTS). This will produce vector text in JAVA2D sketches and PDF output in cases where the vector data is available: when the font is still installed, or the font is created via the createFont() function (rather than the Tool).</td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Syntax</th>
+
+		<td><pre>textFont(<kbd>font</kbd>)
+
+textFont(<kbd>font</kbd>, <kbd>size</kbd>)</pre></td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Parameters</th>
+
+		<td><table cellpadding="0" cellspacing="0" border="0">
+
+	<tr class="">
+
+		<th scope="row">font</th>
+
+		<td>PFont: any variable of the type PFont</td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">size</th>
+
+		<td>int or float: the size of the letters in units of pixels</td>
+
+	</tr>
+
+</table></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Usage</th>
+
+		<td>Web & Application</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Related</th>
+
+
+
+		<td>
+
+    <a href="/reference/createFont_">createFont()</a><br />
+
+    <a href="/reference/loadFont_">loadFont() </a><br />
+
+    <a href="/reference/PFont">PFont </a><br />
+
+    <a href="/reference/text_">text()</a><br /></td>
+
+	</tr>
+
+</table>
+
+
+
+
+<hr>
+<div class="cclicense">
+  <p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+    <img alt="Creative Commons License" border="0" src="http://processingjs.org/images/somerights20.gif" />
+  </a>
+</div>
+    
+
+      <div class="footer">
+        Processing is an open visualization language developed by
+        <a href="http://benfry.com/">Ben Fry</a> &amp; <a href="http://reas.com/">Casey Reas</a>,<br>
+        and originally ported to JavaScript by
+        <a href="http://ejohn.org/blog/processingjs/">John Resig</a>.<br>
+        Processing.js is maintained by the Processing.js team.<br>
+		This site maintained by volunteer Khan Academy Students.<br>
+      </div>
+    </div>
+    <a href="http://github.com/processing-js/processing-js/">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://processingjs.org/images/forkme-right-orange.png" alt="Fork me on GitHub">
+    </a>
+  </body>
+</html>

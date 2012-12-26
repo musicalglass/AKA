@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Processing.js</title>
+    <script src="/js/processing.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="http://processingjs.org/"><img src="http://processingjs.org/images/header.png"
+ width="177" height="42"></a>
+      </div>
+      <span class="tagline">a port of the Processing Visualization Language</span>
+<hr>
+
+
+<table cellpadding="4" cellspacing="4" border="0" class="ref-item" width="721">
+	<tr class="name-row">
+		<th scope="row">Name</th>
+		<td><h3>lightFalloff()</h3></td>
+
+	</tr>
+
+	<tr class="">
+		<th scope="row">Description</th>			
+
+		<td><p>Sets the falloff rates for point lights, spot lights, and ambient lights. The parameters are used to determine the falloff with the following equation:</p>
+		<p>d = distance from light position to vertex position<br />
+falloff = 1 / (CONSTANT + d * LINEAR + (d*d) * QUADRATIC)</p><p>Like <b>fill()</b>, it affects only the elements which are created after it in the code. 
+The default value if <b>LightFalloff(1.0, 0.0, 0.0)</b>. Thinking about an ambient light with a falloff can be tricky. 
+It is used, for example, if you wanted a region of your scene to be lit ambiently one color and another region to be lit ambiently by another color, 
+you would use an ambient light with location and falloff. You can think of it as a point light that doesn't care which direction a surface is facing.</p></td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Syntax</th>
+		<td><pre>lightFalloff(<kbd>constant</kbd>,<kbd>linear</kbd>,<kbd>quadratic</kbd>)</pre></td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Parameters</th>
+		<td><table cellpadding="0" cellspacing="0" border="0">
+			<tr class="">
+				<th scope="row">constant</th>
+				<td>int or float: constant value for determining falloff</td>
+			</tr>
+			<tr class="">
+				<th scope="row">linear</th>
+				<td>int or float: linear value for determining falloff</td>
+			</tr>
+			<tr class="">
+				<th scope="row">quadratic</th>
+				<td>int or float: quadratic value for determining falloff</td>
+			</tr>
+			</table></td>
+
+	</tr>
+	<tr class="">
+		<th scope="row">Returns</th>
+		<td>None</td>
+	</tr>
+	<tr class="">
+		<th scope="row">Usage</th>
+		<td>Web & Application</td>
+	</tr>
+
+	<tr class="">
+
+		<th scope="row">Related</th>
+		<td><a href="/reference/lights_">lights()</a><br />
+		<a href="/reference/ambientLight_">ambientLight()</a><br />
+		<a href="/reference/pointLight_">pointLight()</a><br />
+		<a href="/reference/spotLight_">spotLight()</a><br />
+		<a href="/reference/lightSpecular_">lightSpecular()</a><br /></td>
+	</tr>
+</table>
+
+<hr>
+<div class="cclicense">
+  <p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+    <img alt="Creative Commons License" border="0" src="http://processingjs.org/images/somerights20.gif" />
+  </a>
+</div>
+    
+
+      <div class="footer">
+        Processing is an open visualization language developed by
+        <a href="http://benfry.com/">Ben Fry</a> &amp; <a href="http://reas.com/">Casey Reas</a>,<br>
+        and originally ported to JavaScript by
+        <a href="http://ejohn.org/blog/processingjs/">John Resig</a>.<br>
+        Processing.js is maintained by the Processing.js team.<br>
+		This site maintained by volunteer Khan Academy Students.<br>
+      </div>
+    </div>
+    <a href="http://github.com/processing-js/processing-js/">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://processingjs.org/images/forkme-right-orange.png" alt="Fork me on GitHub">
+    </a>
+  </body>
+</html>

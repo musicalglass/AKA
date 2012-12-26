@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Processing.js</title>
+    <script src="/js/processing.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="http://processingjs.org/"><img src="http://processingjs.org/images/header.png"
+ width="177" height="42"></a>
+      </div>
+      <span class="tagline">a port of the Processing Visualization Language</span>
+<hr>
+
+
+<table cellpadding="4" cellspacing="4" border="0" class="ref-item" width="721">
+
+	<tr class="name-row">
+
+		<th scope="row">Name</th>
+
+		<td><h3>translate()</h3></td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Examples</th>
+
+		<td><div class="example"><img src="/reference/translate_.gif" alt="example pic" /><pre class="margin">translate(30, 20);
+
+rect(0, 0, 55, 55);</pre></div><div class="example"><img src="/reference/translate_2.gif" alt="example pic" /><pre class="margin warning">// Translating in 3D requires P3D
+
+// or OPENGL as a parameter to size()
+
+size(100, 100, P3D);
+
+translate(30, 20, -50);
+
+rect(0, 0, 55, 55);</pre></div><div class="example"><img src="/reference/translate_3.gif" alt="example pic" /><pre class="margin">translate(30, 20);
+
+rect(0, 0, 55, 55);
+
+translate(14, 14);
+
+rect(0, 0, 55, 55);</pre></div></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+
+
+		<th scope="row">Description</th>
+
+		<td>Specifies an amount to displace objects within the display window. The <b>x</b> parameter specifies left/right translation, the <b>y</b> parameter specifies up/down translation, and the <b>z</b> parameter specifies translations toward/away from the screen. <span class="warning">Using this function with the <b>z</b> parameter requires using the P3D or OPENGL parameter in combination with size as shown in the above example.</span> Transformations apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling <b>translate(50, 0)</b> and then <b>translate(20, 0)</b> is the same as <b>translate(70, 0)</b>. If <b>translate()</b> is called within <b>draw()</b>, the transformation is reset when the loop begins again. This function can be further controlled by the <b>pushMatrix()</b> and <b>popMatrix()</b>.</td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Syntax</th>
+
+		<td><pre>translate(<kbd>x</kbd>, <kbd>y</kbd>);
+
+<span class="warning">translate(<kbd>x</kbd>, <kbd>y</kbd>, <kbd>z</kbd>);</span></pre></td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Parameters</th>
+
+		<td><table cellpadding="0" cellspacing="0" border="0">
+
+	<tr class="">
+
+		<th scope="row">x</th>
+
+		<td>int or float: left/right translation</td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">y</th>
+
+		<td>int or float: up/down translation</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">z</th>
+
+
+
+		<td>int or float: forward/back translation</td>
+
+	</tr>
+
+</table></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Usage</th>
+
+		<td>Web & Application</td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Related</th>
+
+		<td><a href="/reference/rotateX_">rotateX() </a><br />
+
+    <a href="/reference/rotateY_">rotateY() </a><br />
+
+    <a href="/reference/rotateZ_">rotateZ() </a><br />    
+
+    <a href="/reference/rotate_">rotate() </a><br />
+
+    <a href="/reference/scale_">scale() </a><br />
+
+    <a href="/reference/pushMatrix_">pushMatrix()</a>
+
+    <br /><a href="/reference/popMatrix_">popMatrix()</a><br /></td>
+
+
+
+	</tr>
+
+</table>
+
+
+<hr>
+<div class="cclicense">
+  <p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+    <img alt="Creative Commons License" border="0" src="http://processingjs.org/images/somerights20.gif" />
+  </a>
+</div>
+    
+
+      <div class="footer">
+        Processing is an open visualization language developed by
+        <a href="http://benfry.com/">Ben Fry</a> &amp; <a href="http://reas.com/">Casey Reas</a>,<br>
+        and originally ported to JavaScript by
+        <a href="http://ejohn.org/blog/processingjs/">John Resig</a>.<br>
+        Processing.js is maintained by the Processing.js team.<br>
+		This site maintained by volunteer Khan Academy Students.<br>
+      </div>
+    </div>
+    <a href="http://github.com/processing-js/processing-js/">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://processingjs.org/images/forkme-right-orange.png" alt="Fork me on GitHub">
+    </a>
+  </body>
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Processing.js - Reference</title>
+    <script src="/js/processing.min.js" type="text/javascript"></script>
+
+  </head>
+  
+<body bgcolor="#FFFFFF">
+<div class="container">
+      <div class="header">
+        <a href="http://processingjs.org/"><img src="http://processingjs.org/images/header.png" width="177" height="42"></a>
+      </div>
+      <span class="tagline">a port of the Processing Visualization Language</span>
+<hr>
+	 
+<h2>Processing-JS Reference</h2>
+<hr>
+
+<p>This page references all the Processing.js commands which have been ported 
+  so far. </p>
+<p>The Khan Academy Student community is working towards a Reference that is 100% 
+  compatible with the Khan Academy integrated program editor :) </p>
+<p>The original Processing-JS reference can be found on <a href="http://processingjs.org/reference/">the 
+  Processingjs.org website</a></p>
+<hr>
+<div class="reference row">
+  <div class="span">
+    <div class="category"> 
+      <p><b>Processing.js instructions</b> </p>
+      <p><a style="color: #FF0000" href="reference/directives.html">@pjs directives</a> 
+	  <a style="color: #FF0000" href="reference/font.html">font</a> 
+        <a style="color: #FF0000" href="reference/globalKeyEvents.html">globalKeyEvents</a> 
+		<a style="color: #FF0000" href="reference/pauseOnBlur.html">pauseOnBlur</a> 
+        <a style="color: #FF0000" href="reference/preload.html">preload</a></p>
+      </div>
+
+    <div class="category">
+      <p><b>Structure</b> </p>
+      <p><a style="color: #FF0000" href="reference/arrayAccess.html">[] (array access)</a> 
+	    <a style="color: #FF0000" href="reference/assign.html">= (assign)</a> 
+	    <a style="color: #FF0000" href="reference/class.html">class</a> 
+		<a style="color: #FF0000" href="reference/comma.html">, (comma)</a> 
+		<a style="color: #FF0000" href="/reference/comment/">// (comment)</a> 
+		<a style="color: #FF0000" href="reference/curlyBraces.html">{}(curly braces)</a> 
+		<a style="color: #FF0000" href="reference/docComment.html">/** */ (doc comment)</a> 
+        <a style="color: #FF0000" href="reference/dot.html">. (dot)</a> 
+		<a style="color: #FF0000" href="reference/draw.html">draw()</a> 
+        <a style="color: #FF0000" href="reference/exit.html">exit()</a> 
+		<a style="color: #FF0000" href="reference/extends.html">extends</a> 
+        <a style="color: #FF0000" href="reference/false.html">false</a> 
+		<a style="color: #FF0000" href="reference/final.html">final</a> 
+        <a style="color: #FF0000" href="reference/implements.html">implements</a> 
+		<a style="color: #FF0000" href="reference/import.html">import</a> 
+        <a style="color: #FF0000" href="reference/loop.html">loop()</a> 
+		<a style="color: #FF0000" href="reference/multilineComment.html">/* */ (multiline comment)</a> 
+		<a style="color: #FF0000" href="reference/new.html">new</a> 
+		<a style="color: #FF0000" href="reference/noLoop.html">noLoop()</a> 
+        <a style="color: #FF0000" href="reference/null.html">null</a> 
+		<a style="color: #FF0000" href="reference/parentheses.html">()(parentheses)</a> 
+		<a style="color: #FF0000" href="reference/popStyle.html">popStyle()</a> 
+		<a style="color: #FF0000" href="reference/private.html" >private</a> 
+        <a style="color: #FF0000" href="reference/public.html">public</a> 
+		<a style="color: #FF0000" href="/reference/pushStyle_" pushStyle()></a> 
+        <a style="color: #FF0000" href="reference/redraw.html">redraw()</a> 
+		<a style="color: #FF0000" href="reference/return.html">return</a> 
+        <a style="color: #FF0000" href="reference/semicolon.html">; (semicolon)</a> 
+		<a style="color: #FF0000" href="reference/setup.html">setup()</a> 
+        <a style="color: #FF0000" href="reference/size.html">size()</a> 
+		<a style="color: #FF0000" href="reference/static.html">static</a> 
+        <a style="color: #FF0000" href="reference/super.html">super</a> 
+		<a style="color: #FF0000" href="reference/this.html">this</a> 
+        <a style="color: #FF0000" href="reference/true.html">true</a> 
+		<a style="color: #FF0000" href="reference/void.html">void</a></p>
+      </div>
+
+    <div class="category">
+      <p><b>Environment</b> </p>
+      <p><a style="color: #FF0000" href="reference/cursor.html">cursor()</a> 
+	  <a href="reference/focused.html">focused</a> 
+        <a href="reference/frameCount.html">frameCount</a> 
+		<a href="reference/frameRate().html">frameRate()</a> 
+        <a href="reference/frameRate.html">frameRate</a> 
+		<a href="reference/height.html">height</a> 
+        <a href="reference/noCursor.html">noCursor()</a> 
+		<a href="reference/online.html">online</a> 
+        <a style="color: #FF0000" href="reference/screen.html">screen</a> 
+		<a style="color: #FF0000" href="reference/width.html">width</a></p>
+      </div>
+
+    <div class="category">
+      <b>Data</b>
+      <h5>Primitive</h5>
+      <a style="color: #FF0000" href="reference/boolean().html">boolean</a> 
+	  <a style="color: #FF0000" href="reference/byte.html">byte</a> 
+      <a style="color: #FF0000" href="reference/char.html">char</a> 
+	  <a style="color: #FF0000" href="reference/color.html">color</a> 
+      <a style="color: #FF0000" href="reference/double.html">double</a> 
+	  <a style="color: #FF0000" href="reference/float.html">float</a> 
+      <a style="color: #FF0000" href="/reference/int/">int</a> 
+	  <a style="color: #FF0000" href="/reference/long/">long</a><br>
+		
+      <h5>Composite</h5>
+      <a style="color: #FF0000" href="reference/array.html">Array</a> 
+	  <a style="color: #FF0000" href="reference/arrayList.html">ArrayList</a> 
+      <a style="color: #FF0000" href="reference/hashMap.html">HashMap</a> 
+	  <a style="color: #FF0000" href="reference/Object.html">Object</a> 
+      <a style="color: #FF0000" href="reference/String.html">String</a> 
+	  <a style="color: #FF0000" href="reference/XMLElement.html">XMLElement</a><br>
+		
+      <h5>Conversion</h5>
+      <a style="color: #FF0000" href="reference/binary().html">binary()</a> 
+	  <a style="color: #FF0000" href="reference/boolean().html">boolean()</a> 
+      <a style="color: #FF0000" href="reference/byte().html">byte()</a> 
+	  <a style="color: #FF0000" href="reference/char().html">char()</a> 
+      <a style="color: #FF0000" href="reference/float().html">float()</a> 
+	  <a style="color: #FF0000" href="reference/hex().html">hex()</a> 
+      <a style="color: #FF0000" href="Drag%20to%20a%20file%20to%20make%20a%20link.">int()</a> 
+	  <a style="color: #FF0000" href="Drag%20to%20a%20file%20to%20make%20a%20link.">str()</a> 
+      <a style="color: #FF0000" href="Drag%20to%20a%20file%20to%20make%20a%20link.">unbinary()</a> 
+	  <a style="color: #FF0000" href="Drag%20to%20a%20file%20to%20make%20a%20link.">unhex()</a><br>
+		
+      <h5>String Functions</h5>
+      <p><a style="color: #FF0000" href="reference/join().html">join()</a> 
+	  <a style="color: #FF0000" href="reference/match().html">match()</a> 
+        <a style="color: #FF0000" href="reference/matchAll.html">matchAll()</a> 
+		<a style="color: #FF0000" href="reference/nf().html">nf()</a> 
+        <a style="color: #FF0000" href="reference/nfc().html">nfc()</a> 
+		<a style="color: #FF0000" href="reference/nfp().html">nfp()</a> 
+        <a style="color: #FF0000" href="reference/nfs().html">nfs()</a> 
+		<a style="color: #FF0000" href="reference/split().html">split()</a> 
+        <a style="color: #FF0000" href="reference/splitTokens().html">splitTokens()</a> 
+		<a style="color: #FF0000" href="reference/trim().html">trim()</a><br>
+      </p>
+
+      <div>
+            <h5>Array Functions</h5>
+        <p><a style="color: #FF0000" href="reference/append().html">append()</a> 
+		<a style="color: #FF0000" href="reference/arrayCopy().html">arrayCopy()</a> 
+          <a style="color: #FF0000" href="reference/concat().html">concat()</a> 
+		  <a style="color: #FF0000" href="reference/expand().html">expand()</a> 
+          <a style="color: #FF0000" href="reference/reverse().html">reverse()</a> 
+		  <a style="color: #FF0000" href="reference/shorten().html">shorten()</a> 
+          <a style="color: #FF0000" href="reference/sort().html">sort()</a> 
+		  <a style="color: #FF0000" href="reference/splice().html">splice()</a> 
+          <a style="color: #FF0000" href="reference/subset().html">subset()</a></p>
+        </div>
+</div>
+
+    <div class="category">
+      <b>Control</b>
+      <h5>Relational Operators</h5>
+      <a style="color: #FF0000" href="reference/equality.html">== (equality)</a> 
+	  <a style="color: #FF0000" href="reference/greaterThan.html">> (greater than)</a> 
+	  <a style="color: #FF0000" href="reference/greaterEqual.html">>= (greater than or equal to)</a> 
+	  <a style="color: #FF0000" href="reference/inequality.html">!= (inequality)</a> 
+      <a style="color: #FF0000" href="reference/lessThan.html">< (less than)</a> 
+	  <a style="color: #FF0000" href="reference/lessEqual.html">&lt;= (less than or equal to)</a><br>
+		
+      <h5>Iteration</h5>
+      <a style="color: #FF0000" href="reference/for.html">for()</a> 
+	  <a style="color: #FF0000" href="reference/while.html">while()</a><br>
+		
+      <h5>Conditionals</h5>
+      <a style="color: #FF0000" href="reference/break.html">break</a> 
+	  <a style="color: #FF0000" href="reference/case.html">case</a> 
+      <a style="color: #FF0000" href="reference/conditional.html">?: (conditional)</a> 
+	  <a style="color: #FF0000" href="reference/continue.html">continue</a> 
+      <a style="color: #FF0000" href="reference/default.html">default</a> 
+	  <a style="color: #FF0000" href="reference/else.html">else()</a> 
+      <a style="color: #FF0000" href="reference/if.html">if()</a> 
+	  <a style="color: #FF0000" href="reference/switch().html">switch()</a><br>
+		
+      <h5>Logical Operators</h5> 
+      <p><a style="color: #FF0000" href="/reference/logical AND/">&& (logical AND)</a> 
+	  <a style="color: #FF0000" href="/reference/logical NOT/">! (logical NOT)</a> 
+	  <a style="color: #FF0000" href="/reference/logical OR/">|| (logical OR)</a>
+	  </p>
+      </div>
+  </div>
+
+
+<div class="span3">
+    <div class="category">
+	
+      <p><b>Shape</b></p>
+      <p> <a style="color: #FF0000" href="reference/PShape.html">PShape</a><br>
+      </p>
+	  
+      <h5>2D Primitives</h5> 
+      <p><a style="color: #FF0000" href="reference/arc.html">arc()</a> 
+	  <a style="color: #FF0000" href="reference/ellipse.html">ellipse()</a> 
+        <a style="color: #FF0000" href="reference/line.html">line()</a> 
+		<a style="color: #FF0000" href="reference/point.html">point()</a> 
+        <a style="color: #FF0000" href="reference/quad.html">quad()</a> 
+		<a style="color: #FF0000" href="reference/rect.html">rect()</a> 
+        <a style="color: #FF0000" href="reference/triangle.html">triangle()</a><br>
+      </p>
+	  
+      <h5>Curves</h5>
+      <p><a style="color: #FF0000" href="reference/bezier.html">bezier()</a> 
+	  <a style="color: #FF0000" href="reference/bezierDetail.html">bezierDetail()</a> 
+        <a style="color: #FF0000" href="reference/bezierPoint.html">bezierPoint()</a> 
+		<a style="color: #FF0000" href="reference/bezierTangent.html">bezierTangent()</a> 
+        <a style="color: #FF0000" href="reference/curve.html">curve()</a> 
+		<a style="color: #FF0000" href="reference/curveDetail.html">curveDetail()</a> 
+        <a style="color: #FF0000" href="reference/curvePoint.html">curvePoint()</a> 
+		<a style="color: #FF0000" href="reference/curveTangent.html">curveTangent()</a> 
+        <a style="color: #FF0000" href="reference/curveTightness.html">curveTightness()</a>
+		</p>
+
+      <h5>Attributes</h5>
+      <p><a style="color: #FF0000" href="reference/ellipseMode.html">ellipseMode()</a> 
+	  <a style="color: #FF0000" href="reference/noSmooth.html">noSmooth()</a> 
+      <a style="color: #FF0000" href="reference/rectMode.html">rectMode()</a> 
+	  <a style="color: #FF0000" href="reference/smooth.html">smooth()</a> 
+      <a style="color: #FF0000" href="reference/strokeCap.html">strokeCap()</a> 
+	  <a style="color: #FF0000" href="reference/strokeJoin.html">strokeJoin()</a> 
+      <a style="color: #FF0000" href="reference/strokeWeight.html">strokeWeight()</a> 
+	  </p>
+	  
+      <h5>Vertex</h5>
+      <p><a style="color: #FF0000" href="reference/beginShape.html">beginShape()</a> 
+	  <a style="color: #FF0000" href="reference/bezierVertex.html">bezierVertex()</a> 
+        <a style="color: #FF0000" href="reference/curveVertex.html">curveVertex()</a> 
+		<a style="color: #FF0000" href="reference/endShape.html">endShape()</a> 
+        <a style="color: #FF0000" href="reference/texture.html">texture()</a> 
+		<a style="color: #FF0000" href="reference/textureMode.html">textureMode()</a> 
+        <a style="color: #FF0000" href="reference/vertex.html">vertex()</a>
+		</p>
+		
+         <h5>Loading & Displaying</h5>
+        <p><a style="color: #FF0000" href="reference/loadShape.html">loadShape()</a> 
+		<a style="color: #FF0000" href="reference/shape().html">shape()</a> 
+        <a style="color: #FF0000" href="reference/shapeMode.html">shapeMode()</a>
+		</p>
+
+	</div>
+
+	<div class="category">
+      <b>Input</b>
+        <h5>Mouse</h5>
+      <a style="color: #FF0000" href="reference/mouseButton.html">mouseButton</a> 
+	  <a style="color: #FF0000" href="reference/mouseClicked.html">mouseClicked()</a> 
+      <a style="color: #FF0000" href="reference/mouseDragged.html">mouseDragged()</a> 
+	  <a style="color: #FF0000" href="reference/mouseMoved.html">mouseMoved()</a> 
+      <a style="color: #FF0000" href="reference/mouseOut.html">mouseOut()</a> 
+	  <a style="color: #FF0000" href="reference/mouseOver.html">mouseOver()</a> 
+      <a style="color: #FF0000" href="reference/mousePressed().html">mousePressed()</a> 
+	  <a style="color: #FF0000" href="reference/mousePressed.html">mousePressed</a> 
+      <a style="color: #FF0000" href="reference/mouseReleased.html">mouseReleased()</a> 
+	  <a style="color: #FF0000" href="reference/mouseX.html">mouseX</a> 
+      <a style="color: #FF0000" href="reference/mouseY.html">mouseY</a> 
+	  <a style="color: #FF0000" href="reference/pmouseX.html">pmouseX</a> 
+      <a style="color: #FF0000" href="reference/pmouseY.html">pmouseY</a> 
+
+      <h5>Keyboard</h5>
+      <a style="color: #FF0000" href="reference/key.html">key</a> 
+	  <a style="color: #FF0000" href="reference/keyCode.html">keyCode</a> 
+      <a style="color: #FF0000" href="reference/keyPressed().html">keyPressed()</a> 
+	  <a style="color: #FF0000" href="reference/keyPressed.html">keyPressed</a> 
+      <a style="color: #FF0000" href="reference/keyReleased().html">keyReleased()</a> 
+	  <a style="color: #FF0000" href="reference/keyTyped().html">keyTyped()</a> 
+
+      <h5>Files</h5>
+      <a style="color: #FF0000" href="reference/loadBytes.html">loadBytes()</a> 
+	  <a style="color: #FF0000" href="reference/loadStrings.html">loadStrings()</a> 
+
+      <h5>Web</h5>
+      <a style="color: #FF0000" href="reference/link.html">link()</a> 
+      <a style="color: #FF0000" href="reference/status.html">status()</a> 
+
+      <h5>Time & Date</h5>
+      <p><a style="color: #FF0000" href="reference/day.html">day()</a> 
+	  <a style="color: #FF0000" href="reference/hour.html">hour()</a> 
+        <a style="color: #FF0000" href="reference/millis.html">millis()</a> 
+		<a style="color: #FF0000" href="reference/minute.html">minute()</a> 
+        <a style="color: #FF0000" href="reference/month.html">month()</a> 
+		<a style="color: #FF0000" href="reference/second.html">second()</a> 
+        <a style="color: #FF0000" href="reference/year.html">year()</a>
+		</p>
+	</div>
+
+	<div class="category">
+      <b>Output</b>
+        <h5>Text Area</h5>
+      <p><a style="color: #FF0000" href="reference/print.html">print()</a> 
+	  <a style="color: #FF0000" href="reference/println.html">println()</a>
+	  </p>
+	  
+	<div>
+        <h5>Image</h5>
+        <p><a style="color: #FF0000" href="/reference/save_/">save()</a> 
+		<a style="color: #FF0000" href="/reference/saveFrame_/">saveFrame()</a>
+		</p>
+	</div>
+
+	<div class="category">
+          <h5>Files</h5>
+        <p><a style="color: #FF0000" href="reference/saveStrings.html">saveStrings()</a> 
+		 </p>
+     </div>
+</div>
+      
+    <div class="category"> 
+      <b>Transform</b>
+      <p><a style="color: #FF0000" href="reference/applyMatrix.html">applyMatrix()</a> 
+	  <a style="color: #FF0000" href="reference/popMatrix.html">popMatrix()</a> 
+        <a style="color: #FF0000" href="reference/printMatrix.html">printMatrix()</a> 
+		<a style="color: #FF0000" href="reference/pushMatrix.html">pushMatrix()</a> 
+        <a style="color: #FF0000" href="reference/resetMatrix.html">resetMatrix()</a> 
+		<a style="color: #FF0000" href="reference/rotate.html">rotate()</a> 
+        <a style="color: #FF0000" href="reference/rotateX.html">rotateX()</a> 
+		<a style="color: #FF0000" href="reference/rotateY.html">rotateY()</a> 
+        <a style="color: #FF0000" href="reference/rotateZ.html">rotateZ()</a> 
+		<a style="color: #FF0000" href="reference/scale.html">scale()</a> 
+        <a style="color: #FF0000" href="reference/translate.html">translate()</a>
+		</p>
+    </div>
+
+    <div class="category" >
+      <b>Lights, Camera</b>
+        <h5>Lights</h5>
+      <a style="color: #FF0000" href="reference/ambientLight.html">ambientLight()</a> 
+	  <a style="color: #FF0000" href="reference/directionalLight.html">directionalLight()</a> 
+      <a style="color: #FF0000" href="reference/lightFalloff.html">lightFalloff()</a> 
+	  <a style="color: #FF0000" href="reference/lightSpecular.html">lightSpecular()</a> 
+      <a style="color: #FF0000" href="reference/lights.html">lights()</a> 
+	  <a style="color: #FF0000" href="reference/noLights.html">noLights()</a> 
+      <a style="color: #FF0000" href="reference/normal.html">normal()</a> 
+	  <a style="color: #FF0000" href="reference/pointLight.html">pointLight()</a> 
+      <a style="color: #FF0000" href="reference/spotLight.html">spotLight()</a> 
+
+      <h5>Camera</h5>
+      <a style="color: #FF0000" href="reference/beginCamera.html">beginCamera()</a> 
+	  <a style="color: #FF0000" href="reference/camera.html">camera()</a> 
+      <a style="color: #FF0000" href="reference/endCamera.html">endCamera()</a> 
+	  <a style="color: #FF0000" href="reference/frustum.html">frustum()</a> 
+      <a style="color: #FF0000" href="reference/ortho.html">ortho()</a> 
+	  <a style="color: #FF0000" href="reference/perspective.html">perspective()</a> 
+      <a style="color: #FF0000" href="reference/printCamera.html">printCamera()</a> 
+	  <a style="color: #FF0000" href="reference/printProjection.html">printProjection()</a> 
+
+      <h5>Coordinates</h5>
+      <a style="color: #FF0000" href="reference/modelX.html">modelX()</a> 
+	  <a style="color: #FF0000" href="reference/modelY.html">modelY()</a> 
+      <a style="color: #FF0000" href="reference/modelZ.html">modelZ()</a> 
+	  <a style="color: #FF0000" href="reference/screenX.htm">screenX()</a> 
+      <a style="color: #FF0000" href="reference/screenY.html">screenY()</a> 
+	  <a style="color: #FF0000" href="reference/screenZ.html">screenZ()</a> 
+
+      <h5>Material Properties</h5>
+      <p><a style="color: #FF0000" href="reference/ambient.html">ambient()</a> 
+	  <a style="color: #FF0000" href="reference/emissive.html">emissive()</a> 
+        <a style="color: #FF0000" href="reference/shininess.html">shininess()</a> 
+		<a style="color: #FF0000" href="reference/specular.html">specular()</a></p>
+    </div>
+</div>
+
+  <div class="span3">
+    <div class="category">
+	
+      <b>Color</b>
+        <h5>Setting</h5>
+      <a style="color: #FF0000" href="reference/background.html">background()</a> 
+	  <a style="color: #FF0000" href="reference/colorMode.html">colorMode()</a> 
+      <a style="color: #FF0000" href="reference/fill.html">fill()</a> 
+	  <a style="color: #FF0000" href="reference/noFill.html">noFill()</a> 
+      <a style="color: #FF0000" href="reference/noStroke.html">noStroke()</a> 
+	  <a style="color: #FF0000" href="reference/stroke.html">stroke()</a> 
+
+      <h5>Creating & Reading</h5>
+      <p><a style="color: #FF0000" href="reference/alpha.html">alpha()</a> 
+	  <a style="color: #FF0000" href="reference/blendColor.html">blendColor()</a> 
+        <a style="color: #FF0000" href="reference/blue.html">blue()</a> 
+		<a style="color: #FF0000" href="reference/brightness.html">brightness()</a> 
+        <a style="color: #FF0000" href="reference/color().html">color()</a> 
+		<a style="color: #FF0000" href="reference/green.html">green()</a> 
+        <a style="color: #FF0000" href="reference/hue.html">hue()</a> 
+		<a style="color: #FF0000" href="reference/lerpColor.html">lerpColor()</a> 
+        <a style="color: #FF0000" href="reference/red.html">red()</a> 
+		<a style="color: #FF0000" href="reference/saturation.html">saturation()</a></p>
+      </div>
+
+    <div class="category">
+      <p><b>Image</b> </p>
+      <p><a style="color: #FF0000" href="reference/PImage.html">PImage</a> 
+	  <a style="color: #FF0000" href="reference/createImage.html">createImage()</a> 
+      </p>
+	  
+      <h5>Loading & Displaying</h5>
+      <a style="color: #FF0000" href="reference/image.html">image()</a> 
+	  <a style="color: #FF0000" href="reference/imageMode.html">imageMode()</a> 
+      <a style="color: #FF0000" href="reference/loadImage.html">loadImage()</a> 
+	  <a style="color: #FF0000" href="reference/noTint.html">noTint()</a> 
+      <a style="color: #FF0000" href="reference/requestImage.html">requestImage()</a> 
+	  <a style="color: #FF0000" href="reference/tint.html">tint()</a> 
+
+      <h5>Pixels</h5>
+      <p><a style="color: #FF0000" href="reference/blend.html">blend()</a> 
+	  <a style="color: #FF0000" href="reference/copy.html">copy()</a> 
+        <a style="color: #FF0000" href="reference/filter.html">filter()</a> 
+		<a style="color: #FF0000" href="reference/get.html">get()</a> 
+        <a style="color: #FF0000" href="reference/loadPixels.html">loadPixels()</a> 
+		<a style="color: #FF0000" href="reference/pixels.html">pixels[]</a> 
+        <a style="color: #FF0000" href="reference/set.html">set()</a> 
+		<a style="color: #FF0000" href="reference/updatePixels.html">updatePixels()</a></p>
+      </div>
+
+    <div class="category">
+      <b>Rendering</b>
+      <p> <a style="color: #FF0000" href="reference/PGraphics.html">PGraphics</a> 
+	  <a style="color: #FF0000" href="reference/createGraphics.html">createGraphics()</a> 
+        <a style="color: #FF0000" href="reference/hint.html">hint()</a>
+		</p>
+      </div>
+
+    <div class="category"> 
+      <b>Typography</b>
+      <p><a style="color: #FF0000" href="reference/PFont.html">PFont</a> 
+	  </p>
+
+      <h5>Loading & Displaying</h5>
+      <p><a style="color: #FF0000" href="reference/createFont.html">createFont()</a> 
+	  <a style="color: #FF0000" href="reference/loadFont.html">loadFont()</a> 
+        <a style="color: #FF0000" href="reference/text.html">text()</a> 
+		<a style="color: #FF0000" href="reference/textFont.html">textFont()</a>
+		</p>
+      <div>
+	  
+      <h5>Attributes</h5>
+	  <p><a style="color: #FF0000" href="reference/textAlign.html">textAlign()</a> 
+		<a style="color: #FF0000" href="reference/textLeading.html">textLeading()</a> 
+        <a style="color: #FF0000" href="reference/textMode.html">textMode()</a> 
+		<a style="color: #FF0000" href="reference/textSize.html">textSize()</a> 
+        <a style="color: #FF0000" href="reference/textWidth.html">textWidth()</a> 
+		</p>
+
+        <h5>Metrics</h5>
+        <p><a style="color: #FF0000" href="reference/textAscent.html">textAscent()</a> 
+		<a style="color: #FF0000" href="reference/textDescent.html">textDescent()</a>
+		</p>
+        </div>
+    </div>
+
+    <div class="category">
+      <b>Math</b>
+      <p><a style="color: #FF0000" href="reference/PVector.html">PVector</a> 
+	  </p>
+
+      <h5>Operators</h5>
+      <a style="color: #FF0000" href="reference/addAssign.html">+= (add assign)</a> 
+	  <a style="color: #FF0000" href="reference/addition.html">+ (addition)</a> 
+	  <a style="color: #FF0000" href="reference/decrement.html">-- (decrement)</a> 
+	  <a style="color: #FF0000" href="reference/divide.html">/ (divide)</a> 
+	  <a style="color: #FF0000" href="reference/divideAssign.html">/= (divide assign)</a> 
+      <a style="color: #FF0000" href="reference/increment.html">++ (increment)</a> 
+	  <a style="color: #FF0000" href="reference/minus.html">-(minus)</a> 
+	  <a style="color: #FF0000" href="reference/modulo.html">% (modulo)</a> 
+	  <a style="color: #FF0000" href="reference/multiply.html">* (multiply)</a> 
+	  <a style="color: #FF0000" href="reference/multiplyAssign.html">*= (multiply assign)</a> 
+      <a style="color: #FF0000" href="reference/subtractAssign.html">-= (subtract assign)</a> 
+
+      <h5>Bitwise Operators</h5>
+      <a style="color: #FF0000" href="reference/bitwiseAnd.html">& (bitwise AND)</a> 
+	  <a style="color: #FF0000" href="reference/bitwiseOr.html">|(bitwise OR)</a> 
+	  <a style="color: #FF0000" href="reference/leftShift.html"><< (left shift)</a> 
+      <a style="color: #FF0000" href="reference/rightShift.html">>> (right shift)</a> 
+
+      <h5>Calculation</h5>
+      <a style="color: #FF0000" href="reference/abs.html">abs()</a> 
+	  <a style="color: #FF0000" href="reference/ceil.html">ceil()</a> 
+      <a style="color: #FF0000" href="reference/constrain.html">constrain()</a> 
+	  <a style="color: #FF0000" href="reference/dist.html">dist()</a> 
+      <a style="color: #FF0000" href="reference/exp.html">exp()</a> 
+	  <a style="color: #FF0000" href="reference/floor.html">floor()</a> 
+      <a style="color: #FF0000" href="reference/lerp.html">lerp()</a> 
+	  <a style="color: #FF0000" href="reference/log.html">log()</a> 
+      <a style="color: #FF0000" href="reference/mag.html">mag()</a> 
+	  <a style="color: #FF0000" href="reference/map.html">map()</a> 
+      <a style="color: #FF0000" href="reference/max.html">max()</a> 
+	  <a style="color: #FF0000" href="reference/min.html">min()</a> 
+      <a style="color: #FF0000" href="reference/norm.html">norm()</a> 
+	  <a style="color: #FF0000" href="reference/pow.html">pow()</a> 
+      <a style="color: #FF0000" href="reference/round.html">round()</a> 
+	  <a style="color: #FF0000" href="reference/sq.html">sq()</a> 
+      <a style="color: #FF0000" href="reference/sqrt.html">sqrt()</a> 
+	  
+      <h5>Trigonometry</h5>
+      <a href="reference/acos.html">acos()</a> 
+	  <a style="color: #FF0000" href="reference/asin.html">asin()</a> 
+      <a style="color: #FF0000" href="reference/atan.html">atan()</a> 
+	  <a style="color: #FF0000" href="reference/atan2.html">atan2()</a> 
+      <a style="color: #FF0000" href="reference/cos.html">cos()</a> 
+	  <a style="color: #FF0000" href="reference/degrees.html">degrees()</a> 
+      <a style="color: #FF0000" href="reference/radians.html">radians()</a> 
+	  <a style="color: #FF0000" href="reference/sin.html">sin()</a> 
+      <a style="color: #FF0000" href="reference/tan.html">tan()</a> 
+
+      <h5>Random</h5>
+      <p><a style="color: #FF0000" href="reference/noise.html">noise()</a> 
+	  <a style="color: #FF0000" href="reference/noiseDetail.html">noiseDetail()</a> 
+        <a style="color: #FF0000" href="reference/noiseDetail.html">noiseSeed()</a> 
+		<a style="color: #FF0000" href="reference/random.html">random()</a> 
+        <a style="color: #FF0000" href="reference/randomSeed.html">randomSeed()</a></p>
+      </div>
+	  
+    <div class="category">
+      <b>Constants</b>
+      <p><a style="color: #FF0000" href="reference/halfPi.html">HALF_PI (1.57079...)</a> 
+	  <a style="color: #FF0000" href="reference/Pi.html">PI (3.14159...)</a> 
+	  <a style="color: #FF0000" href="reference/quarterPi.html">QUARTER_PI (0.78539...)</a> 
+        <a style="color: #FF0000" href="reference/twoPi.html">TWO_PI (6.28318...)</a> </p>
+    </div>
+	
+	    <div class="category">
+      <b>N/A</b>
+      <p>Commands that do not apply with the Khan Academy integrated Program editor.
+	  </p>
+	  </div>
+	
+  </div>
+</div>
+
+<hr>
+
+	<div class="cclicense">
+  		<p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
+  		<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+    <img alt="Creative Commons License" border="0" src="http://processingjs.org/images/somerights20.gif" /></a>
+	</div>
+
+      <div class="footer">
+        Processing is an open visualization language developed by
+        <a href="http://benfry.com/">Ben Fry</a> &amp; <a href="http://reas.com/">Casey Reas</a>,<br>
+        and originally ported to JavaScript by
+        <a href="http://ejohn.org/blog/processingjs/">John Resig</a>.<br>
+        Processing.js is maintained by the Processing.js team.<br>
+		This site maintained by volunteer Khan Academy Students.<br>
+		<p></p>
+      </div>
+
+    <a href="http://github.com/processing-js/processing-js/">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://processingjs.org/images/forkme-right-orange.png" alt="Fork me on GitHub">
+    </a>
+</div>
+
+</body>
+</html>

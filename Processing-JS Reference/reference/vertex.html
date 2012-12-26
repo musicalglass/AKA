@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Processing.js</title>
+    <script src="/js/processing.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="http://processingjs.org/"><img src="http://processingjs.org/images/header.png"
+ width="177" height="42"></a>
+      </div>
+      <span class="tagline">a port of the Processing Visualization Language</span>
+<hr>
+
+
+<table cellpadding="4" cellspacing="4" border="0" class="ref-item" width="721">
+
+	<tr class="name-row">
+
+		<th scope="row">Name</th>
+
+		<td><h3>vertex()</h3></td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Examples</th>
+
+		<td><div class="example"><img src="/reference/vertex_.gif" alt="example pic" /><pre class="margin">beginShape(POINTS);
+
+vertex(30, 20);
+
+vertex(85, 20);
+
+vertex(85, 75);
+
+vertex(30, 75);
+
+endShape();</pre></div><div class="example"><img src="/reference/vertex_3.gif" alt="example pic" /><pre class="margin warning">// Drawing vertices in 3D requires P3D
+
+// or OPENGL as a parameter to size()
+
+size(100, 100, P3D);
+
+beginShape(POINTS);
+
+vertex(30, 20, -50);
+
+vertex(85, 20, -50);
+
+vertex(85, 75, -50);
+
+vertex(30, 75, -50);
+
+endShape();</pre></div><div class="example"><img src="/reference/vertex_2.gif" alt="example pic" /><pre class="margin warning">noStroke();
+
+PImage a = loadImage("arch.jpg");
+
+beginShape();
+
+texture(a);
+
+// "arch.jpg" is 100x100 pixels in size so
+
+// the values 0 and 100 are used for the
+
+// parameters "u" and "v" to map it directly
+
+// to the vertex points
+
+vertex(10, 20, 0, 0);
+
+vertex(80, 5, 100, 0);
+
+vertex(95, 90, 100, 100);
+
+vertex(40, 95, 0, 100);
+
+endShape();</pre></div></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+
+
+		<th scope="row">Description</th>
+
+		<td>All shapes are constructed by connecting a series of vertices. <b>vertex()</b> is used to specify the vertex coordinates for points, lines, triangles, quads, and polygons and is used exclusively within the <b>beginShape()</b> and <b>endShape()</b> function. <br /><br /><span class="warning">Drawing a vertex in 3D using the <b>z</b> parameter requires the P3D or OPENGL parameter in combination with size as shown in the above example.<br /><br />This function is also used to map a texture onto the geometry. The <b>texture()</b> function declares the texture to apply to the geometry and the <b>u</b> and <b>v</b> coordinates set define the mapping of this texture to the form. By default, the coordinates used for <b>u</b> and <b>v</b> are specified in relation to the image's size in pixels, but this relation can be changed with <b>textureMode()</b>.</span></td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Syntax</th>
+
+		<td><pre>vertex(<kbd>x</kbd>, <kbd>y</kbd>); 
+
+<span class="warning">vertex(<kbd>x</kbd>, <kbd>y</kbd>, <kbd>z</kbd>); 
+
+vertex(<kbd>x</kbd>, <kbd>y</kbd>, <kbd>u</kbd>, <kbd>v</kbd>); 
+
+vertex(<kbd>x</kbd>, <kbd>y</kbd>, <kbd>z</kbd>, <kbd>u</kbd>, <kbd>v</kbd>);</span></pre></td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Parameters</th>
+
+		<td><table cellpadding="0" cellspacing="0" border="0">
+
+	<tr class="">
+
+		<th scope="row">x</th>
+
+		<td>int or float: x-coordinate of the vertex</td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">y</th>
+
+		<td>int or float: y-coordinate of the vertex</td>
+
+	</tr>
+
+
+
+	<tr class="warning">
+
+		<th scope="row">z</th>
+
+
+
+		<td>int or float: z-coordinate of the vertex</td>
+
+	</tr>
+
+
+
+	<tr class="warning">
+
+		<th scope="row">u</th>
+
+		<td>int or float: horizontal coordinate for the texture mapping</td>
+
+	</tr>
+
+
+
+	<tr class="warning">
+
+		<th scope="row">v</th>
+
+		<td>int or float: vertical coordinate for the texture mapping</td>
+
+	</tr>
+
+</table></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Usage</th>
+
+
+
+		<td>Application & Web</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Related</th>
+
+		<td><a href="/reference/beginShape_">beginShape()</a><br />
+
+    <a href="/reference/endShape_">endShape()</a><br />
+
+    <a href="/reference/bezierVertex_">bezierVertex()</a><br />
+
+    <a href="/reference/curveVertex_">curveVertex()</a><br />
+
+    <a href="/reference/texture_">texture()</a><br /></td>
+
+
+
+	</tr>
+
+</table>
+
+
+
+
+<hr>
+<div class="cclicense">
+  <p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+    <img alt="Creative Commons License" border="0" src="http://processingjs.org/images/somerights20.gif" />
+  </a>
+</div>
+    
+
+      <div class="footer">
+        Processing is an open visualization language developed by
+        <a href="http://benfry.com/">Ben Fry</a> &amp; <a href="http://reas.com/">Casey Reas</a>,<br>
+        and originally ported to JavaScript by
+        <a href="http://ejohn.org/blog/processingjs/">John Resig</a>.<br>
+        Processing.js is maintained by the Processing.js team.<br>
+		This site maintained by volunteer Khan Academy Students.<br>
+      </div>
+    </div>
+    <a href="http://github.com/processing-js/processing-js/">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://processingjs.org/images/forkme-right-orange.png" alt="Fork me on GitHub">
+    </a>
+  </body>
+</html>

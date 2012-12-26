@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Processing.js</title>
+    <script src="/js/processing.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="http://processingjs.org/"><img src="http://processingjs.org/images/header.png"
+ width="177" height="42"></a>
+      </div>
+      <span class="tagline">a port of the Processing Visualization Language</span>
+<hr>
+
+
+<table cellpadding="4" cellspacing="4" border="0" class="ref-item" width="721">
+
+	<tr class="name-row">
+
+		<th scope="row">Name</th>
+
+		<td><h3>String</h3></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Examples</th>
+
+
+
+		<td><div class="example"><pre>String str1 = "CCCP";
+
+char data[] = {'C', 'C', 'C', 'P'};
+
+String str2 = new String(data);
+
+println(str1);  // Prints "CCCP" to the console
+
+println(str2);  // Prints "CCCP" to the console</pre></div><hr class="noShade" noshade="noshade" size="1" /><div class="example"><pre>// Comparing String objects, see reference below.
+
+String p = "potato";
+
+if (p == "potato") {
+
+  println("p == potato, yep.");  // this will not print
+
+} 
+
+// The correct way to compare two Strings
+
+if (p.equals("potato")) {
+
+  println("Yes, the contents of p and potato are the same.");
+
+}</pre></div><hr class="noShade" noshade="noshade" size="1" /><div class="example"><pre>// Use a backslash to include quotes in a String
+
+String quoted = "This one has \"quotes\"";
+
+println(quoted);  // This one has "quotes"</pre></div></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Description</th>
+
+		<td>A string is a sequence of characters. The class <b>String</b> includes methods for examining individual characters, comparing strings, searching strings, extracting parts of strings, and for converting an entire string uppercase and lowercase. Strings are always defined inside double quotes ("Abc") and characters are always defined inside single quotes('A'). 
+
+
+
+<br /><br />
+
+To compare the contents of two Strings, use the equals() method, as in "if (a.equals(b))", instead of "if (a == b)". A String is an Object, so comparing them with the == operator only compares whether both Strings are stored in the same memory location. Using the equals() method will ensure that the actual contents are compared. (The <a href="http://processing.org/reference/troubleshooting/index.html#strings">troubleshooting</a> reference has a longer explanation.)
+
+<br /><br />
+
+Because a String is defined within quotes, including quotes in a String requires the \ (backslash) character to be used (see the second example above). This is known as an <em>escape sequence</em>. Other escape sequences include \t for the tab character, and \n for new line. A single backslash is indicated by \.
+
+<br /><br />
+
+There are more string methods than those linked from this page. Additional <b>String</b> documentation is located at <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/">http://java.sun.com/j2se/1.4.2/docs/api/</A>.</td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Methods</th>
+
+		<td><table cellpadding="0" cellspacing="0" border="0">
+
+	<tr class="">
+
+		<th scope="row"><a href="/reference/String_charAt_">charAt()</a></th>
+
+		<td>Returns the character at the specified index</td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row"><a href="/reference/String_equals_">equals()</a></th>
+
+		<td>Compares a string to a specified object</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row"><a href="/reference/String_indexOf_">indexOf()</a></th>
+
+
+
+		<td>Returns the index value of the first occurance of a character within the input string</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row"><a href="/reference/String_length_">length()</a></th>
+
+		<td>Returns the number of characters in the input string</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row"><a href="/reference/String_substring_">substring()</a></th>
+
+		<td>Returns a new string that is part of the input string</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row"><a href="/reference/String_toLowerCase_">toLowerCase()</a></th>
+
+		<td>Converts all the characters to lower case</td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row"><a href="/reference/String_toUpperCase_">toUpperCase()</a></th>
+
+		<td>Converts all the characters to upper case</td>
+
+	</tr>
+
+</table></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row"><!--*-->Constructor<!--*--></th>
+
+		<td><pre>String(<kbd>data</kbd>)
+
+String(<kbd>data</kbd>, <kbd>offset</kbd>, <kbd>length</kbd>)</pre></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Parameters</th>
+
+		<td><table cellpadding="0" cellspacing="0" border="0">
+
+	<tr class="">
+
+		<th scope="row">data</th>
+
+		<td>byte[] or char[]: array of bytes to be decoded into characters or array of characters to be combined into a string</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">offset</th>
+
+		<td>int: index of the first character</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">length</th>
+
+
+
+		<td>int: number of characters</td>
+
+	</tr>
+
+</table></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Usage</th>
+
+		<td>Web & Application</td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Related</th>
+
+		<td><a href="/reference/char">char</a>
+
+        <br /><a href="/reference/text_">text()</a><br /></td>
+
+	</tr>
+
+</table>
+
+
+<hr>
+<div class="cclicense">
+  <p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+    <img alt="Creative Commons License" border="0" src="http://processingjs.org/images/somerights20.gif" />
+  </a>
+</div>
+    
+
+      <div class="footer">
+        Processing is an open visualization language developed by
+        <a href="http://benfry.com/">Ben Fry</a> &amp; <a href="http://reas.com/">Casey Reas</a>,<br>
+        and originally ported to JavaScript by
+        <a href="http://ejohn.org/blog/processingjs/">John Resig</a>.<br>
+        Processing.js is maintained by the Processing.js team.<br>
+		This site maintained by volunteer Khan Academy Students.<br>
+      </div>
+    </div>
+    <a href="http://github.com/processing-js/processing-js/">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://processingjs.org/images/forkme-right-orange.png" alt="Fork me on GitHub">
+    </a>
+  </body>
+</html>

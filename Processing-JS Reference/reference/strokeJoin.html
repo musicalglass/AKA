@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Processing.js</title>
+    <script src="/js/processing.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="http://processingjs.org/"><img src="http://processingjs.org/images/header.png"
+ width="177" height="42"></a>
+      </div>
+      <span class="tagline">a port of the Processing Visualization Language</span>
+<hr>
+
+
+<table cellpadding="4" cellspacing="4" border="0" class="ref-item" width="721">
+	<tr class="name-row">
+		<th scope="row">Name</th>
+		<td><h3>strokeJoin()</h3></td>
+
+	</tr>
+
+	<tr class="">
+		<th scope="row">Examples</th>
+		<td><div class="example"><img src="/reference/strokeJoin_.gif" alt="example pic" /><pre class="margin">noFill();
+smooth();
+strokeWeight(10.0);
+strokeJoin(MITER);
+beginShape();
+vertex(35, 20);
+vertex(65, 50);
+vertex(35, 80);
+endShape();</pre></div><div class="example"><img src="/reference/strokeJoin_2.gif" alt="example pic" /><pre class="margin">noFill();
+smooth();
+strokeWeight(10.0);
+strokeJoin(BEVEL);
+beginShape();
+vertex(35, 20);
+vertex(65, 50);
+vertex(35, 80);
+endShape();</pre>
+</div><div class="example"><img src="/reference/strokeJoin_3.gif" alt="example pic" /><pre class="margin">noFill();
+smooth();
+strokeWeight(10.0);
+strokeJoin(ROUND);
+beginShape();
+vertex(35, 20);
+vertex(65, 50);
+vertex(35, 80);
+endShape();</pre>
+</div></td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Description</th>
+
+		<td><p>Sets the style of the joints which connect line segments. These joints are either mitered, beveled, or rounded and specified with 
+		the corresponding parameters MITER, BEVEL, and ROUND. 
+		The default joint is MITER. </p><p>This function is not available with the P2D, P3D, or OPENGL renderers. 
+		More information about the renderers can be found in the size() reference.</p></td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Syntax</th>
+		<td><pre>strokeJoin(<kbd>MODE</kbd>)</pre></td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Parameters</th>
+
+		<td><table cellpadding="0" cellspacing="0" border="0">
+	<tr class="">
+		<th scope="row">MODE</th>
+		<td>Either MITER, BEVEL, or ROUND</td>
+	</tr>
+	
+</table></td>
+	</tr>
+<tr class="">
+
+		<th scope="row">Returns</th>
+		<td>None</td>
+	</tr>
+	<tr class="">
+
+		<th scope="row">Usage</th>
+		<td>Web & Application</td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Related</th>
+		<td><a href="/reference/stroke_">stroke()</a><br />
+		<a href="/reference/strokeWeight_">strokeWeight()</a><br />
+		<a href="/reference/strokeCap_">strokeCap()</a><br /></td>
+
+	</tr>
+</table>
+
+
+<hr>
+<div class="cclicense">
+  <p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+    <img alt="Creative Commons License" border="0" src="http://processingjs.org/images/somerights20.gif" />
+  </a>
+</div>
+    
+
+      <div class="footer">
+        Processing is an open visualization language developed by
+        <a href="http://benfry.com/">Ben Fry</a> &amp; <a href="http://reas.com/">Casey Reas</a>,<br>
+        and originally ported to JavaScript by
+        <a href="http://ejohn.org/blog/processingjs/">John Resig</a>.<br>
+        Processing.js is maintained by the Processing.js team.<br>
+		This site maintained by volunteer Khan Academy Students.<br>
+      </div>
+    </div>
+    <a href="http://github.com/processing-js/processing-js/">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://processingjs.org/images/forkme-right-orange.png" alt="Fork me on GitHub">
+    </a>
+  </body>
+</html>

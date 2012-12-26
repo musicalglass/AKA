@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Processing.js</title>
+    <script src="/js/processing.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="http://processingjs.org/"><img src="http://processingjs.org/images/header.png"
+ width="177" height="42"></a>
+      </div>
+      <span class="tagline">a port of the Processing Visualization Language</span>
+<hr>
+
+
+<table cellpadding="4" cellspacing="4" border="0" class="ref-item" width="721">
+
+	<tr class="name-row">
+
+		<th scope="row">Name</th>
+
+		<td><h3>loadImage()</h3></td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Examples</th>
+
+		<td><div class="example"><img src="/reference/loadImage_.jpg" alt="example pic" /><pre class="margin">
+
+    // @pjs preload must be used to preload the image 
+
+    /* @pjs preload="laDefense.jpg"; */
+
+    PImage b;
+
+    b = loadImage("laDefense.jpg");
+
+    image(b, 0, 0);
+
+</pre></div><div class="example"><img src="/reference/loadImage_.jpg" alt="example pic" /><pre class="margin">
+
+// @pjs preload must be used to preload the image
+
+/* @pjs preload="laDefense.jpg"; */
+
+PImage b;
+
+void setup() {
+
+  b = loadImage("laDefense.jpg");
+
+  noLoop();
+
+}
+
+
+
+void draw() {
+
+  image(b, 0, 0);
+
+}</pre></div><div class="example"><pre>PImage online;
+
+
+
+void setup() {
+
+  String url = "http://mt0.google.com/mt?n=404&v=w2.61&x=9913&y=12119&zoom=2";
+
+  online = loadImage(url, "png");
+
+  noLoop();
+
+}
+
+
+
+void draw() {
+
+  image(b, 0, 0);
+
+}</pre></div></td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Description</th>
+
+		<td>Loads an image into a variable of type <b>PImage</b>. Four types of images ( <b>.gif</b>, <b>.jpg</b>, <b>.tga</b>, <b>.png</b>) images may be loaded. To load correctly, <strike>images must be located in the data directory of the current sketch</strike>, the images must be preloaded using @pjs preload specifying the path to the image. In most cases, load all images in <b>setup()</b> to preload them at the start of the program. Loading images inside <b>draw()</b> will reduce the speed of a program. You can also load images from a data URI, such as "data:image/jpg;base64,{base 64 encoded data block}" which does not require any preloading.
+
+
+
+<br /><br />
+
+The filename parameter can also be a URL to a file found online. For security reasons, a Processing sketch found online can only download files from the same server from which it came.
+
+<br /><br />
+
+The extension of the filename parameter is used to determine the image type. In cases where the image filename does not end with a proper extension, specify the extension as the second parameter to loadImage(), as shown in the third example on this page.
+
+<br /><br />
+
+If an image is not loaded successfully, the <b>null</b> value is returned and an error message will be printed to the console. The error message does not halt the program, however the null value may cause a NullPointerException if your code does not check whether the value returned from loadImage() is null.
+
+<br /><br />
+
+    <b>NOTE: </b>Some browers will not allow you to load images from file:// URIs. It is recommended that you use a webserver for your development and testing to avoid any problems with file:// URIs.</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+
+
+		<th scope="row">Syntax</th>
+
+		<td><pre>loadImage(<kbd>filename</kbd>)</pre></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Parameters</th>
+
+		<td><table cellpadding="0" cellspacing="0" border="0">
+
+
+
+	<tr class="">
+
+		<th scope="row">filename</th>
+
+		<td>string: name of file to load or data URI/td>
+
+	</tr>
+
+</table></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Usage</th>
+
+
+
+		<td>Web & Application</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Related</th>
+
+		<td><a href="/reference/PImage">PImage </a>
+
+        <br /><a href="/reference/image_">image() </a>
+
+        <br /><a href="/reference/imageMode_">imageMode() </a>
+
+        <br /><a href="/reference/background_">background()</a><br /></td>
+
+	</tr>
+
+</table>
+
+
+
+
+<hr>
+<div class="cclicense">
+  <p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+    <img alt="Creative Commons License" border="0" src="http://processingjs.org/images/somerights20.gif" />
+  </a>
+</div>
+    
+
+      <div class="footer">
+        Processing is an open visualization language developed by
+        <a href="http://benfry.com/">Ben Fry</a> &amp; <a href="http://reas.com/">Casey Reas</a>,<br>
+        and originally ported to JavaScript by
+        <a href="http://ejohn.org/blog/processingjs/">John Resig</a>.<br>
+        Processing.js is maintained by the Processing.js team.<br>
+		This site maintained by volunteer Khan Academy Students.<br>
+      </div>
+    </div>
+    <a href="http://github.com/processing-js/processing-js/">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://processingjs.org/images/forkme-right-orange.png" alt="Fork me on GitHub">
+    </a>
+  </body>
+</html>

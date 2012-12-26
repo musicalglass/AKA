@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Processing.js</title>
+    <script src="/js/processing.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="http://processingjs.org/"><img src="http://processingjs.org/images/header.png"
+ width="177" height="42"></a>
+      </div>
+      <span class="tagline">a port of the Processing Visualization Language</span>
+<hr>
+
+
+<table cellpadding="4" cellspacing="4" border="0" class="ref-item" width="721">
+	<tr class="name-row">
+		<th scope="row">Name</th>
+		<td><h3>PVector</h3></td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Examples</th>
+
+		<td><div class="example"><pre class="">PVector v1, v2;
+
+void setup() {
+  smooth();
+  noLoop();
+  v1 = new PVector(40, 20);
+  v2 = new PVector(25, 50); 
+}
+
+void draw() {
+  ellipse(v1.x, v1.y, 12, 12);
+  ellipse(v2.x, v2.y, 12, 12);
+  v2.add(v1);
+  ellipse(v2.x, v2.y, 24, 24);
+}</pre></div></td>
+	</tr>
+
+
+	<tr class="">
+		<th scope="row">Description</th>
+		
+		<td><p>A class to describe a two or three dimensional vector. This datatype stores two or three variables that are commonly used as a position, 
+		velocity, and/or acceleration. Technically, position is a point and velocity and acceleration are vectors, but this is often simplified to consider 
+		all three as vectors. For example, if you consider a rectangle moving across the screen, at any given instant it has a position (the object's location, 
+		expressed as a point.), a velocity (the rate at which the object's position changes per time unit, expressed as a vector), and acceleration (the rate at 
+		which the object's velocity changes per time unit, expressed as a vector). Since vectors represent groupings of values, we cannot simply use traditional 
+		addition/multiplication/etc. Instead, we'll need to do some "vector" math, which is made easy by the methods inside the PVector class. </p>
+		<p>There are additional methods and other ways to use some of these methods in the <a href="http://processing.googlecode.com/svn-history/r7367/trunk/processing/build/javadoc/core/processing/core/PVector.html">developers reference</a>.</p></td>
+
+	</tr>
+	<tr class="">
+		<th scope="row">Fields</th>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0">
+			<tr class="">
+				<th scope="row"><a href="/reference/PVector_x">x</a></th>
+				<td>x component of the vector</td>		
+			</tr>
+			<tr class="">
+				<th scope="row"><a href="/reference/PVector_y">y</a></th>
+				<td>y component of the vector</td>
+		
+			</tr>
+			<tr class="">
+				<th scope="row"><a href="/reference/PVector_z">z</a></th>
+				<td>z component of the vector</td>
+		
+			</tr>
+			</table>
+			</td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Methods</th>
+		<td><table cellpadding="0" cellspacing="0" border="0">
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_get_">get()</a></th>
+		<td>Gets the x, y, z component of the vector</td>
+
+	</tr>
+
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_set_">set()</a></th>
+		<td>Sets the x, y, z component of the vector</td>
+	</tr>
+
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_mag_">mag()</a></th>
+		<td>Calculates the magnitude (length) of the vector and returns the result as a float </td>
+	</tr>
+
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_add_">add()</a></th>
+		<td>Adds one vector to another</td>
+	</tr>
+
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_sub_">sub()</a></th>
+		<td>	Subtracts one vector from another</td>
+	</tr>
+
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_mult_">mult()</a></th>
+		<td>Multiplies the vector by a scalar</td>
+	</tr>
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_div_">div()</a></th>
+		<td>Divides the vector by a scalar</td>
+	</tr>
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_dist_">dist()</a></th>
+		<td>Calculate the Euclidean distance between two points</td>
+	</tr>
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_dot_">dot()</a></th>
+		<td>Calculates the dot product</td>
+	</tr>
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_cross_">cross()</a></th>
+		<td>Calculates the cross product</td>
+	</tr>
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_normalize_">normalize()</a></th>
+		<td>Normalizes the vector</td>
+	</tr>
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_limit_">limit()</a></th>
+		<td>Limits the magnitude of the vector</td>
+	</tr>
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_angleBetween_">angleBetween()</a></th>
+		<td>Calculates the angle between two vectors</td>
+	</tr>
+	<tr class="">
+		<th scope="row"><a href="/reference/PVector_array_">array()</a></th>
+		<td>Return a representation of the vector as an array</td>
+	</tr>
+</table></td>
+	</tr>
+
+	<tr class="">
+		<th scope="row"><!--*-->Constructor<!--*--></th>
+		<td><pre>PVector()</pre><br />
+		<pre>PVector(<kbd>x</kbd>,<kbd>y</kbd>)</pre><br />
+		<pre>PVector(<kbd>x</kbd>,<kbd>y</kbd>,<kbd>z</kbd>)</pre></td>
+	</tr>
+<tr class="">
+			<th scope="row">Parameters</th>
+	
+			<td><table cellpadding="0" cellspacing="0" border="0">
+		<tr class="">
+			<th scope="row">x</th>
+			<td>float: x component</td>
+		</tr>
+		<tr class="">
+			<th scope="row">y</th>
+			<td>float: y component</td>
+		</tr>
+		<tr class="">
+			<th scope="row">z</th>
+			<td>float: z component</td>
+		</tr>
+	</table></td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Usage</th>
+		<td>Web & Application</td>
+
+	</tr>
+
+</table>
+
+<hr>
+<div class="cclicense">
+  <p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+    <img alt="Creative Commons License" border="0" src="http://processingjs.org/images/somerights20.gif" />
+  </a>
+</div>
+    
+
+      <div class="footer">
+        Processing is an open visualization language developed by
+        <a href="http://benfry.com/">Ben Fry</a> &amp; <a href="http://reas.com/">Casey Reas</a>,<br>
+        and originally ported to JavaScript by
+        <a href="http://ejohn.org/blog/processingjs/">John Resig</a>.<br>
+        Processing.js is maintained by the Processing.js team.<br>
+		This site maintained by volunteer Khan Academy Students.<br>
+      </div>
+    </div>
+    <a href="http://github.com/processing-js/processing-js/">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://processingjs.org/images/forkme-right-orange.png" alt="Fork me on GitHub">
+    </a>
+  </body>
+</html>

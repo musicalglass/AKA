@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Processing.js</title>
+    <script src="/js/processing.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="http://processingjs.org/"><img src="http://processingjs.org/images/header.png"
+ width="177" height="42"></a>
+      </div>
+      <span class="tagline">a port of the Processing Visualization Language</span>
+<hr>
+
+
+<table cellpadding="4" cellspacing="4" border="0" class="ref-item" width="721">
+
+	<tr class="name-row">
+
+		<th scope="row">Name</th>
+
+		<td><h3>colorMode()</h3></td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Examples</th>
+
+		<td><div class="example"><img src="/reference/colorMode_.jpg" alt="example pic" /><pre class="margin">noStroke();
+
+colorMode(RGB, 100);
+
+for(int i=0; i<100; i++) {
+
+  for(int j=0; j<100; j++) {
+
+    stroke(i, j, 0);
+
+    point(i, j);
+
+  }
+
+}</pre></div><div class="example"><img src="/reference/colorMode_2.jpg" alt="example pic" /><pre class="margin">noStroke();
+
+colorMode(HSB, 100);
+
+for(int i=0; i<100; i++) {
+
+  for(int j=0; j<100; j++) {
+
+    stroke(i, j, 100);
+
+    point(i, j);
+
+  }
+
+}</pre></div></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Description</th>
+
+		<td>Changes the way Processing interprets color data. By default, <b>fill()</b>, <b>stroke()</b>, and <b>background()</b> colors are set by values between 0 and 255 using the RGB color model. It is possible to change the numerical range used for specifying colors and to switch color systems. For example, calling <b>colorMode(RGB, 1.0)</b> will specify that values are specified between 0 and 1. The limits for defining colors are altered by setting the parameters range1, range2, range3, and range 4.</td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Syntax</th>
+
+		<td><pre>colorMode(<kbd>mode</kbd>);
+
+colorMode(<kbd>mode</kbd>, <kbd>range</kbd>);
+
+colorMode(<kbd>mode</kbd>, <kbd>range1</kbd>, <kbd>range2</kbd>, <kbd>range3</kbd>);
+
+colorMode(<kbd>mode</kbd>, <kbd>range1</kbd>, <kbd>range2</kbd>, <kbd>range3</kbd>, <kbd>range4</kbd>);</pre></td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Parameters</th>
+
+		<td><table cellpadding="0" cellspacing="0" border="0">
+
+	<tr class="">
+
+		<th scope="row">mode</th>
+
+		<td>Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness</td>
+
+
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">range</th>
+
+		<td>int or float: range for all color elements</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">range1</th>
+
+
+
+		<td>int or float: range for the red or hue depending on the current color mode</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">range2</th>
+
+		<td>int or float: range for the green or saturation depending on the current color mode</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">range3</th>
+
+		<td>int or float: range for the blue or brightness depending on the current color mode</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">range4</th>
+
+		<td>int or float: range for the alpha</td>
+
+
+
+	</tr>
+
+</table></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Usage</th>
+
+		<td>Web & Application</td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Related</th>
+
+		<td><a href="/reference/background_">background()</a><br />
+
+    <a href="/reference/fill_">fill()</a><br />
+
+    <a href="/reference/stroke_">stroke()</a><br /></td>
+
+	</tr>
+
+</table>
+
+
+<hr>
+<div class="cclicense">
+  <p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+    <img alt="Creative Commons License" border="0" src="http://processingjs.org/images/somerights20.gif" />
+  </a>
+</div>
+    
+
+      <div class="footer">
+        Processing is an open visualization language developed by
+        <a href="http://benfry.com/">Ben Fry</a> &amp; <a href="http://reas.com/">Casey Reas</a>,<br>
+        and originally ported to JavaScript by
+        <a href="http://ejohn.org/blog/processingjs/">John Resig</a>.<br>
+        Processing.js is maintained by the Processing.js team.<br>
+		This site maintained by volunteer Khan Academy Students.<br>
+      </div>
+    </div>
+    <a href="http://github.com/processing-js/processing-js/">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://processingjs.org/images/forkme-right-orange.png" alt="Fork me on GitHub">
+    </a>
+  </body>
+</html>

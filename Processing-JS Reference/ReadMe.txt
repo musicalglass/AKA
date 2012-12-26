@@ -1,0 +1,3 @@
+The Processing-JS Reference folder is a clone of the original which is being ported over for compatibility with the Khan Academy integrated editor. Red items have yet to be ported or identified as N/A.
+
+Anyone who cares to jump on board and start porting can do so without permission. Just log on to GitHub, clone the repository in Windows and start editing away! Pretty self explanatory how to update the HTML links and such. If you like you can post a pull request so other people know not to work on the same things, but you don't need to wait around for an OK. Just feel free to hack away. This is my first GitHub Repository so if you've used one before you already know more about than I.

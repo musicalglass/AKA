@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Processing.js</title>
+    <script src="/js/processing.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="http://processingjs.org/"><img src="http://processingjs.org/images/header.png"
+ width="177" height="42"></a>
+      </div>
+      <span class="tagline">a port of the Processing Visualization Language</span>
+<hr>
+
+
+<table cellpadding="4" cellspacing="4" border="0" class="ref-item" width="721">
+	<tr class="name-row">
+		<th scope="row">Name</th>
+		<td><h3>long</h3></td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Examples</th>
+
+		<td><div class="example"><pre>long a;          // Declare variable "a" of type int
+a = 23;          // Assign "a" the value 23
+long b = -256;   // Declare variable "b" and assign it the value -256
+long c = a + b;  // Declare variable "c" and assign it the sum of "a" and "b"
+int i = (int)c;  // Converts the value of "c" from a long to a int</pre></div></td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Description</th>
+		<td>Datatype for large integers. While integers can be as large as 2,147,483,647 and as low as -2,147,483,648 (stored as 32 bits), 
+		a <b>long</b> integer has a minimum value of -9,223,372,036,854,775,808 and a maximum value of 9,223,372,036,854,775,807 (stored as 64 bits). 
+		Use this datatype when you need a number to have a greater magnitude than can be stored within an <b>int</b>. 
+		Processing functions don't use this datatype, so while they work in the language, 
+		you'll usually have to convert to a <b>int</b> using the <b>(int)</b> syntax before passing into a function.</td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Syntax</th>
+		<td><pre>long <kbd>var</kbd> </pre><br>
+		<pre>long <kbd>var</kbd>= <kbd>value</kbd></pre>
+		</td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Parameters</th>
+
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tr class="">
+					<th scope="row">var</th>
+					<td>variable name referencing the value</td>
+				</tr>
+				<tr class="">
+					<th scope="row">value</th>
+					<td>any integer value</td>
+				</tr>
+			</table>
+			</td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Usage</th>
+		<td>Web & Application</td>
+
+	</tr>
+
+	<tr class="">
+		<th scope="row">Related</th>
+		<td><a href="/reference/int">int</a></td>
+	</tr>
+</table>
+
+<hr>
+<div class="cclicense">
+  <p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+    <img alt="Creative Commons License" border="0" src="http://processingjs.org/images/somerights20.gif" />
+  </a>
+</div>
+    
+
+      <div class="footer">
+        Processing is an open visualization language developed by
+        <a href="http://benfry.com/">Ben Fry</a> &amp; <a href="http://reas.com/">Casey Reas</a>,<br>
+        and originally ported to JavaScript by
+        <a href="http://ejohn.org/blog/processingjs/">John Resig</a>.<br>
+        Processing.js is maintained by the Processing.js team.<br>
+		This site maintained by volunteer Khan Academy Students.<br>
+      </div>
+    </div>
+    <a href="http://github.com/processing-js/processing-js/">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://processingjs.org/images/forkme-right-orange.png" alt="Fork me on GitHub">
+    </a>
+  </body>
+</html>

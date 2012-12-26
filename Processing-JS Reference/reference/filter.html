@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Processing.js</title>
+    <script src="/js/processing.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="http://processingjs.org/"><img src="http://processingjs.org/images/header.png"
+ width="177" height="42"></a>
+      </div>
+      <span class="tagline">a port of the Processing Visualization Language</span>
+<hr>
+
+
+<table cellpadding="4" cellspacing="4" border="0" class="ref-item" width="721">
+	<tr class="name-row">
+		<th scope="row">Name</th>
+		<td><h3>filter()</h3></td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Examples</th>
+
+		<td><div class="example"><img src="/reference/filter_threshold.jpg" alt="example pic" /><pre class="margin">// @pjs preload must be used to preload the image
+/* @pjs preload="topanga.jpg"; */
+PImage b;
+b = loadImage("topanga.jpg");
+image(b, 0, 0);
+filter(THRESHOLD);</pre></div>
+<div class="example"><img src="/reference/filter_gray.jpg" alt="example pic" /><pre class="margin">// @pjs preload must be used to preload the image
+/* @pjs preload="topanga.jpg"; */
+PImage b;
+b = loadImage("topanga.jpg");
+image(b, 0, 0);
+filter(GRAY);</pre></div>
+<div class="example"><img src="/reference/filter_invert.jpg" alt="example pic" /><pre class="margin">// @pjs preload must be used to preload the image
+/* @pjs preload="topanga.jpg"; */
+PImage b;
+b = loadImage("topanga.jpg");
+image(b, 0, 0);
+filter(INVERT);
+save("filter_invert.tif");</pre></div>
+<div class="example"><img src="/reference/filter_posterize.jpg" alt="example pic" /><pre class="margin">// @pjs preload must be used to preload the image
+/* @pjs preload="topanga.jpg"; */
+PImage b;
+b = loadImage("topanga.jpg");
+image(b, 0, 0);
+filter(GRAY);
+filter(POSTERIZE, 4);</pre></div>
+<div class="example"><img src="/reference/filter_blur.jpg" alt="example pic" /><pre class="margin">// @pjs preload must be used to preload the image
+/* @pjs preload="topanga.jpg"; */
+PImage b;
+b = loadImage("topanga.jpg");
+image(b, 0, 0);
+filter(BLUR, 6);</pre></div>
+	</td>
+	</tr>
+
+	<tr class="">
+		<th scope="row">Description</th>
+		<td><p>Filters an image as defined by one of the following modes:</p>
+		<p>THRESHOLD - converts the image to black and white pixels depending if they are above or below the threshold defined by the level parameter. 
+		The level must be between 0.0 (black) and 1.0(white). If no level is specified, 0.5 is used.</p>
+		<p>GRAY - converts any colors in the image to grayscale equivalents</p>
+		<p>INVERT - sets each pixel to its inverse value</p>
+		<p>POSTERIZE - limits each channel of the image to the number of colors specified as the level parameter</p>
+		<p>BLUR - executes a Guassian blur with the level parameter specifying the extent of the blurring. 
+		If no level parameter is used, the blur is equivalent to Guassian blur of radius 1.</p>
+		<p>OPAQUE - sets the alpha channel to entirely opaque.</p>
+		<p>ERODE - reduces the light areas with the amount defined by the level parameter.</p>
+		<p>DILATE - increases the light areas with the amount defined by the level parameter</p></td>
+	</tr>
+	<tr class="">
+		<th scope="row">Syntax</th>
+		<td><pre>filter(<kbd>MODE</kbd>)</pre><br />
+		<pre>filter(<kbd>MODE</kbd>,<kbd>srcImg</kbd>)</pre></td>
+	</tr>
+	
+	<tr class="">
+		<th scope="row">Parameters</th>
+		<td>
+		<table cellpadding="0" cellspacing="0" border="0">
+			<tr class="">
+				<th scope="row">MODE</th>
+				<td>Either THRESHOLD, GRAY, INVERT, POSTERIZE, BLUR, OPAQUE, ERODE, or DILATE</td>
+			</tr>
+			<tr class="">
+				<th scope="row">param</th>
+				<td>int or float in the range from 0 to 1</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr class="">
+		<th scope="row">Returns</th>
+		<td>None</td>
+	</tr>
+	<tr class="">
+		<th scope="row">Usage</th>
+		<td>Web & Application</td>
+	</tr>
+
+</table>
+
+<hr>
+<div class="cclicense">
+  <p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+    <img alt="Creative Commons License" border="0" src="http://processingjs.org/images/somerights20.gif" />
+  </a>
+</div>
+    
+
+      <div class="footer">
+        Processing is an open visualization language developed by
+        <a href="http://benfry.com/">Ben Fry</a> &amp; <a href="http://reas.com/">Casey Reas</a>,<br>
+        and originally ported to JavaScript by
+        <a href="http://ejohn.org/blog/processingjs/">John Resig</a>.<br>
+        Processing.js is maintained by the Processing.js team.<br>
+		This site maintained by volunteer Khan Academy Students.<br>
+      </div>
+    </div>
+    <a href="http://github.com/processing-js/processing-js/">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://processingjs.org/images/forkme-right-orange.png" alt="Fork me on GitHub">
+    </a>
+  </body>
+</html>
