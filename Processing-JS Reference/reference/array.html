@@ -33,29 +33,50 @@
 
 
 
-		<td><div class="example"><pre>int[] numbers = new int[3];
-
+		<td>
+        <div class="example"> 
+          <pre>// Declare an Array called numbers which contains 3 Variables
+var numbers = [3];<br>
+// Starting at 0, write values into Vaiables in Array
 numbers[0] = 90;
-
 numbers[1] = 150;
+numbers[2] = 0;
 
-numbers[2] = 30;
+// Sets variable a to 240
+var a = numbers[0] + numbers[1]; 
 
-int a = numbers[0] + numbers[1]; // Sets variable a to 240
+// Write Variable into 3rd Array slot
+numbers[2] = a;
 
-int b = numbers[1] + numbers[2]; // Sets variable b to 180</pre></div><hr class="noShade" noshade="noshade" size="1" /><div class="example"><pre>int[] numbers = { 90, 150, 30 };
+fill(0); // Set color
+// Print 3rd Array Variable to screen
+text(numbers[2],100,100);</pre>
+          <hr class="noShade" noshade size="1" />
+          <pre>// Declare Array called numbers containing 3 Variables
+var numbers =[90, 150, 30];
 
-int a = numbers[0] + numbers[1]; // Sets variable a to 240
+var a = numbers[0] + numbers[1]; // Sets variable a to 240
+var b = numbers[1] + numbers[2]; // Sets variable b to 180
 
-int b = numbers[1] + numbers[2]; // Sets variable b to 180</pre></div><hr class="noShade" noshade="noshade" size="1" /><div class="example"><pre>int degrees = 360;
+fill(0);
+text("a = "+ a +"  b = " +  b, 100, 100);</pre>
+        </div>
+        <div class="example"></div>
+        <hr class="noShade" noshade size="1" /><div class="example">
+		  <pre>var angle = 30;
 
-float[] cos_vals = new float[degrees];
+var cos_vals = [angle];
 
-for(int i=0; i < degrees; i++) {
+for(var i=0; i < angle; i++) {
+  cos_vals[i] = cos(i);
+}
 
-  cos_vals[i] = cos(TWO_PI/degrees * i);
-
-}</pre></div></td>
+fill(0);
+for(var i = 0; i < cos_vals.length; i++){
+// Print on new line
+     text(cos_vals[i], 100, i * 13 + 13); 
+}</pre>
+        </div></td>
 
 	</tr>
 
@@ -65,7 +86,15 @@ for(int i=0; i < degrees; i++) {
 
 		<th scope="row">Description</th>
 
-		<td>An array is a list of data. It is possible to have an array of any type of data. Each piece of data in an array is identified by an index number representing its position in the array. The first element in the array is <b>[0]</b>, the second element is <b>[1]</b>, and so on. Arrays are similar to objects, so they must be created with the keyword <b>new</b>. Every array has a variable <b>length</b> which is an integer value for the total number of elements in the array. (People are often confused by the use of <b>length()</b> to get the size of a String and <b>length</b> to get the size of an array. Notice the absence of the parentheses when working with arrays.)</td>
+		
+      <td>An array is a list of data. It is possible to have an array of any type 
+        of data. Each piece of data in an array is identified by an index number 
+        representing its position in the array. The first element in the array 
+        is <b>[0]</b>, the second element is <b>[1]</b>, and so on. Every array 
+        has a variable <b>length</b> which is an integer value for the total number 
+        of elements in the array. (People are often confused by the use of <b>length()</b> 
+        to get the size of a String and <b>length</b> to get the size of an array. 
+        Notice the absence of the parentheses when working with arrays.)</td>
 
 
 

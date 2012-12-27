@@ -28,25 +28,30 @@
         <div class="example"> 
           <pre>// Move the mouse left and right across the image
 // to see the cursor change from a cross to a hand
-void draw() 
-{
- if(mouseX < 50) {
+draw = function(){ 
+ if(mouseX < 50){
   cursor(CROSS);
  } else {
   cursor(HAND);
  }
-}</pre>
+};
+
+
+// Click the mouse to make the Cursor Disappear<br><br>draw = function(){ <br>    if(mouseClicked){<br>        noCursor();<br>    }else{<br>        cursor();<br>    }<br>};</pre>
         </div>
       </td>
     </tr>
     <tr class=""> 
       <th scope="row">Description</th>
-      <td>Sets the cursor to a predefined symbol, an image, or turns it on if 
-        already hidden. If you are trying to set an image as the cursor, it is 
-        recommended to make the size 16x16 or 32x32 pixels. It is not possible 
-        to load an image as the cursor if you are exporting your program for the 
-        Web. The values for parameters <b>x</b> and <b>y</b> must be less than 
-        the dimensions of the image.</td>
+      <td> 
+        <p>Sets the cursor to a predefined symbol, an image, or turns it on if 
+          already hidden. If you are trying to set an image as the cursor, it 
+          is recommended to make the size 16x16 or 32x32 pixels. It is not possible 
+          to load an image as the cursor if you are exporting your program for 
+          the Web. The values for parameters <b>x</b> and <b>y</b> must be less 
+          than the dimensions of the image.<br>
+          Does not work with the Khan Academy editor.</p>
+        </td>
     </tr>
     <tr class=""> 
       <th scope="row">Syntax</th>
