@@ -1,6 +1,6 @@
 To view Processing-JS Programs offline:
 Click on the ZIP tab at the top of the page. This archive will automatically pack itself into a ZIP file which will download into your default downloads folder. 
-After UnZipping the file into the folder of your choice, open the index.html page with your Web Browser and and you can view a number of sample Programs embedded in Web Pages.
+After UnZipping the file into the folder of your choice, open the index.html page with your Web Browser and you can view a number of sample Programs embedded in Web Pages.
 
 Creating your own files for offline viewing is relatively easy if you understand a little basic HTML.
 Copy your Program code and open the template.js file. Paste your program into the designated area. Save As and name the file programName.js .
