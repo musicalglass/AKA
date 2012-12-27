@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Processing.js</title>
+    <title>Processing.js - if</title>
     <script src="/js/processing.min.js" type="text/javascript"></script>
   </head>
   <body>
@@ -33,18 +33,12 @@
 
 
 
-		<td><div class="example"><img src="http://processingjs.org/reference/if_.gif" alt="example pic" /><pre class="margin">for (int i=5; i < height; i+=5) {
-
-  stroke(255);  //Set the color to white
-
+		<td><div class="example"><img src="http://processingjs.org/reference/if_.gif" alt="example pic" /><pre class="margin">for (var i = 5; i < height; i += 5) {
+  stroke(255, 0, 0);  //Set the color to red
   if(i < 35) {  //When "i" is less than "35"...
-
     stroke(0);  //...set the color to black
-
   }
-
   line(30, i, 80, i);
-
 }</pre></div></td>
 
 	</tr>
