@@ -43,7 +43,7 @@ void draw()
 	</tr>
 	<tr class="">
 		<th scope="row">Description</th>
-		<td><p>This directive regulates image preloading, which is required when using <a href="/reference/loadImage_">loadImage()</a> or <a href="/reference/requestImage_">requestImage()</a> in a sketch. 
+		<td><p>This directive regulates image preloading, which is required when using <a href="loadImage.html">loadImage()</a> or <a href="requestImage.html">requestImage()</a> in a sketch. 
     Using this directive will preload all images indicated between quotes, and comma separated if multiple images are used, so that they will be ready 
     for use when the sketch begins running. As resources are loaded via the AJAX approach, not using this directive will result in the sketch loading 
     an image, and then immediately trying to use this image in some way, even though the browser has not finished downloading and caching it. Images 
@@ -51,14 +51,14 @@ void draw()
     all browser-supported image formats are supported by processing.js, it is best to stick to "gif", "jpg" and "png" formats if you intend your 
     sketch to be cross-platform compatible with native Processing. </p>
     <p><b>NOTE:</b> remote images can be drawn, but their pixels cannot be manipulated due to browser security restrictions. </p>
-    <p><b>NOTE:</b> this directive is for images only. For preloading fonts, use the <a href="/reference/font">font</a> directive listed below.</p>
+    <p><b>NOTE:</b> this directive is for images only. For preloading fonts, use the <a href="font.html">font</a> directive listed below.</p>
     </td>
 	</tr>
 
 	<tr class="">
 		<th scope="row">Syntax</th>
 		<td>
-      <pre>
+
         <kbd> /* @pjs preload="imageURL"; */</kbd>  <br/>
         <kbd> /* @pjs preload="data:image/imagetype,base64, {base 64 encoded data block}"; */</kbd>
     </td>
@@ -67,7 +67,7 @@ void draw()
   <tr class="">
 		<th scope="row">Syntax for multiple images</th>
 		<td>
-      <pre>
+
         <kbd> /* @pjs preload="image1,image2,..."; */</kbd> 
     </td>
 	</tr>
@@ -93,9 +93,9 @@ void draw()
 	<tr class="">
 		<th scope="row">Related</th>
 		<td>
-      <a href="/reference/pjs directive">@pjs directives</a> 
-      <br /><a href="/reference/loadImage_">loadImage()</a>
-      <br /><a href="/reference/requestImage_">requestImage()</a>
+      <a href="directives.html">@pjs directives</a> 
+      <br /><a href="loadImage.html">loadImage()</a>
+      <br /><a href="requestImage.html">requestImage()</a>
     </td>
 	</tr>
 </table>
