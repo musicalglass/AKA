@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Processing.js</title>
+    <title>Processing.js - arrayList</title>
     <script src="/js/processing.min.js" type="text/javascript"></script>
   </head>
   <body>
@@ -33,75 +33,9 @@
 
 
 
-		<td><div class="example"><pre>// This is a code fragment that shows how to use an ArrayList.
-
-// It won't compile because it's missing the Ball class.
-
-
-
-ArrayList balls;
-
-
-
-void setup() {
-
-  size(200, 200);
-
-  balls = new ArrayList();  // Create an empty ArrayList
-
-  balls.add(new Ball(width/2, 0, 48));  // Start by adding one element
-
-}
-
-
-
-void draw() {
-
-  background(255);
-
-
-
-  // With an array, we say balls.length, with an ArrayList, 
-
-  // we say balls.size(). The length of an ArrayList is dynamic. 
-
-  // Notice how we are looping through the ArrayList backwards, this 
-
-  // is because we are deleting elements from the list  
-
-  for (int i = balls.size()-1; i >= 0; i--) { 
-
-    // An ArrayList doesn't know what it is storing so we have 
-
-    // to cast the object coming out
-
-    Ball ball = (Ball) balls.get(i);
-
-    ball.move();
-
-    ball.display();
-
-    if (ball.finished()) {
-
-      // Items can be deleted with remove()
-
-      balls.remove(i);
-
-    }
-
-  }  
-
-}
-
-
-
-void mousePressed() {
-
-  // A new ball object is added to the ArrayList, by default to the end
-
-  balls.add(new Ball(mouseX, mouseY, ballWidth));
-
-}</pre></div></td>
+		<td><div class="example">
+          <pre>var arrayList = new ArrayList();// Declaration &amp; initialization with the constructor<br>arrayList.add( {} );// Adding objects, slightly clearer than 'push'<br>for (var i = arrayList.size()-1; i &gt;= 0; --i){ // Note you use 'size()', as opposed to 'length' for arrays<br>var obj = arrayList.get(i);// In contrast to array[i]. A bit bonky coding wise; though it does read better considering linguistics.<br>// Do something with the obj<br>arrayList.remove(i);// Removal, much better to read than array.splice(i, 1);<br>}</pre>
+        </div></td>
 
 	</tr>
 
