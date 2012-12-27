@@ -12,65 +12,137 @@
  width="177" height="42"></a>
       </div>
       <span class="tagline">a port of the Processing Visualization Language</span>
+
 <hr>
 
 
-<table cellpadding="4" cellspacing="4" border="0" class="ref-item" width="721">
+<table cellpadding="0" cellspacing="0" border="0" class="ref-item">
+
 	<tr class="name-row">
+
 		<th scope="row">Name</th>
-		<td><h3>endCamera()</h3></td>
+
+		<td><h3>+ (addition)</h3></td>
+
+
 
 	</tr>
 
 
+
 	<tr class="">
+
 		<th scope="row">Examples</th>
-		<td><div class="example"><img src="http://processingjs.org/reference/beginCamera_.gif" alt="example pic" /><pre class="margin">// The image for this example has not been updated.
-size(100, 100, P3D);
-noFill();
 
-beginCamera();
-camera();
-rotateX(-PI/6);
-endCamera();
+		<td><div class="example"><pre>int a = 50 + 5;  // Sets a to 55
 
-translate(50, 50, 0);
-rotateY(PI/3);
-box(45);</pre></div></td>
+int b = a + 5;   // Sets b to 60</pre></div><hr class="noShade" noshade size="1" /><div class="example"><pre>String s1 = "Chernenko"; 
+
+String s2 = "Brezhnev"; 
+
+String sc1 = s1 + s2; 
+
+String sc2 = s1 + ", Andropov, " + s2; 
+
+println(sc1);  // Prints ChernenkoBrezhnev 
+
+println(sc2);  // Prints Chernenko, Andropov, Brezhnev</pre></div><hr class="noShade" noshade size="1" /><div class="example"><pre>String s1 = "Gorbachev"; 
+
+int i = 1987; 
+
+String sc1 = s1 + i; 
+
+println(sc1);  // Prints Gorbachev1987</pre></div></td>
+
 	</tr>
 
-	<tr class="">
-		<th scope="row">Description</th>			
 
-		<td><p>The <b>beginCamera()</b> and <b>endCamera()</b> functions enable advanced customization of the camera space. Please see the reference for <b>beginCamera()</b> for a description of how the functions are used.</p></td>
+
+	<tr class="">
+
+
+
+		<th scope="row">Description</th>
+
+		<td>Adds two values or concatenates string values. As a mathematical operator, it calculates the sum of two values. As a string operator, it combines two strings into one and converts from primitive datatypes into the String datatype if necessary.</td>
+
 	</tr>
 
+
+
 	<tr class="">
+
 		<th scope="row">Syntax</th>
-		<td><pre>endCamera()</pre></td>
+
+		<td><pre><kbd>value1</kbd> + <kbd>value2</kbd></pre></td>
+
+
+
 	</tr>
 
 
-<tr class="">
-		<th scope="row">Returns</th>
-		<td>None</td>
-	</tr>
 
 	<tr class="">
-		<th scope="row">Usage</th>
-		<td>Web & Application</td>
+
+		<th scope="row">Parameters</th>
+
+		<td><table cellpadding="0" cellspacing="0" border="0">
+
+	<tr class="">
+
+		<th scope="row">value1</th>
+
+		<td>String, int, float, char, byte, boolean</td>
+
+
+
 	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">value2</th>
+
+		<td>String, int, float, char, byte, boolean</td>
+
+	</tr>
+
+</table></td>
+
+	</tr>
+
+
+
+	<tr class="">
+
+		<th scope="row">Usage</th>
+
+		<td>Web & Application</td>
+
+	</tr>
+
+
 
 	<tr class="">
 
 		<th scope="row">Related</th>
-		<td><a href="camera.html">camera()</a><br />
-				<a href="beginCamera.html">beginCamera()</a><br />
-		</td>
+
+
+
+		
+      <td><a href="increment.html">++ (increment)</a><br />
+        <a href="addAssign.html">+= (add assign)</a><br />
+        <a href="minus.html">- (minus)</a><br />
+      </td>
+
 	</tr>
+
 </table>
 
+
 <hr>
+
 <div class="cclicense">
   <p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
