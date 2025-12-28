@@ -12,5 +12,3 @@ I promote the software because the Lite version is free. In fact I exclusively d
 http://www.3dgamestudio.com/
 
 The C# Tutorials folder contains One-Ups for C# and also tutorial programs saved as Visual C# files. Visual C# is also free to download from Microsoft :)
-
-Also newly posted to AKA is the Talking Teddy Bear project. A collection of MP3s intended for use with an MP3 Player Teddy bear or interactive electronic device.
